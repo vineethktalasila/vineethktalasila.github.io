@@ -1,0 +1,22 @@
+---
+title: "Publications & Presentations"
+---
+
+## Selected Publications
+* S. Choi, D. Jain, S. Kim, V. Krishna, E. Lee, S. Minwalla and C. Patel, Dual Dressed Black Holes as the endpoint of the Charged Superradiant Instability in $N=4$ Yang Mills, SciPost Phys. 18 (2025) 4, 137.
+* A. Gadde, S. Jain, V. Krishna, H. Kulkarni and T. Sharma, Monotonicity conjecture for multi-party entanglement I, JHEP 02 (2024) 025.
+* A. Gadde, V. Krishna and T. Sharma, Towards a classification of holographic multi-partite entanglement measures. J. High Energ. Phys. 2023, 202 (2023).
+* A. Gadde, V. Krishna and T. Sharma, New multipartite entanglement measure and its holographic dual, Phys. Rev. D 106 (2022) 126001.
+* P. Mandal, D. Agarwal, P. Kumar, A. Yelikar, K. Soni and V. Krishna, Everyday Radio Telescope, [arXiv:1601.02982].
+
+## Preprints and Ongoing Projects
+* A. Gadde and V. Krishna, Comments on Bulk Replica Symmetry, arXiv:24xx.xxxx.
+* A. Gadde, V. Krishna and T. Sharma, Multi-Entropy in 2d Yang-Mills, arXiv:24xx.xxxx.
+* D. Jain, S. Kim, V. Krishna, E. Lee, S. Minwalla, C. Patel and K. Sharma, Supersymmetric Grey Galaxies and Revolving Black Holes, arXiv:24xx.xxxx.
+
+## Selected Talks
+* IISER, Thiruvananthapuram, India, New measures of multi-partite entanglement and their holographic duals, Department seminar (January 2024).
+* IIT Bombay, India, New measures of multi-partite entanglement and their holographic duals, Indian Strings Meeting (December 2023).
+* SISSA, Trieste, Italy, Supersymmetric Grey Galaxies and Revolving Black Holes, Department seminar (October 2023).
+* University of Milano-Bicocca, Supersymmetric Grey Galaxies and Revolving Black Holes, Department seminar (October 2023).
+* ICTP, Trieste, Italy, Supersymmetric Grey Galaxies and Revolving Black Holes, ICTP Workshop on String Theory, Holography and Black Holes - Gong Show talk (October 2023).

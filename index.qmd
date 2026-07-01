@@ -1,0 +1,17 @@
+---
+title: "Vineeth Krishna Talasila"
+about:
+  template: jolla
+  image: assets/profile.jpeg
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:vineethktalasila@gmail.com
+---
+
+Vineeth Krishna Talasila is a Postdoctoral Researcher at the Leinweber Center for Theoretical Physics at the University of Michigan. He completed his PhD in Theoretical Physics at the Tata Institute of Fundamental Research (TIFR), Mumbai, India. His research interests include Gauge-gravity duality, Quantum Information in Quantum Gravity, Supergravity, and String Theory.
+
+## Contact Information
+* **Email:** vineethktalasila@gmail.com / vineethbannu@gmail.com
+* **Phone:** +1 734-929-6491 / +91 9176896509
+* **Address:** 2025 S Huron Pkwy, Apt 109, Ann Arbor, MI USA 48104

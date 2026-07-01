@@ -1,0 +1,38 @@
+---
+title: "Curriculum Vitae"
+---
+
+## Professional Summary
+Postdoctoral researcher with strong foundations in multi-variable calculus, linear algebra, and stochastic processes. Expert in solving complex multi-variable systems and formulating analytical solutions for high-dimensional geometric problems and implementing numerical validations using Mathematica and Python. Proven track record of high-level mathematical problem solving, evidenced by top-tier national rankings (Top 10 in India) and fellowships at Caltech/LIGO.
+
+## Education
+* **PhD, Department of Theoretical Physics**, Tata Institute of Fundamental Research (TIFR), Mumbai, India (2019-2024).
+  * Thesis Advisor: Prof. Abhijit Gadde.
+  * Thesis Title: "Multi-partite entanglement in holography".
+  * Focus: Thermodynamic instabilities of Black Holes in Holography, Decoherence in Open Quantum Systems.
+* **Integrated BS-MS - Dual degree in Physics and Mathematics**, Indian Institute of Science Education and Research (IISER), Thiruvananthapuram, Kerala, India (2014-2019).
+  * CGPA: 8.83/10.
+  * Master's Thesis Advisor: Prof. Bindusar Sahoo.
+  * Master's Thesis Title: "Kaluza-Klein reductions and AdS/RF correspondence".
+
+## Professional Experience
+* **Postdoctoral Researcher**, Leinweber Center for Theoretical Physics (University of Michigan) (2024 - Present). Investigating thermodynamic phases of supersymmetric systems in a multidimensional parameter space using quantitative analysis in Mathematica and Python.
+* **Doctoral Researcher**, Tata Institute of Fundamental Research (TIFR) (2019-2024). Developed novel mathematical measures for quantifying multi-party entanglement in quantum systems, and established monotonicity properties for such measures. Designed and implemented a semidefinite programming algorithm in Mathematica to optimize separability detection in high-dimensional quantum states. Formulated analytical solutions for holographic duals of information theoretic measures, reducing complex high-dimensional geometry problems into tractable group theoretic computations.
+* **Summer Research Fellow**, LIGO Laboratory, California Institute of Technology (Caltech) (May 2017 - July 2017). Characterized Brownian noise in candidate coatings on the silicon mirrors used in the Interferometers. Designed and Implemented an All Digital Phase Locked Loop in a Field Programmable Gate Array (FPGA) to study the Brownian noise from the experimental setup. Devised several compression techniques to improve the efficiency of the digital circuit.
+* **Hardware-Software Integration**, Everyday Radio Telescope | IISER-TVM (2016). Constructed a radio telescope from everyday objects with fellow astronomy enthusiasts. Performed signal acquisition and processed astronomical data using Python/C++ for spectral analysis.
+
+## Fellowships & Achievements
+* Recipient of Kavli-LIGO Caltech Summer Undergrad Research Fellowship ($6600) for an Internship in LIGO laboratory at California Institute of Technology during May - July 2017.
+* Recipient of Department of Science and Technology, Government of India INSPIRE Fellowship (Rs 4,00,000 in total) during August 2014 - June 2019.
+* All India Rank 6/7,300 in Joint Entrance Screening Test (JEST) 2019 for admission to PhD programs in India.
+* All India Rank 19/40,000 in CSIR-UGC National Eligibility Test (Top 0.05%).
+
+## Technical Skills
+* **Programming:** Mathematica, Python (NumPy, SciPy), C++, LaTeX, MATLAB, SageMath, Linux, Git.
+* **Mathematical Expertise:** Stochastic Processes, Linear Algebra, Differential Equations, Convex Optimization, Information Theory, Spectral Analysis.
+* **Modeling & Analysis:** Signal Processing, Numerical Methods for Differential Equations, Semidefinite Programming.
+
+## Teaching Experience
+* Teaching Assistant for Advanced Quantum Mechanics - Course Instructor: Prof. Rishi Sharma (Fall 2020).
+* Teaching Assistant for Quantum Field Theory I - Course Instructor: Prof. Suvrat Raju (Spring 2023).
+* Teaching Assistant for Quantum Field Theory II - Course Instructor: Dr. Abhijit Gadde (Fall 2023).
