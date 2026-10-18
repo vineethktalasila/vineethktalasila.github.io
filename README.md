@@ -54,6 +54,10 @@ Review the public biography, CV, and talks. Commit these changes and push them t
 
 The workflow builds on pushes and can also be run manually from the Actions tab. Pull requests run the build and checks without deployment. It uses GitHub's automatic `GITHUB_TOKEN`; do not create a personal access token or add Cloudflare credentials.
 
+Check that `.github/workflows/publish.yml` and the root `.nojekyll` file are included in your commit. These names start with a dot and can be omitted when files are copied using a graphical file browser. After pushing, confirm that `.github/workflows/publish.yml` appears in the repository's Code tab and that Actions lists **Build and deploy website**. A run named **pages build and deployment** with a **Build with Jekyll** step is GitHub's default publisher, not this website's Quarto workflow. It can publish the README instead of the website.
+
+For a personal account, a private repository requires GitHub Pro for GitHub Pages. GitHub Free supports Pages from public repositories. [GitHub Pages availability](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
+
 ### 2. Enable GitHub Pages
 
 1. Open [the repository](https://github.com/vineethktalasila/vineethktalasila.github.io).
