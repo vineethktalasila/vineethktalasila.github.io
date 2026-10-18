@@ -1,0 +1,62 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - research.qmd
+    - publications.qmd
+    - cv.qmd
+    - 404.qmd
+  resources:
+    - assets/
+    - CNAME
+    - robots.txt
+    - .nojekyll
+
+website:
+  title: "Vineeth Krishna Talasila"
+  site-url: https://vineethkrishnat.com
+  description: "Vineeth Krishna Talasila is a theoretical physicist at the University of Michigan working on quantum gravity, black holes, and multipartite entanglement."
+  favicon: assets/favicon.svg
+  open-graph:
+    image: assets/profile.jpeg
+  twitter-card:
+    card-style: summary
+    image: assets/profile.jpeg
+  search: false
+  navbar:
+    title: "Vineeth Krishna Talasila"
+    background: light
+    foreground: dark
+    collapse-below: lg
+    left:
+      - href: index.qmd
+        text: About
+      - href: research.qmd
+        text: Research
+      - href: publications.qmd
+        text: Publications & talks
+      - href: cv.qmd
+        text: CV
+    right:
+      - href: index.qmd#contact
+        text: Contact
+  page-footer:
+    left: "Vineeth Krishna Talasila · Theoretical physics"
+    right:
+      - text: University profile
+        href: https://lsa.umich.edu/litp/people/postdoctoral-fellows/vineeth-krishna.html
+      - text: GitHub
+        href: https://github.com/vineethktalasila
+
+format:
+  html:
+    lang: en
+    theme: cosmo
+    css: styles.css
+    toc: false
+    anchor-sections: false
+    smooth-scroll: false
+    link-external-newwindow: false
+    include-before-body: _includes/skip-link.html
+    include-after-body: _includes/scripts.html

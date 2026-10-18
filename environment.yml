@@ -1,0 +1,7 @@
+# Optional: Python is used only for the local site checker / preview server.
+# The website itself is built with Quarto and needs no Conda environment.
+name: personal-website
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12

@@ -1,0 +1,13 @@
+---
+title: "Page not found"
+description: "The requested page could not be found."
+include-in-header:
+  text: '<meta name="robots" content="noindex">'
+sitemap: false
+---
+
+[404 / A small detour]{.eyebrow}
+
+This page may have moved, or the address may be incomplete.
+
+[Return to the home page →](/){.button-link .primary}

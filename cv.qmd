@@ -1,0 +1,79 @@
+---
+title: "Curriculum vitae"
+description: "Academic background, research experience, teaching, and technical skills of Vineeth Krishna Talasila."
+---
+
+Vineeth Krishna Talasila · Publishing as **Vineeth Krishna**
+
+Postdoctoral researcher in theoretical physics at the University of Michigan. My interests include quantum gravity, holography, multipartite entanglement, supergravity, and string theory.
+
+```{=html}
+<button class="button-link print-button" type="button" data-print hidden>Print / save as PDF <span aria-hidden="true">↗</span></button>
+```
+
+## Academic appointments
+
+### University of Michigan
+
+[2024–present · Postdoctoral researcher]{.entry-meta}
+
+Leinweber Institute for Theoretical Physics, Ann Arbor, Michigan. Research on black hole phases, holography, and quantum information in gravity.
+
+### Tata Institute of Fundamental Research
+
+[2019–2024 · Doctoral researcher]{.entry-meta}
+
+Department of Theoretical Physics, Mumbai, India. Research on measures of multipartite entanglement and their holographic descriptions, with analytical and numerical calculations in Mathematica and Python.
+
+### California Institute of Technology
+
+[May–July 2017 · Summer research fellow, LIGO Laboratory]{.entry-meta}
+
+Studied coating Brownian noise and developed a digital phase-locked loop on an FPGA for the experimental setup.
+
+## Education
+
+### PhD in Theoretical Physics
+
+[2019–2024 · Tata Institute of Fundamental Research]{.entry-meta}
+
+- **Advisor:** Abhijit Gadde
+- **Thesis:** *Multi-partite entanglement in holography*
+
+### Integrated BS–MS, Physics and Mathematics
+
+[2014–2019 · IISER Thiruvananthapuram]{.entry-meta}
+
+- **Master’s thesis advisor:** Bindusar Sahoo
+- **Master’s thesis:** *Kaluza-Klein reductions and AdS/RF correspondence*
+
+## Teaching
+
+Teaching assistant at the Tata Institute of Fundamental Research:
+
+| Course | Instructor | Term |
+|:---|:---|:---|
+| Quantum Field Theory II | Abhijit Gadde | Fall 2023 |
+| Quantum Field Theory I | Suvrat Raju | Spring 2023 |
+| Advanced Quantum Mechanics | Rishi Sharma | Fall 2020 |
+
+## Fellowships & distinctions
+
+- Kavli–LIGO Summer Undergraduate Research Fellowship, Caltech (2017).
+- INSPIRE Fellowship, Department of Science and Technology, Government of India (2014–2019).
+- All India Rank 6, Joint Entrance Screening Test (JEST), 2019.
+- All India Rank 19, CSIR–UGC National Eligibility Test.
+
+## Methods & tools
+
+**Programming and scientific computing:** Mathematica, Python (NumPy, SciPy), C++, MATLAB, SageMath, LaTeX, Linux, and Git.
+
+**Mathematical and numerical methods:** Linear algebra, differential equations, information theory, convex optimization, semidefinite programming, stochastic processes, and spectral analysis.
+
+## Earlier research
+
+**Everyday Radio Telescope · IISER Thiruvananthapuram (2016).** Built a radio telescope with fellow students and worked on signal acquisition and spectral analysis. [Read the project paper](https://arxiv.org/abs/1601.02982).
+
+::: {.page-next}
+[Publications & talks →](publications.qmd){.text-link} · [University profile & contact ↗](https://lsa.umich.edu/litp/people/postdoctoral-fellows/vineeth-krishna.html){.text-link}
+:::
