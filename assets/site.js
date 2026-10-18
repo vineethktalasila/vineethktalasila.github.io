@@ -16,7 +16,7 @@ if (publicationSearch) {
   const status = document.querySelector('[data-publication-status]');
   const empty = document.querySelector('[data-publication-empty]');
   controls.hidden = false;
-  publicationSearch.addEventListener('input', () => {
+  const filterEntries = () => {
     const terms = publicationSearch.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
     let visible = 0;
     entries.forEach((entry) => {
@@ -26,5 +26,7 @@ if (publicationSearch) {
     });
     status.textContent = `${visible} of ${entries.length} papers`;
     empty.hidden = visible !== 0;
-  });
+  };
+  publicationSearch.addEventListener('input', filterEntries);
+  filterEntries();
 }

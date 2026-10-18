@@ -26,7 +26,7 @@ a:hover { color: var(--deep-green); }
 [hidden] { display: none !important; }
 ::selection { background: #d7e7dc; color: var(--ink); }
 .navbar { background: var(--paper) !important; border-bottom: 1px solid var(--line); padding: 1rem 0; }
-.navbar > .container-fluid { max-width: 1220px; padding-inline: 2rem; }
+.navbar > .container-fluid { max-width: 1536px; padding-inline: 2rem; }
 .navbar-brand { font-family: Georgia, "Times New Roman", serif; font-size: 1.17rem; color: var(--ink); letter-spacing: -.02em; margin-right: auto; }
 .navbar-nav { gap: .65rem; }
 .navbar-nav .nav-link { font-size: .86rem; color: var(--muted); padding: .45rem .6rem !important; }
@@ -38,13 +38,13 @@ main.content { padding-bottom: 4rem; }
 #title-block-header { margin-bottom: 2rem; }
 #title-block-header .title { margin-top: .6rem; }
 body:has(.home-content) #title-block-header { display: none; }
-.home-content { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
-.hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 5rem; align-items: center; padding: 3.7rem 0 4.6rem; }
+.home-content { width: 100%; margin: 0; padding: 0; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 460px); gap: clamp(3rem, 6vw, 7rem); align-items: center; padding: 3.7rem 0 4.6rem; }
 .eyebrow { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: .68rem; font-weight: 650; letter-spacing: .14em; text-transform: uppercase; color: var(--green); margin-bottom: 1.1rem; }
 .hero h1 { font-size: clamp(3.2rem, 4.8vw, 4.6rem); line-height: 1.04; margin: .3rem 0 1.5rem; }
 .hero h1 span { color: var(--green); }
 .hero-lead { font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.3rem, 2.1vw, 1.7rem); line-height: 1.4; letter-spacing: -.015em; margin-bottom: 1.3rem; }
-.hero-bio { color: var(--muted); max-width: 32rem; font-size: .96rem; }
+.hero-bio { color: var(--muted); max-width: 38rem; font-size: .96rem; }
 .hero-actions { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; margin-top: 1.8rem; }
 .button-link { display: inline-flex; align-items: center; justify-content: center; gap: 1.1rem; background: transparent; color: var(--green); border: 1px solid var(--green); padding: .8rem 1.1rem; text-decoration: none; font-size: .82rem; font-weight: 600; line-height: 1.5; border-radius: 3px; cursor: pointer; }
 .button-link:hover { background: var(--wash); color: var(--deep-green); }
@@ -57,14 +57,14 @@ body:has(.home-content) #title-block-header { display: none; }
 .publication-name strong { font-weight: 500; }
 .portrait-block { position: relative; margin: 0; padding: 0 0 .6rem .7rem; }
 .portrait-block::before { content: ""; position: absolute; z-index: -1; top: 1.4rem; bottom: 2.2rem; left: -.6rem; right: 1.3rem; border: 1px solid #bac5b8; }
-.portrait-block img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 4.4; object-fit: cover; object-position: 50% 38%; border-radius: 2px; }
+.portrait-block img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 38%; border-radius: 2px; }
 .portrait-block figcaption { display: flex; justify-content: space-between; gap: 1rem; font-size: .63rem; color: var(--muted); padding-top: .8rem; }
 .home-section { border-top: 1px solid var(--line); padding: 3.5rem 0; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1.5rem; margin-bottom: 2rem; }
 .section-heading .eyebrow { margin-bottom: .6rem; }
 .section-heading h2 { margin: 0; font-size: clamp(1.75rem, 3vw, 2.45rem); }
 .section-heading > a { white-space: nowrap; margin-bottom: .2rem; }
-.research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+.research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; }
 .research-item { color: var(--ink); text-decoration: none; border-top: 1px solid var(--line); padding: 1.2rem 0 .2rem; }
 .research-item:hover h3 { color: var(--green); text-decoration: underline; text-underline-offset: .25em; }
 .item-number { color: var(--green); font-family: ui-monospace, monospace; font-size: .72rem; }
@@ -124,7 +124,7 @@ body:has(.home-content) #title-block-header { display: none; }
   #quarto-content { padding-top: .5rem; }
   .navbar > .container-fluid { padding-inline: 1.2rem; }
   .navbar-brand { font-size: 1rem; max-width: calc(100% - 3rem); white-space: normal; line-height: 1.4; }
-  .home-content { padding-inline: .4rem; }
+  .home-content { padding-inline: 0; }
   .hero { grid-template-columns: 1fr; padding: 2rem 0 3rem; gap: 2rem; }
   .hero h1 { font-size: clamp(2.8rem, 10vw, 4rem); }
   .hero-lead br { display: none; }
@@ -157,4 +157,28 @@ body:has(.home-content) #title-block-header { display: none; }
   a { color: black !important; }
   .entry-meta { color: #444; }
   .publication-entry { break-inside: avoid; }
+}
+
+/* A wider academic layout, with readable columns instead of unused margins. */
+.page-intro { max-width: 82ch; margin-bottom: 2.5rem; }
+.research-topics, .cv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4.5rem; align-items: start; }
+.research-topic, .cv-column { min-width: 0; }
+.research-topic { border-top: 1px solid var(--line); padding-top: 1.5rem; }
+.research-topic h2 { margin-top: 0; font-size: clamp(1.8rem, 2.5vw, 2.35rem); }
+.research-topic p, .research-topic li { font-size: .96rem; }
+.research-topic li + li { margin-top: .6rem; }
+.cv-column > section:first-child > h2 { margin-top: 0; }
+#paper-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 3.5rem; }
+.publication-controls { max-width: 44rem; }
+.contact-links { display: flex; flex-direction: column; gap: .9rem; align-items: flex-start; min-width: 0; }
+.contact-links .button-link { gap: .6rem; padding: .75rem .85rem; font-size: .78rem; }
+.contact-links .text-link { color: #d6e0da; }
+.contact-links .text-link:hover { color: #fff; }
+.contact-links a { overflow-wrap: anywhere; }
+@media (max-width: 991px) {
+  .research-topics, .cv-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  #paper-list { grid-template-columns: 1fr; }
+}
+@media print {
+  .research-topics, .cv-grid, #paper-list { display: block; }
 }

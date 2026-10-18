@@ -7,6 +7,7 @@ import sys
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1] / "_site"
+PUBLIC_EMAILS = {"contact@vineethkrishnat.com"}
 EXPECTED = {"index.html", "research.html", "publications.html", "cv.html", "404.html"}
 
 
@@ -60,8 +61,10 @@ def main():
         if page.h1_count != (2 if name == "index.html" else 1):
             errors.append(f"{name}: unexpected heading structure")
         # Generic checks avoid storing any removed personal details in this checker.
+        emails = {email.casefold() for email in re.findall(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", source)}
+        if emails - PUBLIC_EMAILS:
+            errors.append(f"{name}: unapproved email address; review without publishing")
         patterns = {
-            "email address": r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}",
             "phone number": r"(?<!\d)(?:\+1[ -]?)?\(?\d{3}\)?[ -]\d{3}[ -]\d{4}(?!\d)",
             "personal filesystem path": r"/Users/|/home/[^/]+/",
             "draft paper identifier": r"24xx\.xxxx",

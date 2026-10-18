@@ -1,39 +1,65 @@
 ---
 title: "Research"
-description: "Research on multipartite entanglement, holographic duality, and the thermodynamics and quantum description of black holes."
+description: "Two research directions: Quantum Information in Quantum Gravity, and Black Holes and Holography."
 ---
 
-[Quantum information & quantum gravity]{.eyebrow}
+[Information, geometry & gravity]{.eyebrow}
 
-My research explores how the structure of quantum information is reflected in spacetime geometry. I work on multipartite entanglement, gauge–gravity duality, and black hole physics, using analytical methods alongside computations in Mathematica and Python.
+::: {.page-intro}
+My research explores how quantum information is reflected in spacetime geometry and how holography describes the quantum states of black holes. I work across two connected directions, using analytical methods alongside computations in Mathematica and Python.
+:::
 
-## Multipartite entanglement {#entanglement}
+:::: {.research-topics}
+
+::: {.research-topic}
+
+## Quantum Information in Quantum Gravity {#quantum-information}
+
+### Multipartite entanglement {#entanglement}
 
 When a quantum system is divided into several parts, its correlations can be richer than those captured by the entropy of a single subsystem. I study measures that distinguish these patterns of entanglement and their behavior when subsystems are combined.
 
 With collaborators, I introduced **multi-entropy**, a generalization of entanglement entropy to multiple parties. Related work studies broader families of measures and a conjectured monotonicity property under coarse-graining.
 
-- [A new multi-partite entanglement measure and its holographic dual](https://arxiv.org/abs/2206.09723)
-- [Monotonicity conjecture for multi-party entanglement I](https://arxiv.org/abs/2308.16247)
-
-## Holography & emergent geometry {#holography}
+### Holography & emergent geometry {#holography}
 
 Gauge–gravity duality provides a way to study gravity through a quantum field theory. One question guiding my work is how multipartite entanglement measures can be calculated using geometric objects in the gravitational description.
 
 I have worked on classifying such measures using permutation groups, and on the role of **replica symmetry** in their bulk geometries. This connects algebraic descriptions of quantum correlations with networks of geometric surfaces and singularities.
 
+### Related papers
+
+- [A new multi-partite entanglement measure and its holographic dual](https://arxiv.org/abs/2206.09723)
+- [Monotonicity conjecture for multi-party entanglement I](https://arxiv.org/abs/2308.16247)
 - [Towards classification of holographic multi-partite entanglement measures](https://arxiv.org/abs/2304.06082)
 - [Multi-invariants and Bulk Replica Symmetry](https://arxiv.org/abs/2411.00935)
 
-## Black holes & quantum gravity {#black-holes}
+:::
+
+::: {.research-topic}
+
+## Black Holes and Holography {#black-holes}
+
+### Supersymmetric phases & black hole thermodynamics
 
 Black hole entropy and instabilities offer clues to the microscopic description of gravity. My work with collaborators investigates **dual dressed black holes** and **supersymmetric grey galaxies**, configurations that combine a black hole with additional degrees of freedom outside it.
 
-More recently, with Finn Larsen, I studied the admissibility of complex black hole geometries in the Euclidean gravitational path integral, and its connection to phase transitions in the superconformal index.
+With Harold Jones and Finn Larsen, I studied the phases of supersymmetric ground states in **AdS₄**, including configurations consisting of a core black hole and a gas, and their relation to the superconformal index.
 
+### The gravitational path integral
+
+With Finn Larsen, I also studied the admissibility of complex black hole geometries in the Euclidean gravitational path integral, and its connection to phase transitions in the superconformal index.
+
+### Related papers
+
+- [Phases of Supersymmetric Ground States in AdS₄](https://arxiv.org/abs/2510.16274)
 - [Dual Dressed Black Holes as the end point of the Charged Superradiant instability](https://arxiv.org/abs/2409.18178)
 - [Supersymmetric Grey Galaxies, Dual Dressed Black Holes and the Superconformal Index](https://arxiv.org/abs/2501.17217)
 - [Allowable Complex Black Holes in the Euclidean Gravitational Path Integral](https://arxiv.org/abs/2602.05979)
+
+:::
+
+::::
 
 ::: {.page-next}
 [Browse publications and talks →](publications.qmd){.text-link}

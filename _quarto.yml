@@ -16,7 +16,7 @@ project:
 website:
   title: "Vineeth Krishna Talasila"
   site-url: https://vineethkrishnat.com
-  description: "Vineeth Krishna Talasila is a theoretical physicist at the University of Michigan working on quantum gravity, black holes, and multipartite entanglement."
+  description: "Vineeth Krishna Talasila is a Leinweber Postdoctoral Fellow at the University of Michigan, Ann Arbor, researching quantum information in quantum gravity, black holes, and holography."
   favicon: assets/favicon.svg
   open-graph:
     image: assets/profile.jpeg
@@ -54,6 +54,12 @@ format:
     lang: en
     theme: cosmo
     css: styles.css
+    page-layout: full
+    grid:
+      body-width: 1440px
+      sidebar-width: 0px
+      margin-width: 0px
+      gutter-width: 2rem
     toc: false
     anchor-sections: false
     smooth-scroll: false

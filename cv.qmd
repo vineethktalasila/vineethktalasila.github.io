@@ -5,17 +5,21 @@ description: "Academic background, research experience, teaching, and technical 
 
 Vineeth Krishna Talasila · Publishing as **Vineeth Krishna**
 
-Postdoctoral researcher in theoretical physics at the University of Michigan. My interests include quantum gravity, holography, multipartite entanglement, supergravity, and string theory.
+Leinweber Postdoctoral Fellow at the Leinweber Institute for Theoretical Physics at the University of Michigan, Ann Arbor. My interests include quantum gravity, holography, multipartite entanglement, supergravity, and string theory.
 
 ```{=html}
 <button class="button-link print-button" type="button" data-print hidden>Print / save as PDF <span aria-hidden="true">↗</span></button>
 ```
 
+:::: {.cv-grid}
+
+::: {.cv-column}
+
 ## Academic appointments
 
 ### University of Michigan
 
-[2024–present · Postdoctoral researcher]{.entry-meta}
+[2024–present · Leinweber Postdoctoral Fellow]{.entry-meta}
 
 Leinweber Institute for Theoretical Physics, Ann Arbor, Michigan. Research on black hole phases, holography, and quantum information in gravity.
 
@@ -47,6 +51,10 @@ Studied coating Brownian noise and developed a digital phase-locked loop on an F
 - **Master’s thesis advisor:** Bindusar Sahoo
 - **Master’s thesis:** *Kaluza-Klein reductions and AdS/RF correspondence*
 
+:::
+
+::: {.cv-column}
+
 ## Teaching
 
 Teaching assistant at the Tata Institute of Fundamental Research:
@@ -74,6 +82,10 @@ Teaching assistant at the Tata Institute of Fundamental Research:
 
 **Everyday Radio Telescope · IISER Thiruvananthapuram (2016).** Built a radio telescope with fellow students and worked on signal acquisition and spectral analysis. [Read the project paper](https://arxiv.org/abs/1601.02982).
 
+:::
+
+::::
+
 ::: {.page-next}
-[Publications & talks →](publications.qmd){.text-link} · [University profile & contact ↗](https://lsa.umich.edu/litp/people/postdoctoral-fellows/vineeth-krishna.html){.text-link}
+[Publications & talks →](publications.qmd){.text-link} · [Email](mailto:contact@vineethkrishnat.com){.text-link} · [University profile ↗](https://lsa.umich.edu/litp/people/postdoctoral-fellows/vineeth-krishna.html){.text-link}
 :::

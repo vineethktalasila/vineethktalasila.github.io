@@ -40,7 +40,7 @@ The checker examines the five rendered pages, internal links and anchors, metada
 | `.github/workflows/publish.yml` | Build checks on pull requests; deploy on pushes to `main` |
 | `scripts/check_site.py` | Checks the actual `_site` output |
 
-After adding a paper, update the initial paper count in `publications.qmd`. Update the home page's recent papers separately when appropriate. All papers and contact links work without JavaScript; search and the print button appear when JavaScript is available. Browser printing is also available from the browser menu.
+The publication count is calculated automatically from the paper entries. Update the home page's recent papers separately when appropriate. All papers and contact links work without JavaScript; search and the print button appear when JavaScript is available. Browser printing is also available from the browser menu.
 
 To change the domain later, update `_quarto.yml`, `CNAME`, and `robots.txt`, then change the GitHub Pages custom-domain setting and DNS. GitHub Actions deployments use the domain in **repository Settings → Pages**; GitHub ignores `CNAME` files for this publishing method. The included `CNAME` documents the intended domain and supports a future branch-based setup. [GitHub's explanation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/troubleshooting-custom-domains-and-github-pages).
 
@@ -126,10 +126,18 @@ If the domain fails, check that all website records are DNS only, the GitHub Pag
 
 ## Content and privacy notes
 
-This revision removes the home address, phone numbers, personal email addresses, grades, fellowship monetary amounts, and machine-specific environment paths from current public source. It uses the public university profile as the contact route. The portrait was resized and re-encoded, with EXIF and embedded metadata checked separately. No analytics, third-party font requests, contact-form service, or cookie-based tracking were added by this project.
+This revision removes the home address, phone numbers, personal email addresses, grades, fellowship monetary amounts, and machine-specific environment paths from current public source. The public contact address is `contact@vineethkrishnat.com`, with a separate university profile link. This address is explicitly allowed by the public-content checker; other email addresses remain flagged. The website provides a mail link; mailbox or forwarding configuration is managed separately by the domain owner. The portrait was resized and re-encoded, with EXIF and embedded metadata checked separately. No analytics, third-party font requests, contact-form service, or cookie-based tracking were added by this project.
 
 **Existing Git history still contains the old versions.** These changes do not erase previous commits, GitHub caches, other clones, or information already published elsewhere. If the old contact details were pushed publicly, review the repository's history before sharing it widely. Removing historical copies is a separate, disruptive Git-history operation and was not performed here.
 
 Public affiliation was checked against the [University of Michigan profile](https://lsa.umich.edu/litp/people/postdoctoral-fellows/vineeth-krishna.html). Paper titles, author lists, identifiers, and available journal references were checked against the linked arXiv/publisher records. The 2026 paper with Finn Larsen was added; the grey-galaxy and bulk-replica placeholders were replaced with verified records. The unverified “Multi-Entropy in 2d Yang-Mills” draft entry was omitted rather than given an invented identifier. The talk dates, education, teaching, awards, and appointment dates follow the supplied draft and should receive your final review.
 
-Useful next additions, when you have the material: seminar slides or recordings, an approved professional email address, and a short description of any public research code. Add only links and projects that you want public.
+Useful next additions, when you have the material: seminar slides or recordings and a short description of any public research code. Add only links and projects that you want public.
+
+## Academic layout and current profile
+
+The site uses Quarto's Cosmo theme with a wider 1440px base body region and no reserved sidebar or margin columns. The Research page and CV use two columns on large screens; the papers list also uses two columns. These sections stack on smaller screens. Adjust the grid in `_quarto.yml` and the responsive rules in `styles.css` to change the reading width.
+
+The current title is **Leinweber Postdoctoral Fellow**, at the Leinweber Institute for Theoretical Physics at the University of Michigan, Ann Arbor. Research is organized as **Quantum Information in Quantum Gravity** and **Black Holes and Holography**. The supplied autumn portrait replaces the previous image, with embedded metadata removed.
+
+The papers list includes [Phases of Supersymmetric Ground States in AdS₄](https://arxiv.org/abs/2510.16274), by Harold Jones, Vineeth Krishna, and Finn Larsen, [JHEP 07 (2026) 174](https://doi.org/10.1007/JHEP07%282026%29174).

@@ -13,10 +13,22 @@ I publish as **Vineeth Krishna**. Papers are listed by publication year, or prep
 <div class="publication-controls" data-publication-controls hidden>
   <label for="paper-search">Find a paper</label>
   <input id="paper-search" type="search" placeholder="Search titles, authors, years…" data-publication-search aria-controls="paper-list" autocomplete="off">
-  <p class="entry-meta" data-publication-status role="status" aria-live="polite">8 of 8 papers</p>
+  <p class="entry-meta" data-publication-status role="status" aria-live="polite">9 of 9 papers</p>
 </div>
 <div id="paper-list">
 ```
+
+::: {.publication-entry}
+[2026 · JHEP 07 (2026) 174]{.entry-meta}
+
+### Phases of Supersymmetric Ground States in AdS~4~
+
+Harold Jones, **Vineeth Krishna**, and Finn Larsen.
+
+Supersymmetric phases comprising a core black hole and a gas, and their relation to the superconformal index in AdS₄.
+
+[arXiv:2510.16274 ↗](https://arxiv.org/abs/2510.16274){.paper-link} [Journal ↗](https://doi.org/10.1007/JHEP07%282026%29174){.paper-link}
+:::
 
 ::: {.publication-entry}
 [2026 · Preprint]{.entry-meta}
