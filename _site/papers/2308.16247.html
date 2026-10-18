@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="A proposed hierarchy of multipartite entanglement inequalities, and its analytical, numerical, and holographic tests.">
+
+<title>Monotonicity Conjecture for Multi-party Entanglement I – Vineeth Krishna Talasila</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1949be69fc946d4a9e3c11eafa1b4452.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Monotonicity Conjecture for Multi-party Entanglement I – Vineeth Krishna Talasila">
+<meta property="og:description" content="A proposed hierarchy of multipartite entanglement inequalities, and its analytical, numerical, and holographic tests.">
+<meta property="og:image" content="https://vineethkrishnat.com/papers/assets/profile.jpeg">
+<meta property="og:site_name" content="Vineeth Krishna Talasila">
+<meta name="twitter:title" content="Monotonicity Conjecture for Multi-party Entanglement I – Vineeth Krishna Talasila">
+<meta name="twitter:description" content="A proposed hierarchy of multipartite entanglement inequalities, and its analytical, numerical, and holographic tests.">
+<meta name="twitter:image" content="https://vineethkrishnat.com/papers/assets/profile.jpeg">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed paper-detail quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Vineeth Krishna Talasila</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html#contact"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content">
+<a class="skip-link" href="#quarto-document-content">Skip to main content</a>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Monotonicity Conjecture for Multi-party Entanglement I</h1>
+</div>
+
+<div>
+  <div class="description">
+    A proposed hierarchy of multipartite entanglement inequalities, and its analytical, numerical, and holographic tests.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="paper-source-links">
+<p><a href="https://arxiv.org/abs/2308.16247">arXiv:2308.16247</a> · <a href="https://doi.org/10.1007/JHEP02(2024)025">Published: JHEP 02 (2024) 025</a> · <a href="https://inspirehep.net/literature/2692462">INSPIRE</a> · <a href="../publications.html">All publications</a></p>
+</div>
+<div class="paper-summary">
+<section id="what-should-happen-when-two-parties-become-one" class="level2 summary-section">
+<h2 data-anchor-id="what-should-happen-when-two-parties-become-one">What should happen when two parties become one?</h2>
+<p>A multipartite quantum state can be viewed at different resolutions. Four laboratories may be treated separately, or two may be grouped into a single laboratory. The underlying state does not change, but the distinction between correlations inside a party and correlations between parties does. A measure intended to capture multipartite entanglement should respond meaningfully to this change of perspective. This paper investigates the proposal that a family of measures should not increase when parties are merged: <strong>monotonicity under coarse graining</strong>.</p>
+<p>The proposal concerns pure states and a family called Rényi multi-entropies. It complements local-unitary invariance, symmetry between parties, and additivity for independent product states. Original equation (6) expresses the desired ordering for a general family of measures:</p>
+<p><span class="math display">\[
+\displaystyle{\cal M}^{({\mathtt{q}})}(|\Psi\rangle)-{\cal M}^{({\mathtt{q}}-1)}(|\Psi_{[A_{\mathtt{a}}A_{\mathtt{b}}]}\rangle)\geq 0\qquad\quad\forall\,{\mathtt{a}},{\mathtt{b}}.
+\tag{6}
+\]</span></p>
+<p>The bracketed subscript means that two Hilbert-space factors are now regarded as one party. Repeated mergers generate many inequalities, organized by the partial order of partitions of the original parties. Thus the conjecture is a hierarchy rather than a single three-party comparison. An inequality for one merger can constrain every route through which a finely partitioned system is reduced to a coarser description.</p>
+<p>The distinction from ordinary monotonicity under local operations and classical communication is central. The paper does not establish that the measures are mixed-state entanglement monotones under such operations. Instead, it asks a separate, mathematically concrete question about pure-state measures at different party resolutions. Treating coarse graining as a relabeling of tensor factors also makes clear that no physical loss of the total state is required for the proposed inequality to have content.</p>
+</section>
+<section id="replica-lattices-and-several-routes-to-evidence" class="level2 summary-section">
+<h2 data-anchor-id="replica-lattices-and-several-routes-to-evidence">Replica lattices and several routes to evidence</h2>
+<p>The construction begins with a polynomial local-unitary invariant: copies of the wavefunction and its complex conjugate are contracted with permutation-defined patterns. For Rényi multi-entropy the permutations are lattice translations, and the contraction can be drawn as a periodic lattice. Figure 3 shows a connected component of the three-party example. Its directions represent different parties, so identifying parties changes the contraction geometry in a controlled way.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../assets/papers/2308.16247/q3_3_3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Original Figure 3, complete figure. One connected component of the invariant built from three independent cyclic generators. Source figure."><img src="../assets/papers/2308.16247/q3_3_3.png" class="img-fluid figure-img" alt="A connected periodic contraction network for a three-party invariant, with colored edges showing the three independent permutation directions."></a></p>
+<figcaption>Original Figure 3, complete figure. One connected component of the invariant built from three independent cyclic generators. <a href="https://arxiv.org/html/2308.16247v1#S1.F3">Source figure</a>.</figcaption>
+</figure>
+</div>
+<p>The Rényi multi-entropy is a logarithm of that invariant with a normalization depending on the number of parties. Original equation (11) defines it:</p>
+<p><span class="math display">\[
+\displaystyle S_{n}^{({\mathtt{q}})}:=\frac{1}{1-n}\frac{1}{n^{{\mathtt{q}}-2}}{\rm log}({\cal E}_{n}^{({\mathtt{q}})}).
+\tag{11}
+\]</span></p>
+<p>This normalization is necessary when comparing descriptions with different numbers of parties. The paper translates the entropy statement into an inequality between polynomial invariants, so the conjecture can be tested without presuming a general positivity theorem for the logarithm’s argument. For pure states the equivalent formulation is original equation (13):</p>
+<p><span class="math display">\[
+\displaystyle{S}_{n}^{({\mathtt{q}})}(|\psi\rangle)\geq{S}_{n}^{({\mathtt{q}}-1)}(|\psi_{[A_{\mathtt{a}}A_{\mathtt{b}}]}\rangle)\quad\Leftrightarrow\quad{\cal E}_{n}^{({\mathtt{q}})}(|\psi\rangle)\leq\Big({\cal E}_{n}^{({\mathtt{q}}-1)}(|\psi_{[A_{\mathtt{a}}A_{\mathtt{b}}]}\rangle)\Big)^{n}.
+\tag{13}
+\]</span></p>
+<p>Several complementary calculations then probe this assertion. Perturbation theory around factorized density matrices verifies it to second order, where the comparison reduces to controlled quadratic expressions. For classical probability distributions, regarded as diagonal density matrices of a purification, the proof uses inequalities between positive coefficients. Generalized three-party W states give another analytic test with genuinely quantum correlations. In that example the replica contraction can be reorganized as a lattice problem and related to a dimer model.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../assets/papers/2308.16247/resolution.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Original Figure 8, complete figure. Resolving the density matrix is a step toward the lattice and dimer representation used in the analytic W-state check. Source figure."><img src="../assets/papers/2308.16247/resolution.png" class="img-fluid figure-img" alt="The original graphical resolution of a four-valent density-matrix vertex into lower-valence pieces, used to reorganize the W-state contraction."></a></p>
+<figcaption>Original Figure 8, complete figure. Resolving the density matrix is a step toward the lattice and dimer representation used in the analytic W-state check. <a href="https://arxiv.org/html/2308.16247v1#S4.F8">Source figure</a>.</figcaption>
+</figure>
+</div>
+<p>The calculations are supplemented by numerical tests of randomly selected finite-dimensional states with several party numbers, dimensions, and replica indices. Agreement across these examples is evidence for the conjecture, while each analytic argument has its stated domain. The variety matters: diagonal states, small perturbations, W states, and random states probe different aspects of the same contraction inequality rather than repeating one special calculation.</p>
+</section>
+<section id="evidence-saturation-and-open-questions" class="level2 summary-section">
+<h2 data-anchor-id="evidence-saturation-and-open-questions">Evidence, saturation, and open questions</h2>
+<p>A holographic argument supplies a geometrical perspective at replica index two. Under the brane-web prescription, merging parties removes interfaces between the corresponding bulk chambers. The cone parameter on an interface is continuously reduced until that singular segment disappears. The gravitational action responds according to a Schläfli-type formula. The action derivative used in the discussion is original equation (101):</p>
+<p><span class="math display">\[
+\displaystyle\partial_{n}S({\widetilde{\cal B}}_{n}^{({\mathtt{2}})})=\frac{1}{n^{2}}\frac{1}{4G_{N}}A({\cal W}).
+\tag{101}
+\]</span></p>
+<p>Its positive-area right-hand side controls the direction of change. The method connects an information-theoretic inequality to the response of a hyperbolic cone geometry, provided the relevant saddle and continuation satisfy the geometric assumptions.</p>
+<p>The main claim remains a conjecture for general multipartite quantum states. The paper proves particular classes and perturbative cases, gives a holographic argument in its specified setting, and reports extensive numerical checks. These do not amount to a universal proof. In particular, the analysis does not establish positivity of every polynomial invariant, and it explicitly leaves that question open. Expressing the conjecture directly as an invariant inequality keeps this limitation visible.</p>
+<p>The holographic argument likewise uses more than local-unitary invariance. It relies on a replica-symmetric bulk description and the ability to vary cone parameters along a family of geometries. Boundary replica symmetry need not always survive in the dominant bulk saddle. The paper’s discussion focuses on two-dimensional holographic theories and replica index two, where the cited construction supports the brane-web prescription. It does not extend the argument indiscriminately to arbitrary replica indices or dimensions.</p>
+<p>Saturation offers another avenue for understanding the result. For some states, grouping particular parties leaves the measure unchanged. The paper relates such behavior to the absence of relevant correlations and asks whether multipartite analogues of mutual information can sharpen that interpretation. Possible mixed-state extensions through convex-roof constructions and connections to quantum error correction are future directions, rather than established consequences of the tests. The contribution is a precise candidate ordering principle together with several independent ways to investigate it.</p>
+</section>
+<div class="paper-references">
+<p>Equations reproduce original equations <a href="https://arxiv.org/html/2308.16247v1#S1.E6">(6)</a>, <a href="https://arxiv.org/html/2308.16247v1#S1.E11">(11)</a>, <a href="https://arxiv.org/html/2308.16247v1#S1.E13">(13)</a>, and <a href="https://arxiv.org/html/2308.16247v1#S5.E101">(101)</a>; figures reproduce original Figures 3 and 8. See <a href="https://arxiv.org/html/2308.16247v1">§§1–7 of the paper</a> for assumptions and proof domains. Related summaries: <a href="../papers/2206.09723.html">The original multi-entropy construction</a> · <a href="../papers/2304.06082.html">Classification of holographic measures</a> · <a href="../papers/2411.00935.html">Bulk replica symmetry</a>.</p>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script src="../assets/site.js" defer=""></script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/vineethkrishnat\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Vineeth Krishna Talasila · Theoretical physics</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://inspirehep.net/authors/2170399?ui-citation-summary=true">
+<p>INSPIRE</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://lsa.umich.edu/litp/people/postdoctoral-fellows/vineeth-krishna.html">
+<p>University profile</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/vineethktalasila">
+<p>GitHub</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

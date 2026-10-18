@@ -21,17 +21,19 @@ quarto render
 python3 scripts/check_site.py
 ```
 
-Python 3.9 or newer is needed only for the checker. `environment.yml` is an optional minimal Python environment. The build goes into `_site/`, which is ignored by Git. Never publish the repository root as the built site: it contains source, documentation, and development files.
+Python 3.9 or newer is needed only for the checker. `environment.yml` is an optional minimal Python environment. The build goes into `_site/`. The deployment workflow regenerates it from the source files; edit the `.qmd` files rather than the rendered HTML. Never publish the repository root as the built site: it contains source, documentation, and development files.
 
-The checker examines the five rendered pages, internal links and anchors, metadata, image descriptions, required deployment files, and common accidental personal-contact patterns. It is a useful check, not a substitute for reviewing new content before publishing.
+The checker examines the fourteen rendered pages, internal links and anchors, metadata, image descriptions, required deployment files, and common accidental personal-contact patterns. It is a useful check, not a substitute for reviewing new content before publishing.
 
 ## Editing guide
 
 | File | Purpose |
 | --- | --- |
 | `index.qmd` | Introduction, recent papers, and contact section |
-| `research.qmd` | Research themes with links to related papers |
-| `publications.qmd` | Paper records, journal/arXiv links, and talks |
+| `research.qmd` | Two extended research columns with original equations and illustrations |
+| `publications.qmd` | Paper records, extended-summary links, journal/arXiv links, and talks |
+| `papers/*.qmd` | Nine extended paper summaries with source equations and figures |
+| `assets/papers/` | Original paper figures and their provenance manifest |
 | `cv.qmd` | Public academic CV; browser print / Save as PDF button |
 | `styles.css` | Colors, typography, responsive layout, and print layout |
 | `assets/profile.jpeg` | Resized, re-encoded public portrait |
@@ -126,7 +128,7 @@ If the domain fails, check that all website records are DNS only, the GitHub Pag
 
 ## Content and privacy notes
 
-This revision removes the home address, phone numbers, personal email addresses, grades, fellowship monetary amounts, and machine-specific environment paths from current public source. The public contact address is `contact@vineethkrishnat.com`, with a separate university profile link. This address is explicitly allowed by the public-content checker; other email addresses remain flagged. The website provides a mail link; mailbox or forwarding configuration is managed separately by the domain owner. The portrait was resized and re-encoded, with EXIF and embedded metadata checked separately. No analytics, third-party font requests, contact-form service, or cookie-based tracking were added by this project.
+This revision removes the home address, phone numbers, personal email addresses, grades, fellowship monetary amounts, and machine-specific environment paths from current public source. The public contact address is `contact@vineethkrishnat.com`, with a separate university profile link. This address is explicitly allowed by the public-content checker; other email addresses remain flagged. The website provides a mail link; mailbox or forwarding configuration is managed separately by the domain owner. The portrait was resized and re-encoded, with EXIF and embedded metadata checked separately. No analytics, contact-form service, or cookie-based tracking were added by this project. Mathematical typesetting loads MathJax and its mathematical fonts from jsDelivr; the site’s general text uses system fonts.
 
 **Existing Git history still contains the old versions.** These changes do not erase previous commits, GitHub caches, other clones, or information already published elsewhere. If the old contact details were pushed publicly, review the repository's history before sharing it widely. Removing historical copies is a separate, disruptive Git-history operation and was not performed here.
 
@@ -151,3 +153,13 @@ The home page, footer, CV, and Publications page link to the supplied [INSPIRE a
 Eight papers have verified publisher and INSPIRE-record links. “Allowable Complex Black Holes in the Euclidean Gravitational Path Integral” is published as [JHEP 06 (2026) 026](https://doi.org/10.1007/JHEP06%282026%29026). For “Everyday Radio Telescope” (arXiv:1601.02982), no journal version or INSPIRE record was found; its entry labels that status and provides an INSPIRE search link. Update it if a confirmed record becomes available.
 
 The research-interest heading shares the word “Quantum” across “Information. Black Holes. Gravity.” Its accessible label spells out all three phrases.
+
+## Extended research and paper summaries
+
+Each of the nine publication titles opens a dedicated page in `papers/`, with three explanatory sections, LaTeX equations, and two figures from that paper. The Research page gives a two-column introduction and reuses four of those original figures. On small screens the columns stack. Figures can be opened for closer inspection. Math is rendered by Quarto with MathJax.
+
+`assets/papers/sources.json` records the arXiv version URL, original figure identifier, original caption, and local filename for every illustration. The images were downloaded from the papers' arXiv HTML representations; no scientific figure was generated or redrawn. Equation references and original figure numbers appear on each page. The summaries distinguish conjectures and numerical evidence from established results and state the assumptions relevant to the interpretation. These are explanatory summaries, not new results.
+
+Paper pages use a readable single column online. Their three main sections begin on separate pages when printed, with compact figure sizing for a roughly three-page reading format. Exact pagination depends on the browser, paper size, and print settings. Use the browser's Print / Save as PDF command if needed.
+
+When adding a paper, create its summary in `papers/`, add the entry and summary link in `publications.qmd`, place source figures under `assets/papers/<arXiv-ID>/`, and extend the provenance manifest. `_quarto.yml` renders all `papers/*.qmd` files, and the checker includes them automatically. Review formulas against the cited version before publishing changes.

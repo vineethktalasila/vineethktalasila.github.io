@@ -1,12 +1,14 @@
 ---
 title: "Research"
-description: "Two research directions: Quantum Information in Quantum Gravity, and Black Holes and Holography."
+description: "Multipartite quantum information, spacetime geometry, and the phases of supersymmetric black holes."
+lightbox: true
+body-classes: research-page
 ---
 
 [Information, geometry & gravity]{.eyebrow}
 
 ::: {.page-intro}
-My research explores how quantum information is reflected in spacetime geometry and how holography describes the quantum states of black holes. I work across two connected directions, using analytical methods alongside computations in Mathematica and Python.
+My research explores how quantum information is reflected in spacetime geometry and how holography describes the quantum states of black holes. The two directions below connect the organization of quantum correlations with the gravitational structures that encode them. The equations and illustrations are reproduced from the linked papers; the individual paper pages explain the constructions and their limits in more detail.
 :::
 
 :::: {.research-topics}
@@ -15,50 +17,96 @@ My research explores how quantum information is reflected in spacetime geometry 
 
 ## Quantum Information in Quantum Gravity {#quantum-information}
 
-### Multipartite entanglement {#entanglement}
+### From two subsystems to many {#entanglement}
 
-When a quantum system is divided into several parts, its correlations can be richer than those captured by the entropy of a single subsystem. I study measures that distinguish these patterns of entanglement and their behavior when subsystems are combined.
+Entanglement entropy measures quantum correlations across a division into two parts. In a pure state with three or more subsystems, there are additional ways for correlations to be shared. Grouping parties together can hide this structure: the entropies of individual subsystems need not capture every invariant of the full state. My work develops measures that treat the multiple parties together and asks how their algebraic structure appears in gravity.
 
-With collaborators, I introduced **multi-entropy**, a generalization of entanglement entropy to multiple parties. Related work studies broader families of measures and a conjectured monotonicity property under coarse-graining.
+The starting point is the replica method. For a bipartite system, copies of a reduced density matrix are joined cyclically, and the resulting contraction gives a Rényi entropy. The multi-entropy construction instead uses a lattice of replicas, with a separate cyclic permutation associated with each party. Its Rényi version is defined in [equation (14) of the original paper](papers/2206.09723.qmd):
 
-### Holography & emergent geometry {#holography}
+$$
+S^{({\mathtt{q}})}_{n}\equiv\frac{1}{1-n}{\rm Log}\,({\mathcal{Z}}_{n}^{({\mathtt{q}})}/({\mathcal{Z}}_{1}^{({\mathtt{q}})})^{n^{{\mathtt{q}}-1}}).
+$$
 
-Gauge–gravity duality provides a way to study gravity through a quantum field theory. One question guiding my work is how multipartite entanglement measures can be calculated using geometric objects in the gravitational description.
+Here $\mathtt{q}$ counts the parties, $n$ is the replica parameter, and $\mathcal{Z}^{(\mathtt{q})}_n$ is the specified contraction of copies of the state and its conjugate. The normalization removes dependence on the norm of the state. The construction reduces to the familiar Rényi entropy for two parties, while retaining information about more general multipartite correlations.
 
-I have worked on classifying such measures using permutation groups, and on the role of **replica symmetry** in their bulk geometries. This connects algebraic descriptions of quantum correlations with networks of geometric surfaces and singularities.
+![Original Figure 2 from [arXiv:2206.09723](https://arxiv.org/abs/2206.09723): graphical notation for the three-party density matrix and the contraction defining $\mathcal{Z}^{(3)}_4$.](assets/papers/2206.09723/rho3.svg){fig-alt="The three-party density matrix and the replica contraction used to define multi-entropy."}
 
-### Related papers
+The continuation toward one replica defines multi-entropy itself, as in equation (17) of the same paper:
 
-- [Multi-invariants and Bulk Replica Symmetry](https://arxiv.org/abs/2411.00935)
-- [Monotonicity conjecture for multi-party entanglement I](https://arxiv.org/abs/2308.16247)
-- [Towards classification of holographic multi-partite entanglement measures](https://arxiv.org/abs/2304.06082)
-- [A new multi-partite entanglement measure and its holographic dual](https://arxiv.org/abs/2206.09723)
+$$
+S^{({\mathtt{q}})}={\rm lim}_{n\to{1}}\,S^{({\mathtt{q}})}_{n}.
+$$
+
+Analytic continuation is a substantive part of the prescription. One cannot infer its existence or uniqueness just from the integer-replica definition. A related question is whether these quantities decrease when two parties are merged. Work on the [monotonicity conjecture](papers/2308.16247.qmd) proves particular cases and develops evidence for others, while leaving the general statement conjectural.
+
+### Replica symmetry and bulk geometry {#holography}
+
+In holography, a quantum field theory admits a gravitational description in one higher dimension. Ordinary entanglement entropy is encoded by an extremal area. The multipartite problem suggests a richer structure: networks of surfaces that partition the bulk into chambers, with junctions where surfaces meet. The replica construction determines the gluing of boundary regions; a compatible bulk saddle must implement that gluing geometrically.
+
+![Original Figure 12 from [arXiv:2304.06082](https://arxiv.org/abs/2304.06082): boundary regions $\mathcal{R}_{\mathtt a}$, bulk chambers $\mathcal{C}_{\mathtt a}$, and the walls separating them.](assets/papers/2304.06082/setup.svg){fig-alt="Boundary regions and bulk chambers separated by a network of walls."}
+
+The [classification program](papers/2304.06082.qmd) studies more general permutation contractions and the finite groups organizing their replica symmetries. The subsequent [bulk replica symmetry analysis](papers/2411.00935.qmd) asks when those symmetries can extend to a smooth covering geometry. This constrains which proposed networks admit a symmetric gravitational realization. The goal is to identify the quantum observables and the geometric assumptions required for each correspondence, including the possibility that a dominant saddle breaks replica symmetry.
+
+### Explore the papers
+
+- [Multi-invariants and Bulk Replica Symmetry](papers/2411.00935.qmd)
+- [Monotonicity conjecture for multi-party entanglement I](papers/2308.16247.qmd)
+- [Towards classification of holographic multi-partite entanglement measures](papers/2304.06082.qmd)
+- [New multipartite entanglement measure and its holographic dual](papers/2206.09723.qmd)
 :::
 
 ::: {.research-topic}
 
 ## Black Holes and Holography {#black-holes}
 
-### Supersymmetric phases & black hole thermodynamics
+### Which states dominate?
 
-Black hole entropy and instabilities offer clues to the microscopic description of gravity. My work with collaborators investigates **dual dressed black holes** and **supersymmetric grey galaxies**, configurations that combine a black hole with additional degrees of freedom outside it.
+A black hole with specified charges is one possible way to organize the states of a gravitational system. It need not be the configuration with the greatest entropy. In anti-de Sitter space, additional charge or angular momentum can reside outside a central black hole, producing phases that combine a black-hole core with a surrounding gas or condensate. My work investigates when these configurations dominate and how their transitions appear in the dual quantum theory.
 
-With Harold Jones and Finn Larsen, I studied the phases of supersymmetric ground states in **AdS₄**, including configurations consisting of a core black hole and a gas, and their relation to the superconformal index.
+Supersymmetry makes this problem more tractable by imposing an energy bound. In the two-charge $AdS_4$ setting, [equation (1) of the ground-state phases paper](papers/2510.16274.qmd) reads:
 
-### The gravitational path integral
+$$
+E\ell\geq J+2(Q_{1}\ell+Q_{2}\ell)~.
+$$
 
-With Finn Larsen, I also studied the admissibility of complex black hole geometries in the Euclidean gravitational path integral, and its connection to phase transitions in the superconformal index.
+Here $\ell$ is the AdS radius, $E$ is energy, $J$ is angular momentum, and $Q_1,Q_2$ are electric charges. States saturating this bound are BPS. Regular single-center supersymmetric black holes obey a further nonlinear relation between their charges, so they occupy a restricted surface in charge space. A core-plus-gas configuration can extend the family of candidate ground states beyond that surface.
 
-### Related papers
+![Original Figure 1 from [arXiv:2510.16274](https://arxiv.org/abs/2510.16274): the black-hole sheet, including its folded region. The translucent foreground reveals the second branch.](assets/papers/2510.16274/bhsheet.png){fig-alt="The supersymmetric black-hole sheet in the charge and angular-momentum space of the AdS4 analysis."}
 
-- [Allowable Complex Black Holes in the Euclidean Gravitational Path Integral](https://arxiv.org/abs/2602.05979)
-- [Phases of Supersymmetric Ground States in AdS₄](https://arxiv.org/abs/2510.16274)
-- [Supersymmetric Grey Galaxies, Dual Dressed Black Holes and the Superconformal Index](https://arxiv.org/abs/2501.17217)
-- [Dual Dressed Black Holes as the end point of the Charged Superradiant instability](https://arxiv.org/abs/2409.18178)
+The [charged-superradiance study](papers/2409.18178.qmd) develops dual dressed black holes as candidate endpoints of an instability in $AdS_5$. The [grey-galaxy and index study](papers/2501.17217.qmd) connects several dressed phases to the superconformal index. This index is a protected, signed count of states: cancellations mean that its entropy need not simply equal the total number of supersymmetric states. Keeping these two counting problems distinct is essential to understanding the proposed phase diagrams.
+
+### Which geometries belong in the sum?
+
+The same question has a Euclidean formulation. A path-integral computation sums over geometries and matter fields. [Equation (1) of the complex-black-hole paper](papers/2602.05979.qmd) expresses the starting point as
+
+$$
+\mathcal{Z}=\int\mathcal{D}g_{\mu\nu}\mathcal{D}\Psi\,e^{-I_{E}[g_{\mu\nu},\Psi]}~,
+$$
+
+where $I_E$ is the Euclidean action. The supersymmetric black-hole saddles relevant to the index have complex metrics. Solving the equations of motion therefore leaves an additional question: which complex geometries are admissible in the integral?
+
+The Kontsevich–Segal–Witten criterion tests convergence of auxiliary matter kinetic terms on a complex geometry. In a suitable diagonal basis, its condition is [equation (20) of the same paper](papers/2602.05979.qmd):
+
+$$
+\sum_i|\arg\lambda_i|<\pi~.
+$$
+
+The $\lambda_i$ are the diagonal metric entries in that basis. The test must hold throughout spacetime. For the studied $AdS_5$ family, analytic asymptotic calculations and numerical bulk checks find agreement between admissibility and the convergence region of the boundary index.
+
+![Original Figure 1 from [arXiv:2602.05979](https://arxiv.org/abs/2602.05979): imposing the test at every polar angle selects the region bounded by the red curves, matching index convergence.](assets/papers/2602.05979/KSWinf.png){fig-alt="Three slices of the region allowed by the asymptotic one-form test, with the boundaries of index convergence marked in red."}
+
+Failure near the asymptotic boundary is consistent with the appearance of a distant angular-momentum-carrying gas. This provides a diagnostic for a change of phase, without constructing the complete replacement saddle. The criterion also has limits: in the related two-charge $AdS_4$ setting it misses an instability. Comparing these examples helps distinguish a successful test within one family from a universal rule for gravitational path integrals.
+
+### Explore the papers
+
+- [Allowable Complex Black Holes in the Euclidean Gravitational Path Integral](papers/2602.05979.qmd)
+- [Phases of Supersymmetric Ground States in AdS₄](papers/2510.16274.qmd)
+- [Supersymmetric Grey Galaxies, Dual Dressed Black Holes and the Superconformal Index](papers/2501.17217.qmd)
+- [Dual Dressed Black Holes and the Charged Superradiant Instability](papers/2409.18178.qmd)
 :::
 
 ::::
 
 ::: {.page-next}
-[Browse publications →](publications.qmd){.text-link}
+[Browse all publications and paper summaries →](publications.qmd){.text-link}
 :::

@@ -1,0 +1,91 @@
+---
+title: "Monotonicity Conjecture for Multi-party Entanglement I"
+description: "A proposed hierarchy of multipartite entanglement inequalities, and its analytical, numerical, and holographic tests."
+lightbox: true
+body-classes: paper-detail
+toc: false
+---
+
+::: {.paper-source-links}
+[arXiv:2308.16247](https://arxiv.org/abs/2308.16247) · [Published: JHEP 02 (2024) 025](https://doi.org/10.1007/JHEP02(2024)025) · [INSPIRE](https://inspirehep.net/literature/2692462) · [All publications](../publications.qmd)
+:::
+
+::: {.paper-summary}
+::: {.summary-section}
+## What should happen when two parties become one?
+
+A multipartite quantum state can be viewed at different resolutions. Four laboratories may be treated separately, or two may be grouped into a single laboratory. The underlying state does not change, but the distinction between correlations inside a party and correlations between parties does. A measure intended to capture multipartite entanglement should respond meaningfully to this change of perspective. This paper investigates the proposal that a family of measures should not increase when parties are merged: **monotonicity under coarse graining**.
+
+The proposal concerns pure states and a family called Rényi multi-entropies. It complements local-unitary invariance, symmetry between parties, and additivity for independent product states. Original equation (6) expresses the desired ordering for a general family of measures:
+
+
+$$
+\displaystyle{\cal M}^{({\mathtt{q}})}(|\Psi\rangle)-{\cal M}^{({\mathtt{q}}-1)}(|\Psi_{[A_{\mathtt{a}}A_{\mathtt{b}}]}\rangle)\geq 0\qquad\quad\forall\,{\mathtt{a}},{\mathtt{b}}.
+\tag{6}
+$$
+
+
+The bracketed subscript means that two Hilbert-space factors are now regarded as one party. Repeated mergers generate many inequalities, organized by the partial order of partitions of the original parties. Thus the conjecture is a hierarchy rather than a single three-party comparison. An inequality for one merger can constrain every route through which a finely partitioned system is reduced to a coarser description.
+
+The distinction from ordinary monotonicity under local operations and classical communication is central. The paper does not establish that the measures are mixed-state entanglement monotones under such operations. Instead, it asks a separate, mathematically concrete question about pure-state measures at different party resolutions. Treating coarse graining as a relabeling of tensor factors also makes clear that no physical loss of the total state is required for the proposed inequality to have content.
+:::
+
+::: {.summary-section}
+## Replica lattices and several routes to evidence
+
+The construction begins with a polynomial local-unitary invariant: copies of the wavefunction and its complex conjugate are contracted with permutation-defined patterns. For Rényi multi-entropy the permutations are lattice translations, and the contraction can be drawn as a periodic lattice. Figure 3 shows a connected component of the three-party example. Its directions represent different parties, so identifying parties changes the contraction geometry in a controlled way.
+
+![Original Figure 3, complete figure. One connected component of the invariant built from three independent cyclic generators. [Source figure](https://arxiv.org/html/2308.16247v1#S1.F3).](../assets/papers/2308.16247/q3_3_3.png){fig-alt="A connected periodic contraction network for a three-party invariant, with colored edges showing the three independent permutation directions."}
+
+The Rényi multi-entropy is a logarithm of that invariant with a normalization depending on the number of parties. Original equation (11) defines it:
+
+
+$$
+\displaystyle S_{n}^{({\mathtt{q}})}:=\frac{1}{1-n}\frac{1}{n^{{\mathtt{q}}-2}}{\rm log}({\cal E}_{n}^{({\mathtt{q}})}).
+\tag{11}
+$$
+
+
+This normalization is necessary when comparing descriptions with different numbers of parties. The paper translates the entropy statement into an inequality between polynomial invariants, so the conjecture can be tested without presuming a general positivity theorem for the logarithm's argument. For pure states the equivalent formulation is original equation (13):
+
+
+$$
+\displaystyle{S}_{n}^{({\mathtt{q}})}(|\psi\rangle)\geq{S}_{n}^{({\mathtt{q}}-1)}(|\psi_{[A_{\mathtt{a}}A_{\mathtt{b}}]}\rangle)\quad\Leftrightarrow\quad{\cal E}_{n}^{({\mathtt{q}})}(|\psi\rangle)\leq\Big({\cal E}_{n}^{({\mathtt{q}}-1)}(|\psi_{[A_{\mathtt{a}}A_{\mathtt{b}}]}\rangle)\Big)^{n}.
+\tag{13}
+$$
+
+
+Several complementary calculations then probe this assertion. Perturbation theory around factorized density matrices verifies it to second order, where the comparison reduces to controlled quadratic expressions. For classical probability distributions, regarded as diagonal density matrices of a purification, the proof uses inequalities between positive coefficients. Generalized three-party W states give another analytic test with genuinely quantum correlations. In that example the replica contraction can be reorganized as a lattice problem and related to a dimer model.
+
+![Original Figure 8, complete figure. Resolving the density matrix is a step toward the lattice and dimer representation used in the analytic W-state check. [Source figure](https://arxiv.org/html/2308.16247v1#S4.F8).](../assets/papers/2308.16247/resolution.png){fig-alt="The original graphical resolution of a four-valent density-matrix vertex into lower-valence pieces, used to reorganize the W-state contraction."}
+
+The calculations are supplemented by numerical tests of randomly selected finite-dimensional states with several party numbers, dimensions, and replica indices. Agreement across these examples is evidence for the conjecture, while each analytic argument has its stated domain. The variety matters: diagonal states, small perturbations, W states, and random states probe different aspects of the same contraction inequality rather than repeating one special calculation.
+
+
+:::
+
+::: {.summary-section}
+## Evidence, saturation, and open questions
+
+A holographic argument supplies a geometrical perspective at replica index two. Under the brane-web prescription, merging parties removes interfaces between the corresponding bulk chambers. The cone parameter on an interface is continuously reduced until that singular segment disappears. The gravitational action responds according to a Schläfli-type formula. The action derivative used in the discussion is original equation (101):
+
+
+$$
+\displaystyle\partial_{n}S({\widetilde{\cal B}}_{n}^{({\mathtt{2}})})=\frac{1}{n^{2}}\frac{1}{4G_{N}}A({\cal W}).
+\tag{101}
+$$
+
+
+Its positive-area right-hand side controls the direction of change. The method connects an information-theoretic inequality to the response of a hyperbolic cone geometry, provided the relevant saddle and continuation satisfy the geometric assumptions.
+
+The main claim remains a conjecture for general multipartite quantum states. The paper proves particular classes and perturbative cases, gives a holographic argument in its specified setting, and reports extensive numerical checks. These do not amount to a universal proof. In particular, the analysis does not establish positivity of every polynomial invariant, and it explicitly leaves that question open. Expressing the conjecture directly as an invariant inequality keeps this limitation visible.
+
+The holographic argument likewise uses more than local-unitary invariance. It relies on a replica-symmetric bulk description and the ability to vary cone parameters along a family of geometries. Boundary replica symmetry need not always survive in the dominant bulk saddle. The paper's discussion focuses on two-dimensional holographic theories and replica index two, where the cited construction supports the brane-web prescription. It does not extend the argument indiscriminately to arbitrary replica indices or dimensions.
+
+Saturation offers another avenue for understanding the result. For some states, grouping particular parties leaves the measure unchanged. The paper relates such behavior to the absence of relevant correlations and asks whether multipartite analogues of mutual information can sharpen that interpretation. Possible mixed-state extensions through convex-roof constructions and connections to quantum error correction are future directions, rather than established consequences of the tests. The contribution is a precise candidate ordering principle together with several independent ways to investigate it.
+:::
+
+::: {.paper-references}
+Equations reproduce original equations [(6)](https://arxiv.org/html/2308.16247v1#S1.E6), [(11)](https://arxiv.org/html/2308.16247v1#S1.E11), [(13)](https://arxiv.org/html/2308.16247v1#S1.E13), and [(101)](https://arxiv.org/html/2308.16247v1#S5.E101); figures reproduce original Figures 3 and 8. See [§§1–7 of the paper](https://arxiv.org/html/2308.16247v1) for assumptions and proof domains. Related summaries: [The original multi-entropy construction](2206.09723.qmd) · [Classification of holographic measures](2304.06082.qmd) · [Bulk replica symmetry](2411.00935.qmd).
+:::
+:::

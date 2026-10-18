@@ -9,6 +9,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1] / "_site"
 PUBLIC_EMAILS = {"contact@vineethkrishnat.com"}
 EXPECTED = {"index.html", "research.html", "publications.html", "cv.html", "404.html"}
+EXPECTED |= {"papers/" + p.with_suffix(".html").name for p in (ROOT.parent / "papers").glob("*.qmd")}
 
 
 class Page(HTMLParser):
@@ -19,6 +20,8 @@ class Page(HTMLParser):
         self.has_description = False
         self.has_title = False
         self.h1_count = 0
+        self.figure_count = 0
+        self.display_math_count = 0
         self.errors = []
         self.feed(source)
 
@@ -30,6 +33,10 @@ class Page(HTMLParser):
             self.ids.add(attrs["id"])
         if tag == "h1":
             self.h1_count += 1
+        if tag == "figure":
+            self.figure_count += 1
+        if {"math", "display"}.issubset(attrs.get("class", "").split()):
+            self.display_math_count += 1
         if tag == "title":
             self.has_title = True
         if tag == "meta" and attrs.get("name") == "description" and attrs.get("content"):
@@ -45,7 +52,7 @@ def main():
     errors = []
     if not ROOT.is_dir():
         sys.exit("Render the website with 'quarto render' before checking it.")
-    actual = {p.name for p in ROOT.glob("*.html")}
+    actual = {p.relative_to(ROOT).as_posix() for p in ROOT.rglob("*.html") if "site_libs" not in p.parts}
     if actual != EXPECTED:
         errors.append("unexpected or missing HTML pages; remove stale _site output and render again")
     pages = {}
@@ -60,6 +67,9 @@ def main():
         # The home title block is hidden in favor of the custom introduction.
         if page.h1_count != (2 if name == "index.html" else 1):
             errors.append(f"{name}: unexpected heading structure")
+        if name.startswith("papers/"):
+            if page.figure_count != 2 or page.display_math_count != 4:
+                errors.append(f"{name}: expected two original figures and four source equations")
         # Generic checks avoid storing any removed personal details in this checker.
         emails = {email.casefold() for email in re.findall(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", source)}
         if emails - PUBLIC_EMAILS:

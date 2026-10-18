@@ -7,6 +7,7 @@ project:
     - publications.qmd
     - cv.qmd
     - 404.qmd
+    - papers/*.qmd
   resources:
     - assets/
     - CNAME
@@ -53,6 +54,7 @@ website:
 
 format:
   html:
+    html-math-method: mathjax
     lang: en
     theme: cosmo
     css: styles.css

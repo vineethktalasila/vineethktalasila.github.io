@@ -1,0 +1,79 @@
+---
+title: "Allowable Complex Black Holes in the Euclidean Gravitational Path Integral"
+description: "How a positivity criterion for complex geometries detects the boundary of the superconformal index and the onset of grey-galaxy physics."
+lightbox: true
+body-classes: paper-detail
+toc: false
+---
+
+::: {.paper-source-links}
+[← Publications](../publications.qmd) · [arXiv](https://arxiv.org/abs/2602.05979) · [Published version](https://doi.org/10.1007/JHEP06(2026)026) · [INSPIRE](https://inspirehep.net/literature/3116970)
+:::
+
+::: {.paper-summary}
+::: {.summary-section}
+## Motivation and setup
+
+The gravitational path integral provides a way to calculate black-hole thermodynamics by summing over spacetime geometries. Its practical successes raise a difficult question: which geometries belong in that sum? Supersymmetric black holes make the question particularly sharp. The Euclidean solutions used to compute their protected partition function have complex metrics. Requiring an ordinary real, positive-definite geometry would discard precisely the saddle points needed for the calculation.
+
+The starting point is the Euclidean gravitational path integral, written in the paper as equation (1):
+
+$$
+\mathcal{Z}=\int\mathcal{D}g_{\mu\nu}\mathcal{D}\Psi\,e^{-I_{E}[g_{\mu\nu},\Psi]}~,
+$$
+
+Here $g_{\mu\nu}$ describes geometry, $\Psi$ denotes the remaining fields, and $I_E$ is their Euclidean action. Boundary conditions specify the observable being computed. In a semiclassical treatment, this formal integral is approximated by contributions from saddle points. Finding a solution of the equations of motion, however, does not by itself establish that the solution is an admissible contribution.
+
+This work tests a proposed admissibility rule against an independent boundary-theory calculation. The setting is type IIB string theory on asymptotically $AdS_5\times S^5$, dual to $\mathcal{N}=4$ supersymmetric Yang–Mills theory. The analysis allows two unequal angular momenta while restricting the three electric charges to be equal. The observable is the superconformal index, a protected trace whose non-supersymmetric contributions cancel. Its convergence can be constrained directly from the spectrum of the boundary theory.
+
+In particular, supersymmetric derivatives generate arbitrarily large angular momentum. Their contributions must be suppressed, requiring the renormalized angular chemical potentials to have positive real parts. This is equation (15):
+
+$$
+\operatorname{Re}(\Omega_{a,b}^{\prime})>0\,.
+$$
+
+There are additional positivity conditions on the regulator and electric chemical potentials. Together they define the region where the index has its statistical interpretation. The gravitational question is whether the geometry itself recognizes these boundaries.
+:::
+
+::: {.summary-section}
+## Construction and results
+
+The test uses the Kontsevich–Segal–Witten, or KSW, criterion. It asks whether auxiliary real matter fields have appropriately convergent kinetic terms on a complex background. For every real, nonzero $p$-form $F$, the pointwise requirement is equation (19):
+
+$$
+\mathrm{Re}\left(\sqrt{\det g}\,g^{i_{1}j_{1}}\ldots g^{i_{p}j_{p}}F_{i_{1}\ldots i_{p}}F_{j_{1}\ldots j_{p}}\right)>0~,
+$$
+
+This condition ranges over the allowed form degrees, including the scalar case. It is a local test throughout spacetime rather than a comparison of the total actions of different black holes. For a diagonal form of the complex metric, it has the equivalent expression given in equation (20):
+
+$$
+\sum_{i}|\arg\lambda_{i}|<\pi~.
+$$
+
+The $\lambda_i$ are the diagonal metric entries after the appropriate change of basis. They should not be confused with ordinary eigenvalues of a Hermitian matrix: the metric is complex symmetric, and it transforms by congruence. The paper develops a practical procedure using real symmetric matrices and a generalized eigenvalue problem, avoiding that ambiguity.
+
+The black-hole solutions are analytically continued to finite-temperature complex Euclidean saddles with supersymmetric boundary conditions. The analysis begins near the asymptotic boundary, where the expressions simplify. The scalar condition reproduces positivity of the real part of the inverse temperature. The one-form condition yields the angular-potential inequalities already required by convergence of the index. At the angular poles, the higher-form tests do not impose additional restrictions beyond the lower-form conditions.
+
+![Original Figure 1: The three panels test the asymptotic one-form condition at different polar angles, at fixed $r_*=0.1$. Requiring the condition at every angle selects the region between the red boundaries, where the index converges. All panels are reproduced from the [paper](https://arxiv.org/abs/2602.05979).](../assets/papers/2602.05979/KSWinf.png){fig-alt="Three parameter-space slices showing the green allowed regions and red index-convergence boundaries."}
+
+The full geometry requires more than an asymptotic test. Numerical checks examine finite radii and several polar angles, applying the scalar, one-form, and higher-form conditions sequentially. In these scans the strongest restrictions arise at the asymptotic boundary and the two angular poles. The higher-form conditions introduce no stronger boundary in the tested bulk region. The resulting allowed set agrees with the convergence region identified independently in the field theory.
+:::
+
+::: {.summary-section}
+## Interpretation and limits
+
+![Original Figure 2: All twelve panels are retained. Moving down the rows approaches the asymptotic boundary; moving across the columns changes the polar angle. The green region becomes most restrictive at infinity and at the poles. The red curves mark the index-convergence boundaries, from the [paper](https://arxiv.org/abs/2602.05979).](../assets/papers/2602.05979/KSWuneqj50.png){fig-alt="A twelve-panel comparison of allowed regions at four radii and three polar angles."}
+
+The location of the failure carries physical information. It occurs far from the black-hole core and is associated with one angular-momentum component. That pattern is consistent with a grey galaxy: a central black hole accompanied by a distant, dilute gas carrying a macroscopic share of the angular momentum. The standard single-center saddle ceases to be an adequate description in precisely the region where a two-component phase is expected to matter.
+
+The result is a detailed test in a specific sector, with analytic boundary calculations supported by numerical bulk checks. It is not a universal proof that KSW identifies every physical gravitational saddle. The criterion studies auxiliary-field fluctuations, excludes metric fluctuations and backreaction, and can be too weak in other settings. In particular, the related two-charge $AdS_4$ analysis finds an instability that KSW does not detect. The paper also distinguishes numerical evidence from analytic proof in checking positivity of certain chemical-potential factors across parameter space.
+
+A complete Euclidean saddle describing the supersymmetric black-hole-plus-gas phase remains an open problem. The present analysis identifies where the familiar saddle becomes inadmissible; it does not construct the replacement geometry. This separation between a diagnostic and a full description is central to interpreting the result.
+:::
+
+::: {.paper-references}
+**Source:** [arXiv:2602.05979](https://arxiv.org/abs/2602.05979), especially §§2–4. Equations above reproduce original equations (1), (15), (19), and (20); illustrations reproduce original Figures 1 and 2. The prose is an explanatory summary of the paper.
+
+**Related work:** [Phases of Supersymmetric Ground States in $AdS_4$](2510.16274.qmd) · [Supersymmetric Grey Galaxies and the Superconformal Index](2501.17217.qmd).
+:::
+:::

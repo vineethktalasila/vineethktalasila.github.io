@@ -5,7 +5,7 @@ description: "Papers and selected presentations by theoretical physicist Vineeth
 
 [Research papers & presentations]{.eyebrow}
 
-I publish as **Vineeth Krishna**. Papers are ordered by their **first arXiv submission date**, most recent first. Journal references and links are included where available. [View my INSPIRE profile ↗](https://inspirehep.net/authors/2170399?ui-citation-summary=true){.text-link}
+I publish as **Vineeth Krishna**. Papers are ordered by their **first arXiv submission date**, most recent first. Select a paper title to read an extended summary with equations and figures from the original work. Journal references and links are included where available. [View my INSPIRE profile ↗](https://inspirehep.net/authors/2170399?ui-citation-summary=true){.text-link}
 
 ## Papers
 
@@ -21,11 +21,13 @@ I publish as **Vineeth Krishna**. Papers are ordered by their **first arXiv subm
 ::: {.publication-entry data-arxiv-date="2026-02-05"}
 [arXiv · 5 February 2026 · JHEP 06 (2026) 026]{.entry-meta}
 
-### Allowable Complex Black Holes in the Euclidean Gravitational Path Integral
+### [Allowable Complex Black Holes in the Euclidean Gravitational Path Integral](papers/2602.05979.qmd)
 
 **Vineeth Krishna** and Finn Larsen.
 
 Admissibility of complex black hole metrics and its relationship to phase transitions in the superconformal index.
+
+[Read extended summary →](papers/2602.05979.qmd){.summary-link}
 
 [arXiv:2602.05979 ↗](https://arxiv.org/abs/2602.05979){.paper-link} [Published version ↗](https://doi.org/10.1007/JHEP06%282026%29026){.paper-link} [INSPIRE ↗](https://inspirehep.net/literature/3116970){.paper-link}
 :::
@@ -33,11 +35,13 @@ Admissibility of complex black hole metrics and its relationship to phase transi
 ::: {.publication-entry data-arxiv-date="2025-10-18"}
 [arXiv · 18 October 2025 · JHEP 07 (2026) 174]{.entry-meta}
 
-### Phases of Supersymmetric Ground States in AdS~4~
+### [Phases of Supersymmetric Ground States in AdS~4~](papers/2510.16274.qmd)
 
 Harold Jones, **Vineeth Krishna**, and Finn Larsen.
 
 Supersymmetric phases comprising a core black hole and a gas, and their relation to the superconformal index in AdS₄.
+
+[Read extended summary →](papers/2510.16274.qmd){.summary-link}
 
 [arXiv:2510.16274 ↗](https://arxiv.org/abs/2510.16274){.paper-link} [Published version ↗](https://doi.org/10.1007/JHEP07%282026%29174){.paper-link} [INSPIRE ↗](https://inspirehep.net/literature/3071188){.paper-link}
 :::
@@ -45,9 +49,11 @@ Supersymmetric phases comprising a core black hole and a gas, and their relation
 ::: {.publication-entry data-arxiv-date="2025-01-28"}
 [arXiv · 28 January 2025 · SciPost Physics 19, 072 (2025)]{.entry-meta}
 
-### Supersymmetric Grey Galaxies, Dual Dressed Black Holes and the Superconformal Index
+### [Supersymmetric Grey Galaxies, Dual Dressed Black Holes and the Superconformal Index](papers/2501.17217.qmd)
 
 Sunjin Choi, Diksha Jain, Seok Kim, **Vineeth Krishna**, Goojin Kwon, Eunwoo Lee, Shiraz Minwalla, and Chintan Patel.
+
+[Read extended summary →](papers/2501.17217.qmd){.summary-link}
 
 [arXiv:2501.17217 ↗](https://arxiv.org/abs/2501.17217){.paper-link} [Published version ↗](https://doi.org/10.21468/SciPostPhys.19.3.072){.paper-link} [INSPIRE ↗](https://inspirehep.net/literature/2873848){.paper-link}
 :::
@@ -55,9 +61,11 @@ Sunjin Choi, Diksha Jain, Seok Kim, **Vineeth Krishna**, Goojin Kwon, Eunwoo Lee
 ::: {.publication-entry data-arxiv-date="2024-11-01"}
 [arXiv · 1 November 2024 · JHEP 06 (2025) 116]{.entry-meta}
 
-### Multi-invariants and Bulk Replica Symmetry
+### [Multi-invariants and Bulk Replica Symmetry](papers/2411.00935.qmd)
 
 Abhijit Gadde, Jonathan Harper, and **Vineeth Krishna**.
+
+[Read extended summary →](papers/2411.00935.qmd){.summary-link}
 
 [arXiv:2411.00935 ↗](https://arxiv.org/abs/2411.00935){.paper-link} [Published version ↗](https://doi.org/10.1007/JHEP06%282025%29116){.paper-link} [INSPIRE ↗](https://inspirehep.net/literature/2845255){.paper-link}
 :::
@@ -65,9 +73,11 @@ Abhijit Gadde, Jonathan Harper, and **Vineeth Krishna**.
 ::: {.publication-entry data-arxiv-date="2024-09-26"}
 [arXiv · 26 September 2024 · SciPost Physics 18, 137 (2025)]{.entry-meta}
 
-### Dual Dressed Black Holes as the end point of the Charged Superradiant instability in N = 4 Yang Mills
+### [Dual Dressed Black Holes as the end point of the Charged Superradiant instability in N = 4 Yang Mills](papers/2409.18178.qmd)
 
 Sunjin Choi, Diksha Jain, Seok Kim, **Vineeth Krishna**, Eunwoo Lee, Shiraz Minwalla, and Chintan Patel.
+
+[Read extended summary →](papers/2409.18178.qmd){.summary-link}
 
 [arXiv:2409.18178 ↗](https://arxiv.org/abs/2409.18178){.paper-link} [Published version ↗](https://doi.org/10.21468/SciPostPhys.18.4.137){.paper-link} [INSPIRE ↗](https://inspirehep.net/literature/2834568){.paper-link}
 :::
@@ -75,9 +85,11 @@ Sunjin Choi, Diksha Jain, Seok Kim, **Vineeth Krishna**, Eunwoo Lee, Shiraz Minw
 ::: {.publication-entry data-arxiv-date="2023-08-30"}
 [arXiv · 30 August 2023 · JHEP 02 (2024) 025]{.entry-meta}
 
-### Monotonicity conjecture for multi-party entanglement I
+### [Monotonicity conjecture for multi-party entanglement I](papers/2308.16247.qmd)
 
 Abhijit Gadde, Shraiyance Jain, **Vineeth Krishna**, Harshal Kulkarni, and Trakshu Sharma.
+
+[Read extended summary →](papers/2308.16247.qmd){.summary-link}
 
 [arXiv:2308.16247 ↗](https://arxiv.org/abs/2308.16247){.paper-link} [Published version ↗](https://doi.org/10.1007/JHEP02%282024%29025){.paper-link} [INSPIRE ↗](https://inspirehep.net/literature/2692462){.paper-link}
 :::
@@ -85,9 +97,11 @@ Abhijit Gadde, Shraiyance Jain, **Vineeth Krishna**, Harshal Kulkarni, and Traks
 ::: {.publication-entry data-arxiv-date="2023-04-12"}
 [arXiv · 12 April 2023 · JHEP 08 (2023) 202]{.entry-meta}
 
-### Towards classification of holographic multi-partite entanglement measures
+### [Towards classification of holographic multi-partite entanglement measures](papers/2304.06082.qmd)
 
 Abhijit Gadde, **Vineeth Krishna**, and Trakshu Sharma.
+
+[Read extended summary →](papers/2304.06082.qmd){.summary-link}
 
 [arXiv:2304.06082 ↗](https://arxiv.org/abs/2304.06082){.paper-link} [Published version ↗](https://doi.org/10.1007/JHEP08%282023%29202){.paper-link} [INSPIRE ↗](https://inspirehep.net/literature/2651116){.paper-link}
 :::
@@ -95,9 +109,11 @@ Abhijit Gadde, **Vineeth Krishna**, and Trakshu Sharma.
 ::: {.publication-entry data-arxiv-date="2022-06-20"}
 [arXiv · 20 June 2022 · Physical Review D 106, 126001 (2022)]{.entry-meta}
 
-### New multipartite entanglement measure and its holographic dual
+### [New multipartite entanglement measure and its holographic dual](papers/2206.09723.qmd)
 
 Abhijit Gadde, **Vineeth Krishna**, and Trakshu Sharma.
+
+[Read extended summary →](papers/2206.09723.qmd){.summary-link}
 
 [arXiv:2206.09723 ↗](https://arxiv.org/abs/2206.09723){.paper-link} [Published version ↗](https://doi.org/10.1103/PhysRevD.106.126001){.paper-link} [INSPIRE ↗](https://inspirehep.net/literature/2098423){.paper-link}
 :::
@@ -105,9 +121,11 @@ Abhijit Gadde, **Vineeth Krishna**, and Trakshu Sharma.
 ::: {.publication-entry data-arxiv-date="2016-01-12"}
 [arXiv · 12 January 2016 · Instrumentation & education]{.entry-meta}
 
-### Everyday Radio Telescope
+### [Everyday Radio Telescope](papers/1601.02982.qmd)
 
 Pranshu Mandal, Devansh Agarwal, Pratik Kumar, Anjali Yelikar, Kanchan Soni, and **Vineeth Krishna T**.
+
+[Read extended summary →](papers/1601.02982.qmd){.summary-link}
 
 [arXiv:1601.02982 ↗](https://arxiv.org/abs/1601.02982){.paper-link} [No published version listed]{.publication-note} [INSPIRE search ↗](https://inspirehep.net/literature?q=arxiv%3A1601.02982){.paper-link}
 

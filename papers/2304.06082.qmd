@@ -1,0 +1,95 @@
+---
+title: "Towards a Classification of Holographic Multi-partite Entanglement Measures"
+description: "From permutation invariants to weighted cosmic-brane webs that probe holographic geometry."
+lightbox: true
+body-classes: paper-detail
+toc: false
+---
+
+::: {.paper-source-links}
+[arXiv:2304.06082](https://arxiv.org/abs/2304.06082) · [Published: JHEP 08 (2023) 202](https://doi.org/10.1007/JHEP08(2023)202) · [INSPIRE](https://inspirehep.net/literature/2651116) · [All publications](../publications.qmd)
+:::
+
+::: {.paper-summary}
+::: {.summary-section}
+## Looking beyond one entanglement surface
+
+In holography, ordinary entanglement entropy connects a boundary quantum state to the area of a minimal surface in a gravitational spacetime. That connection is powerful, but it begins with a division into only two parties. A state split among several regions has many additional patterns of correlation. This paper develops a framework for asking which multipartite quantities admit similarly useful geometric descriptions and which can **probe the original bulk geometry**, rather than requiring a completely new gravitational solution.
+
+The difference between probing and backreacting is already present for two parties. A Rényi entropy at a general replica index requires a geometry with a finite conical defect. Taking the appropriate limit removes that defect and gives a minimal-area quantity in the original spacetime. The paper seeks multipartite analogues of this mechanism, starting from local-unitary invariants of a pure state and organizing them into families that admit a suitable continuation.
+
+A general invariant is built by contracting copies of the wavefunction with conjugate copies. Each party contributes a permutation specifying how its indices are paired. This description supports both classification and counting: disconnected contraction diagrams factorize, while connected diagrams supply the basic building blocks. There are rapidly growing numbers of possibilities, so geometric usefulness provides an extra selection principle. In this work, the word “measure” does not imply that positivity or monotonicity under all allowed quantum operations has been established.
+
+A particularly tractable family comes from independent cyclic permutations assigned to the parties. The replica data are expressed using integer labels, and special families interpolate toward a probe limit. This construction extends the earlier multi-entropy and allows different pieces of the eventual bulk network to carry different weights. It turns the search for one privileged multipartite number into a structured collection of boundary observables.
+
+![Original Figure 12, complete figure. The chamber decomposition ties each wall to the relative permutation of its neighboring parties. [Source figure](https://arxiv.org/html/2304.06082v3#S4.F12).](../assets/papers/2304.06082/setup.svg){fig-alt="Boundary party regions and their associated bulk chambers, divided by the original paper's labeled brane-web interfaces."}
+
+:::
+
+::: {.summary-section}
+## The replica construction and its weighted geometric answer
+
+To compute these quantities in a field theory, copies of a Euclidean path integral are glued according to their permutations. The resulting replicated boundary is filled by a gravitational saddle. The decisive assumption is that its dominant filling preserves the boundary replica symmetry. When it does, the bulk can be quotiented to a simpler geometry containing conical singularities, with each singular segment associated with a boundary-region interface.
+
+Original equation (34) writes the corresponding cosmic-brane contribution:
+
+
+$$
+\displaystyle{\mathcal{S}}_{\rm br}^{(k)}=\frac{k-1}{4kG_{N}}\int dy^{D-1}\sqrt{h}=\frac{k-1}{4kG_{N}}A
+\tag{34}
+$$
+
+
+The cone order sets the brane tension, the induced metric measures its worldvolume, and the area factor makes the geometric content explicit. Continuing toward the probe limit sends the backreaction away. A network of weighted minimal surfaces then remains in the unreplicated geometry. Figure 12 shows the boundary regions and the corresponding bulk chambers, whose separating walls form the web.
+
+The weighted minimization defining the area functional appears in original equation (36):
+
+
+$$
+\displaystyle\partial_{n}{\mathcal{S}}_{\rm grav}|_{n=1}=\frac{1}{4G_{N}}{\rm min}_{\cal W}\left\{\sum_{\widetilde{L}_{\sigma_{\mathtt{a}}^{-1}\sigma_{\mathtt{b}}}\in{\mathcal{W}}}\log({\rm lcm}(m_{\mathtt{a}},m_{\mathtt{b}}))A_{{\mathtt{a}},{\mathtt{b}}}\right\}\equiv\frac{1}{4G_{N}}A_{\rm min}^{\cal W}.
+\tag{36}
+$$
+
+
+Here the weights are logarithms of least common multiples of the integer party labels. They are fixed by the replica construction rather than chosen by hand. Minimization includes the allowed arrangement of the web, not merely the position of one preselected junction. The resulting probe measure has the compact form of original equation (37):
+
+
+$$
+\displaystyle S^{\{m_{\mathtt{a}}\}}=\frac{1}{4G_{N}}A_{\rm min}^{\cal W}.
+\tag{37}
+$$
+
+
+This is the multipartite geometric prescription: a weighted area divided by the gravitational coupling. In three bulk dimensions, the areas reduce to lengths of geodesic segments. As an explicit example, the equal-label three-party case reduces to a junction problem. Original equation (43) gives:
+
+
+$$
+\displaystyle S^{\{m,m,m\}}=\frac{\log m}{4G_{N}}{\rm min}_{X}\Big(\sum_{i}\ell(P_{i},X))\Big).
+\tag{43}
+$$
+
+
+The boundary endpoints are fixed while the interior junction is optimized. Unequal labels generalize the competition among the segments. This makes the geometric meaning of the boundary family concrete: changing the observable changes the web's tensions and therefore which portions of spacetime it probes.
+
+The paper tests the proposal against two-dimensional CFT calculations involving twist-operator correlation functions and semiclassical conformal blocks. The nontrivial dependence on boundary positions, including cross-ratio dependence, agrees in the cases analyzed. The tests also identify a limitation: parts of the overall normalization depend on twist three-point coefficients that are not fully fixed by the conformal-block calculation. The evidence therefore supports a detailed prescription within its assumptions without replacing those assumptions with a universal theorem.
+:::
+
+::: {.summary-section}
+## Finer bulk partitions, with assumptions kept visible
+
+Different choices of multipartite measure can draw different webs across the same spacetime. Overlaying them partitions a bulk slice more finely than a single bipartite entanglement wedge does. Figure 24 displays this idea using only the paper's original construction. Regions inaccessible to one boundary party can be subdivided by observables sensitive to several parties together, motivating questions about a more detailed account of bulk locality.
+
+
+![Original Figure 24, complete figure. Several probe webs refine the bulk partition associated with a fixed boundary decomposition. [Source figure](https://arxiv.org/html/2304.06082v3#S7.F24).](../assets/papers/2304.06082/4-chop.svg){fig-alt="Original bulk slice subdivided into smaller regions by the overlapping brane webs of several multipartite probe measures."}
+
+The paper discusses a possible connection to quantum error correction: finer geometric partitions might encode distinctions between which combinations of boundary regions can reconstruct bulk information. This is a motivation and prospective application, not a demonstrated multipartite reconstruction theorem. It suggests what further information-theoretic properties would be valuable to establish for the new observables.
+
+Two technical qualifications are especially important. First, continuation away from integer replica data must be defined with care. The discussion explains that uniqueness and existence are nontrivial; a simple continuation for generalized GHZ states does not automatically satisfy standard sufficient growth conditions. Second, boundary replica symmetry can be broken by the dominant bulk filling. A three-party example at replica index three illustrates that failure, while a four-party example at index two admits an explicitly symmetric filling.
+
+These limitations motivate the later study of bulk replica symmetry rather than invalidating the framework's useful cases. The outcome is a broad construction of candidate probes, a conditional gravitational derivation, explicit CFT tests, and a clear set of questions about continuation, saddle dominance, quantum corrections, and operational entanglement properties. Its main achievement is to make the multipartite geometry systematic enough that these questions can be asked precisely.
+:::
+
+::: {.paper-references}
+Equations reproduce original equations [(34)](https://arxiv.org/html/2304.06082v3#S4.E34), [(36)](https://arxiv.org/html/2304.06082v3#S4.E36), [(37)](https://arxiv.org/html/2304.06082v3#S4.E37), and [(43)](https://arxiv.org/html/2304.06082v3#S6.E43); figures reproduce original Figures 12 and 24 without redrawing. See [§§2–7 of the paper](https://arxiv.org/html/2304.06082v3) for classification, derivation, and limitations. Related summaries: [The original multi-entropy construction](2206.09723.qmd) · [Monotonicity conjecture](2308.16247.qmd) · [Bulk replica symmetry](2411.00935.qmd).
+:::
+:::

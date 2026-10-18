@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Two research directions: Quantum Information in Quantum Gravity, and Black Holes and Holography.">
+<meta name="description" content="Multipartite quantum information, spacetime geometry, and the phases of supersymmetric black holes.">
 
 <title>Research – Vineeth Krishna Talasila</title>
 <style>
@@ -43,6 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-1949be69fc946d4a9e3c11eafa1b4452.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -59,19 +62,48 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Research – Vineeth Krishna Talasila">
-<meta property="og:description" content="Two research directions: Quantum Information in Quantum Gravity, and Black Holes and Holography.">
+<meta property="og:description" content="Multipartite quantum information, spacetime geometry, and the phases of supersymmetric black holes.">
 <meta property="og:image" content="https://vineethkrishnat.com/assets/profile.jpeg">
 <meta property="og:site_name" content="Vineeth Krishna Talasila">
 <meta name="twitter:title" content="Research – Vineeth Krishna Talasila">
-<meta name="twitter:description" content="Two research directions: Quantum Information in Quantum Gravity, and Black Holes and Holography.">
+<meta name="twitter:description" content="Multipartite quantum information, spacetime geometry, and the phases of supersymmetric black holes.">
 <meta name="twitter:image" content="https://vineethkrishnat.com/assets/profile.jpeg">
 <meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed research-page quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -132,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Two research directions: Quantum Information in Quantum Gravity, and Black Holes and Holography.
+    Multipartite quantum information, spacetime geometry, and the phases of supersymmetric black holes.
   </div>
 </div>
 
@@ -151,55 +183,103 @@ ul.task-list li input[type="checkbox"] {
 
 <p><span class="eyebrow">Information, geometry &amp; gravity</span></p>
 <div class="page-intro">
-<p>My research explores how quantum information is reflected in spacetime geometry and how holography describes the quantum states of black holes. I work across two connected directions, using analytical methods alongside computations in Mathematica and Python.</p>
+<p>My research explores how quantum information is reflected in spacetime geometry and how holography describes the quantum states of black holes. The two directions below connect the organization of quantum correlations with the gravitational structures that encode them. The equations and illustrations are reproduced from the linked papers; the individual paper pages explain the constructions and their limits in more detail.</p>
 </div>
 <div class="research-topics">
 <section id="quantum-information" class="level2 research-topic">
 <h2 data-anchor-id="quantum-information">Quantum Information in Quantum Gravity</h2>
 <section id="entanglement" class="level3">
-<h3 data-anchor-id="entanglement">Multipartite entanglement</h3>
-<p>When a quantum system is divided into several parts, its correlations can be richer than those captured by the entropy of a single subsystem. I study measures that distinguish these patterns of entanglement and their behavior when subsystems are combined.</p>
-<p>With collaborators, I introduced <strong>multi-entropy</strong>, a generalization of entanglement entropy to multiple parties. Related work studies broader families of measures and a conjectured monotonicity property under coarse-graining.</p>
+<h3 data-anchor-id="entanglement">From two subsystems to many</h3>
+<p>Entanglement entropy measures quantum correlations across a division into two parts. In a pure state with three or more subsystems, there are additional ways for correlations to be shared. Grouping parties together can hide this structure: the entropies of individual subsystems need not capture every invariant of the full state. My work develops measures that treat the multiple parties together and asks how their algebraic structure appears in gravity.</p>
+<p>The starting point is the replica method. For a bipartite system, copies of a reduced density matrix are joined cyclically, and the resulting contraction gives a Rényi entropy. The multi-entropy construction instead uses a lattice of replicas, with a separate cyclic permutation associated with each party. Its Rényi version is defined in <a href="./papers/2206.09723.html">equation (14) of the original paper</a>:</p>
+<p><span class="math display">\[
+S^{({\mathtt{q}})}_{n}\equiv\frac{1}{1-n}{\rm Log}\,({\mathcal{Z}}_{n}^{({\mathtt{q}})}/({\mathcal{Z}}_{1}^{({\mathtt{q}})})^{n^{{\mathtt{q}}-1}}).
+\]</span></p>
+<p>Here <span class="math inline">\(\mathtt{q}\)</span> counts the parties, <span class="math inline">\(n\)</span> is the replica parameter, and <span class="math inline">\(\mathcal{Z}^{(\mathtt{q})}_n\)</span> is the specified contraction of copies of the state and its conjugate. The normalization removes dependence on the norm of the state. The construction reduces to the familiar Rényi entropy for two parties, while retaining information about more general multipartite correlations.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/papers/2206.09723/rho3.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Original Figure 2 from arXiv:2206.09723: graphical notation for the three-party density matrix and the contraction defining \mathcal{Z}^{(3)}_4."><img src="assets/papers/2206.09723/rho3.svg" class="img-fluid figure-img" alt="The three-party density matrix and the replica contraction used to define multi-entropy."></a></p>
+<figcaption>Original Figure 2 from <a href="https://arxiv.org/abs/2206.09723">arXiv:2206.09723</a>: graphical notation for the three-party density matrix and the contraction defining <span class="math inline">\(\mathcal{Z}^{(3)}_4\)</span>.</figcaption>
+</figure>
+</div>
+<p>The continuation toward one replica defines multi-entropy itself, as in equation (17) of the same paper:</p>
+<p><span class="math display">\[
+S^{({\mathtt{q}})}={\rm lim}_{n\to{1}}\,S^{({\mathtt{q}})}_{n}.
+\]</span></p>
+<p>Analytic continuation is a substantive part of the prescription. One cannot infer its existence or uniqueness just from the integer-replica definition. A related question is whether these quantities decrease when two parties are merged. Work on the <a href="./papers/2308.16247.html">monotonicity conjecture</a> proves particular cases and develops evidence for others, while leaving the general statement conjectural.</p>
 </section>
 <section id="holography" class="level3">
-<h3 data-anchor-id="holography">Holography &amp; emergent geometry</h3>
-<p>Gauge–gravity duality provides a way to study gravity through a quantum field theory. One question guiding my work is how multipartite entanglement measures can be calculated using geometric objects in the gravitational description.</p>
-<p>I have worked on classifying such measures using permutation groups, and on the role of <strong>replica symmetry</strong> in their bulk geometries. This connects algebraic descriptions of quantum correlations with networks of geometric surfaces and singularities.</p>
+<h3 data-anchor-id="holography">Replica symmetry and bulk geometry</h3>
+<p>In holography, a quantum field theory admits a gravitational description in one higher dimension. Ordinary entanglement entropy is encoded by an extremal area. The multipartite problem suggests a richer structure: networks of surfaces that partition the bulk into chambers, with junctions where surfaces meet. The replica construction determines the gluing of boundary regions; a compatible bulk saddle must implement that gluing geometrically.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/papers/2304.06082/setup.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Original Figure 12 from arXiv:2304.06082: boundary regions \mathcal{R}_{\mathtt a}, bulk chambers \mathcal{C}_{\mathtt a}, and the walls separating them."><img src="assets/papers/2304.06082/setup.svg" class="img-fluid figure-img" alt="Boundary regions and bulk chambers separated by a network of walls."></a></p>
+<figcaption>Original Figure 12 from <a href="https://arxiv.org/abs/2304.06082">arXiv:2304.06082</a>: boundary regions <span class="math inline">\(\mathcal{R}_{\mathtt a}\)</span>, bulk chambers <span class="math inline">\(\mathcal{C}_{\mathtt a}\)</span>, and the walls separating them.</figcaption>
+</figure>
+</div>
+<p>The <a href="./papers/2304.06082.html">classification program</a> studies more general permutation contractions and the finite groups organizing their replica symmetries. The subsequent <a href="./papers/2411.00935.html">bulk replica symmetry analysis</a> asks when those symmetries can extend to a smooth covering geometry. This constrains which proposed networks admit a symmetric gravitational realization. The goal is to identify the quantum observables and the geometric assumptions required for each correspondence, including the possibility that a dominant saddle breaks replica symmetry.</p>
 </section>
-<section id="related-papers" class="level3">
-<h3 data-anchor-id="related-papers">Related papers</h3>
+<section id="explore-the-papers" class="level3">
+<h3 data-anchor-id="explore-the-papers">Explore the papers</h3>
 <ul>
-<li><a href="https://arxiv.org/abs/2411.00935">Multi-invariants and Bulk Replica Symmetry</a></li>
-<li><a href="https://arxiv.org/abs/2308.16247">Monotonicity conjecture for multi-party entanglement I</a></li>
-<li><a href="https://arxiv.org/abs/2304.06082">Towards classification of holographic multi-partite entanglement measures</a></li>
-<li><a href="https://arxiv.org/abs/2206.09723">A new multi-partite entanglement measure and its holographic dual</a></li>
+<li><a href="./papers/2411.00935.html">Multi-invariants and Bulk Replica Symmetry</a></li>
+<li><a href="./papers/2308.16247.html">Monotonicity conjecture for multi-party entanglement I</a></li>
+<li><a href="./papers/2304.06082.html">Towards classification of holographic multi-partite entanglement measures</a></li>
+<li><a href="./papers/2206.09723.html">New multipartite entanglement measure and its holographic dual</a></li>
 </ul>
 </section>
 </section>
 <section id="black-holes" class="level2 research-topic">
 <h2 data-anchor-id="black-holes">Black Holes and Holography</h2>
-<section id="supersymmetric-phases-black-hole-thermodynamics" class="level3">
-<h3 data-anchor-id="supersymmetric-phases-black-hole-thermodynamics">Supersymmetric phases &amp; black hole thermodynamics</h3>
-<p>Black hole entropy and instabilities offer clues to the microscopic description of gravity. My work with collaborators investigates <strong>dual dressed black holes</strong> and <strong>supersymmetric grey galaxies</strong>, configurations that combine a black hole with additional degrees of freedom outside it.</p>
-<p>With Harold Jones and Finn Larsen, I studied the phases of supersymmetric ground states in <strong>AdS₄</strong>, including configurations consisting of a core black hole and a gas, and their relation to the superconformal index.</p>
+<section id="which-states-dominate" class="level3">
+<h3 data-anchor-id="which-states-dominate">Which states dominate?</h3>
+<p>A black hole with specified charges is one possible way to organize the states of a gravitational system. It need not be the configuration with the greatest entropy. In anti-de Sitter space, additional charge or angular momentum can reside outside a central black hole, producing phases that combine a black-hole core with a surrounding gas or condensate. My work investigates when these configurations dominate and how their transitions appear in the dual quantum theory.</p>
+<p>Supersymmetry makes this problem more tractable by imposing an energy bound. In the two-charge <span class="math inline">\(AdS_4\)</span> setting, <a href="./papers/2510.16274.html">equation (1) of the ground-state phases paper</a> reads:</p>
+<p><span class="math display">\[
+E\ell\geq J+2(Q_{1}\ell+Q_{2}\ell)~.
+\]</span></p>
+<p>Here <span class="math inline">\(\ell\)</span> is the AdS radius, <span class="math inline">\(E\)</span> is energy, <span class="math inline">\(J\)</span> is angular momentum, and <span class="math inline">\(Q_1,Q_2\)</span> are electric charges. States saturating this bound are BPS. Regular single-center supersymmetric black holes obey a further nonlinear relation between their charges, so they occupy a restricted surface in charge space. A core-plus-gas configuration can extend the family of candidate ground states beyond that surface.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/papers/2510.16274/bhsheet.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Original Figure 1 from arXiv:2510.16274: the black-hole sheet, including its folded region. The translucent foreground reveals the second branch."><img src="assets/papers/2510.16274/bhsheet.png" class="img-fluid figure-img" alt="The supersymmetric black-hole sheet in the charge and angular-momentum space of the AdS4 analysis."></a></p>
+<figcaption>Original Figure 1 from <a href="https://arxiv.org/abs/2510.16274">arXiv:2510.16274</a>: the black-hole sheet, including its folded region. The translucent foreground reveals the second branch.</figcaption>
+</figure>
+</div>
+<p>The <a href="./papers/2409.18178.html">charged-superradiance study</a> develops dual dressed black holes as candidate endpoints of an instability in <span class="math inline">\(AdS_5\)</span>. The <a href="./papers/2501.17217.html">grey-galaxy and index study</a> connects several dressed phases to the superconformal index. This index is a protected, signed count of states: cancellations mean that its entropy need not simply equal the total number of supersymmetric states. Keeping these two counting problems distinct is essential to understanding the proposed phase diagrams.</p>
 </section>
-<section id="the-gravitational-path-integral" class="level3">
-<h3 data-anchor-id="the-gravitational-path-integral">The gravitational path integral</h3>
-<p>With Finn Larsen, I also studied the admissibility of complex black hole geometries in the Euclidean gravitational path integral, and its connection to phase transitions in the superconformal index.</p>
+<section id="which-geometries-belong-in-the-sum" class="level3">
+<h3 data-anchor-id="which-geometries-belong-in-the-sum">Which geometries belong in the sum?</h3>
+<p>The same question has a Euclidean formulation. A path-integral computation sums over geometries and matter fields. <a href="./papers/2602.05979.html">Equation (1) of the complex-black-hole paper</a> expresses the starting point as</p>
+<p><span class="math display">\[
+\mathcal{Z}=\int\mathcal{D}g_{\mu\nu}\mathcal{D}\Psi\,e^{-I_{E}[g_{\mu\nu},\Psi]}~,
+\]</span></p>
+<p>where <span class="math inline">\(I_E\)</span> is the Euclidean action. The supersymmetric black-hole saddles relevant to the index have complex metrics. Solving the equations of motion therefore leaves an additional question: which complex geometries are admissible in the integral?</p>
+<p>The Kontsevich–Segal–Witten criterion tests convergence of auxiliary matter kinetic terms on a complex geometry. In a suitable diagonal basis, its condition is <a href="./papers/2602.05979.html">equation (20) of the same paper</a>:</p>
+<p><span class="math display">\[
+\sum_i|\arg\lambda_i|&lt;\pi~.
+\]</span></p>
+<p>The <span class="math inline">\(\lambda_i\)</span> are the diagonal metric entries in that basis. The test must hold throughout spacetime. For the studied <span class="math inline">\(AdS_5\)</span> family, analytic asymptotic calculations and numerical bulk checks find agreement between admissibility and the convergence region of the boundary index.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="assets/papers/2602.05979/KSWinf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Original Figure 1 from arXiv:2602.05979: imposing the test at every polar angle selects the region bounded by the red curves, matching index convergence."><img src="assets/papers/2602.05979/KSWinf.png" class="img-fluid figure-img" alt="Three slices of the region allowed by the asymptotic one-form test, with the boundaries of index convergence marked in red."></a></p>
+<figcaption>Original Figure 1 from <a href="https://arxiv.org/abs/2602.05979">arXiv:2602.05979</a>: imposing the test at every polar angle selects the region bounded by the red curves, matching index convergence.</figcaption>
+</figure>
+</div>
+<p>Failure near the asymptotic boundary is consistent with the appearance of a distant angular-momentum-carrying gas. This provides a diagnostic for a change of phase, without constructing the complete replacement saddle. The criterion also has limits: in the related two-charge <span class="math inline">\(AdS_4\)</span> setting it misses an instability. Comparing these examples helps distinguish a successful test within one family from a universal rule for gravitational path integrals.</p>
 </section>
-<section id="related-papers-1" class="level3">
-<h3 data-anchor-id="related-papers-1">Related papers</h3>
+<section id="explore-the-papers-1" class="level3">
+<h3 data-anchor-id="explore-the-papers-1">Explore the papers</h3>
 <ul>
-<li><a href="https://arxiv.org/abs/2602.05979">Allowable Complex Black Holes in the Euclidean Gravitational Path Integral</a></li>
-<li><a href="https://arxiv.org/abs/2510.16274">Phases of Supersymmetric Ground States in AdS₄</a></li>
-<li><a href="https://arxiv.org/abs/2501.17217">Supersymmetric Grey Galaxies, Dual Dressed Black Holes and the Superconformal Index</a></li>
-<li><a href="https://arxiv.org/abs/2409.18178">Dual Dressed Black Holes as the end point of the Charged Superradiant instability</a></li>
+<li><a href="./papers/2602.05979.html">Allowable Complex Black Holes in the Euclidean Gravitational Path Integral</a></li>
+<li><a href="./papers/2510.16274.html">Phases of Supersymmetric Ground States in AdS₄</a></li>
+<li><a href="./papers/2501.17217.html">Supersymmetric Grey Galaxies, Dual Dressed Black Holes and the Superconformal Index</a></li>
+<li><a href="./papers/2409.18178.html">Dual Dressed Black Holes and the Charged Superradiant Instability</a></li>
 </ul>
 </section>
 </section>
 </div>
 <div class="page-next">
-<p><a href="./publications.html" class="text-link">Browse publications →</a></p>
+<p><a href="./publications.html" class="text-link">Browse all publications and paper summaries →</a></p>
 </div>
 
 
@@ -614,7 +694,7 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="https://inspirehep.net/authors/2170399?ui-citation-summary=true">
 <p>INSPIRE</p>
 </a>
-  </li>
+  </li>  
     <li class="nav-item">
     <a class="nav-link" href="https://lsa.umich.edu/litp/people/postdoctoral-fellows/vineeth-krishna.html">
 <p>University profile</p>
@@ -629,6 +709,38 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
