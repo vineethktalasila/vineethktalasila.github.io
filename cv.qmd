@@ -87,5 +87,5 @@ Teaching assistant at the Tata Institute of Fundamental Research:
 ::::
 
 ::: {.page-next}
-[Publications & talks →](publications.qmd){.text-link} · [Email](mailto:contact@vineethkrishnat.com){.text-link} · [University profile ↗](https://lsa.umich.edu/litp/people/postdoctoral-fellows/vineeth-krishna.html){.text-link}
+[Publications →](publications.qmd){.text-link} · [INSPIRE profile ↗](https://inspirehep.net/authors/2170399?ui-citation-summary=true){.text-link} · [Email](mailto:contact@vineethkrishnat.com){.text-link} · [University profile ↗](https://lsa.umich.edu/litp/people/postdoctoral-fellows/vineeth-krishna.html){.text-link}
 :::

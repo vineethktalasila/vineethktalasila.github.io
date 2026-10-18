@@ -35,7 +35,7 @@ website:
       - href: research.qmd
         text: Research
       - href: publications.qmd
-        text: Publications & talks
+        text: Publications
       - href: cv.qmd
         text: CV
     right:
@@ -44,6 +44,8 @@ website:
   page-footer:
     left: "Vineeth Krishna Talasila · Theoretical physics"
     right:
+      - text: INSPIRE
+        href: https://inspirehep.net/authors/2170399?ui-citation-summary=true
       - text: University profile
         href: https://lsa.umich.edu/litp/people/postdoctoral-fellows/vineeth-krishna.html
       - text: GitHub

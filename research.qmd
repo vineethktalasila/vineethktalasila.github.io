@@ -29,11 +29,10 @@ I have worked on classifying such measures using permutation groups, and on the 
 
 ### Related papers
 
-- [A new multi-partite entanglement measure and its holographic dual](https://arxiv.org/abs/2206.09723)
+- [Multi-invariants and Bulk Replica Symmetry](https://arxiv.org/abs/2411.00935)
 - [Monotonicity conjecture for multi-party entanglement I](https://arxiv.org/abs/2308.16247)
 - [Towards classification of holographic multi-partite entanglement measures](https://arxiv.org/abs/2304.06082)
-- [Multi-invariants and Bulk Replica Symmetry](https://arxiv.org/abs/2411.00935)
-
+- [A new multi-partite entanglement measure and its holographic dual](https://arxiv.org/abs/2206.09723)
 :::
 
 ::: {.research-topic}
@@ -52,15 +51,14 @@ With Finn Larsen, I also studied the admissibility of complex black hole geometr
 
 ### Related papers
 
-- [Phases of Supersymmetric Ground States in AdS₄](https://arxiv.org/abs/2510.16274)
-- [Dual Dressed Black Holes as the end point of the Charged Superradiant instability](https://arxiv.org/abs/2409.18178)
-- [Supersymmetric Grey Galaxies, Dual Dressed Black Holes and the Superconformal Index](https://arxiv.org/abs/2501.17217)
 - [Allowable Complex Black Holes in the Euclidean Gravitational Path Integral](https://arxiv.org/abs/2602.05979)
-
+- [Phases of Supersymmetric Ground States in AdS₄](https://arxiv.org/abs/2510.16274)
+- [Supersymmetric Grey Galaxies, Dual Dressed Black Holes and the Superconformal Index](https://arxiv.org/abs/2501.17217)
+- [Dual Dressed Black Holes as the end point of the Charged Superradiant instability](https://arxiv.org/abs/2409.18178)
 :::
 
 ::::
 
 ::: {.page-next}
-[Browse publications and talks →](publications.qmd){.text-link}
+[Browse publications →](publications.qmd){.text-link}
 :::

@@ -141,3 +141,13 @@ The site uses Quarto's Cosmo theme with a wider 1440px base body region and no r
 The current title is **Leinweber Postdoctoral Fellow**, at the Leinweber Institute for Theoretical Physics at the University of Michigan, Ann Arbor. Research is organized as **Quantum Information in Quantum Gravity** and **Black Holes and Holography**. The supplied autumn portrait replaces the previous image, with embedded metadata removed.
 
 The papers list includes [Phases of Supersymmetric Ground States in AdS₄](https://arxiv.org/abs/2510.16274), by Harold Jones, Vineeth Krishna, and Finn Larsen, [JHEP 07 (2026) 174](https://doi.org/10.1007/JHEP07%282026%29174).
+
+## Logos and publication links
+
+The supplied University of Michigan SVG and Leinweber Institute JPG are displayed in an affiliation band on the home page. Originals are retained in `assets/logos/` without changing their artwork or proportions. Each logo links to its institution.
+
+The home page, footer, CV, and Publications page link to the supplied [INSPIRE author profile](https://inspirehep.net/authors/2170399?ui-citation-summary=true). Publications are ordered by **first arXiv submission**, rather than journal publication year or revision date. Dates and article-level INSPIRE records were checked against the INSPIRE API. The selected home-page papers and Research page's related-paper lists use the same chronology.
+
+Eight papers have verified publisher and INSPIRE-record links. “Allowable Complex Black Holes in the Euclidean Gravitational Path Integral” is published as [JHEP 06 (2026) 026](https://doi.org/10.1007/JHEP06%282026%29026). For “Everyday Radio Telescope” (arXiv:1601.02982), no journal version or INSPIRE record was found; its entry labels that status and provides an INSPIRE search link. Update it if a confirmed record becomes available.
+
+The research-interest heading shares the word “Quantum” across “Information. Black Holes. Gravity.” Its accessible label spells out all three phrases.
