@@ -18,7 +18,7 @@ Black-hole entropy is a count of microscopic states, but identifying exactly whi
 
 The five charges are three electric or R-charges $Q_1,Q_2,Q_3$ and two angular momenta $J_1,J_2$. Their gravitational setting is type IIB theory on $AdS_5\times S^5$. The analysis concerns the leading large-$N$ entropy, with charges of order $N^2$. It uses known black-hole thermodynamics and motivated conjectures to predict where different kinds of supersymmetric states dominate.
 
-The paper distinguishes an ordinary degeneracy from the superconformal index. A degeneracy counts states at definite charges. The index instead makes a signed count that combines states along lines in charge space. The direction of these lines is equation (8):
+The paper distinguishes an ordinary degeneracy from the superconformal index. A degeneracy counts states at definite charges. The index instead makes a signed count that combines states along lines in charge space. The direction of these lines is
 
 $$
 t_{I}=\frac{1}{2}\left(1,1,1,-1,-1\right).
@@ -34,13 +34,13 @@ This observation motivates the two separate questions addressed in the paper: wh
 
 The first ingredient is a black hole dressed by supersymmetric excitations. Grey galaxies place angular momentum in a distant gas of high-spin gravitons. Dual dressed black holes place electric charge in dual giant gravitons. Revolving black holes, related to supersymmetric descendants, can share the leading thermodynamics of grey galaxies. The gas or dressing carries a substantial fraction of the charge, while the black-hole core supplies the leading entropy.
 
-The charge decomposition is equation (9):
+The charges split as
 
 $$
 Z_{i}=Z_{i}^{BH}+Z_{i}^{gas},
 $$
 
-Here $Z_i$ denotes the five charges collectively. The core charges lie on the black hole sheet, while the macroscopic gas charges are nonnegative. At leading order, the proposed components can be treated as noninteracting for the purpose of adding charges and evaluating entropy. The dressed concentration conjecture then prescribes the maximization in equation (10):
+Here $Z_i$ denotes the five charges collectively. The core charges lie on the black hole sheet, while the macroscopic gas charges are nonnegative. At leading order, the proposed components can be treated as noninteracting for the purpose of adding charges and evaluating entropy. The dressed concentration conjecture then prescribes the maximization
 
 $$
 \max_{Z_{i}^{\prime}}S_{BH}(Z_{i}^{\prime}),~~~(Z_{i}^{\prime}\leq Z_{i}~~~\forall i=1\ldots 5)
@@ -48,11 +48,11 @@ $$
 
 The optimization ranges over allowed black-hole cores. Rather than restricting large entropy to a thin sheet, it extends that entropy into the surrounding charge space. An algorithm identifies the optimal core and which charge components reside in the dressing. The resulting microcanonical ground-state diagram has eleven phases: the pure black-hole phase, three grey-galaxy phases, and seven dual-dressed phases.
 
-![Original Figure 2: A schematic slice of the black hole sheet organizes the possible cores. Blue equal-charge surfaces distinguish dual-dressed phases, while the red equal-angular-momentum surface organizes grey-galaxy phases. Reproduced from the [paper](https://arxiv.org/abs/2501.17217).](../assets/papers/2501.17217/b3slices.png){fig-alt="A ball divided by blue equal-electric-charge planes and a red equal-angular-momentum plane."}
+![Figure 1. A $\mathbb B^3$ slice of the black hole sheet. Blue equal-charge planes separate the cores of the three rank-two dual-dressed phases; their surfaces seed the rank-four phases and their intersection seeds the rank-six phase. The red equal-angular-momentum plane separates the two rank-two grey-galaxy cores and seeds the rank-four grey-galaxy phase. ([arXiv:2501.17217](https://arxiv.org/abs/2501.17217))](../assets/papers/2501.17217/b3slices.png){fig-alt="A ball divided by blue equal-electric-charge planes and a red equal-angular-momentum plane."}
 
 The rank labels count the independent rotation planes occupied by the dressing. A rank-two dual dressed phase carries one electric-charge component outside the core; rank four carries two; rank six carries three. Equal-charge surfaces determine where these possibilities meet. Similarly, grey galaxies distinguish dressing in one or both angular-momentum planes. These are different outcomes of the same constrained entropy problem, rather than separate assumptions about unrelated solutions.
 
-For reference, the known core black holes satisfy the nonlinear density relation in equation (43), with lowercase charges normalized by $N^2$:
+The known core black holes satisfy a nonlinear density relation, with lowercase charges normalized by $N^2$:
 
 $$
 \displaystyle\frac{j_{1}j_{2}}{2}+q_{1}q_{2}q_{3}=\left(q_{1}+q_{2}+q_{3}+\frac{1}{2}\right)\left(q_{1}q_{2}+q_{1}q_{3}+q_{2}q_{3}-\frac{1}{2}(j_{1}+j_{2})\right),
@@ -62,20 +62,17 @@ The second ingredient, the unobstructed saddle conjecture, addresses the index. 
 :::
 
 ::: {.summary-section}
-## Interpretation and limits
+## Microscopic evidence and index phases
 
-![Original Figure 1: At $N=10$ on the charge slice specified in the paper, red dots show the numerically evaluated index entropy. Blue curves give the intersection-black-hole prediction; the orange segment gives the grey-galaxy prediction. The comparison is qualitative evidence for the conjectured change of phase. Reproduced from the [paper](https://arxiv.org/abs/2501.17217).](../assets/papers/2501.17217/N10GG.svg){fig-alt="Red numerical index data compared with blue black-hole and orange grey-galaxy predictions."}
+![Figure 2. Numerical indicial entropy $N^{-2}\log|n_I|$ at $N=10$, with $2(Z_1+Z_2+Z_3)+3(Z_4+Z_5)=90$, as a function of $j_R=(Z_4-Z_5)/N^2$. Red dots are numerical data. Blue curves give the intersection-black-hole entropy and orange gives the grey-galaxy entropy; the combined solid curve is the prediction under the unobstructed saddle conjecture. ([arXiv:2501.17217](https://arxiv.org/abs/2501.17217))](../assets/papers/2501.17217/N10GG.svg){fig-alt="Red numerical index data compared with blue black-hole and orange grey-galaxy predictions."}
 
-The numerical comparison is an independent check using the field-theory index at $N\leq10$. On a selected charge slice, the data follow the expected departure from the naive black-hole curve toward a grey-galaxy contribution. The choice of slice matters: finite-$N$ graviton contributions can obscure the leading black-hole physics, and some other comparisons are much less discriminating. Qualitative agreement at these ranks does not establish the asymptotic conjectures for arbitrary charges.
+The field-theory index supplies an independent comparison at $N\leq10$. On the charge slice shown above, the numerical data follow the pure-black-hole curve near the central region and then track the grey-galaxy prediction as the angular-momentum imbalance grows. The transition changes which core supplies the leading entropy. It is visible even at these moderate ranks because the selected slice separates the two predictions and keeps the graviton contribution relatively small in the discriminating region.
 
-The two conjectures should also remain distinct. Evidence for supersymmetric dressing includes descendant states, probe-brane constructions, and directly enumerated field-theory states. The claim that phase cancellations leave the maximal entropy intact is more tentative. Alternating sums can undergo exponentially strong cancellation, so the second claim does not follow from entropy maximization alone. The paper explicitly discusses circumstances in which such a conjecture could fail.
+The two conjectures organize different aspects of this microscopic picture. Supersymmetric descendants give concrete examples of black holes carrying additional angular momentum. Probe dual giants and directly enumerated field-theory states support the possibility of electric-charge dressing. These examples motivate the dressed concentration prescription, which maximizes over the known single-center black-hole family. The more tentative unobstructed saddle assumption then relates that positive degeneracy problem to the signed sum defining the index. Qualitative agreement with finite-$N$ data provides evidence for the combined prediction on the studied charge slices.
 
-The analysis additionally assumes that the known family exhausts the relevant single-center supersymmetric black holes. Additional families could change the optimization and detailed phase boundaries. Exact backreacted dressed solutions, higher-rank index computations, and broader charge-space tests remain important checks. Subject to these qualifications, the work gives a concrete alternative to the idea that all extensive supersymmetric entropy is concentrated on the isolated-black-hole sheet.
+In the grand canonical description, the phase structure has a simple chemical-potential interpretation. In a grey-galaxy phase, the angular-momentum component stored in the dressing is associated with a vanishing renormalized angular potential. In a dual-dressed phase, the corresponding electric potential vanishes. A growing amount of charge can then reside outside the core while the relevant potential remains pinned to its phase boundary. The rank of the dressing records how many independent charge components participate in this redistribution.
+
+This picture explains both the familiar entropy match and its predicted extensions. When the optimal point on an index line is the intersection black hole, the leading index agrees with its area-law entropy. When the optimum moves into a dressed phase, the entropy is instead set by a different core whose remaining charges are supplied by the exterior excitations. The nine-phase index diagram is therefore the projection of a richer eleven-phase ground-state problem, with the index retaining four independent combinations of the five conserved charges.
 :::
 
-::: {.paper-references}
-**Source:** [arXiv:2501.17217](https://arxiv.org/abs/2501.17217), especially §§1–6 and Appendix A. Equations above reproduce original equations (8), (9), (10), and (43); illustrations reproduce original Figures 2 and 1. The prose is an explanatory summary of the paper.
-
-**Related work:** [Phases of Supersymmetric Ground States in $AdS_4$](2510.16274.qmd) · [Allowable Complex Black Holes](2602.05979.qmd).
-:::
 :::

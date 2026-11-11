@@ -1,0 +1,78 @@
+---
+title: "Applied Data Science"
+description: "Satellite observations, geospatial data, and time-series modeling: the Permian flaring project from the Erdős Institute Data Science Boot Camp."
+body-classes: data-science-page
+lightbox: true
+---
+
+[Earth observation & time series]{.eyebrow}
+
+::: {.page-intro}
+I completed the Erdős Institute’s Summer 2026 Data Science Boot Camp, working in a four-person team on satellite-based monitoring of gas flaring in the Permian Basin. The project brought together geospatial data processing and time-series modeling to estimate flaring ahead of delayed regulatory reports.
+:::
+
+::: {.project-story}
+
+## Flaring in the Permian: What Satellites See vs What Operators Report
+
+[Summer 2026 · Erdős Institute · Team project]{.entry-meta}
+
+Texas operators report vented and flared gas volumes to the Railroad Commission of Texas, but the figures arrive with a delay and remain subject to revision. Satellites observe the heat emitted by the same flares independently of those filings. We asked whether this signal could estimate current flaring before the official figures became available, and whether it could also help predict oil production.
+
+::: {.project-resource-links}
+[Project repository ↗](https://github.com/Erdos-Projects/summer26-permian-flaring){.paper-link} [Executive summary ↗](https://github.com/Erdos-Projects/summer26-permian-flaring/blob/main/presentation/Erdos_Executive_Summary.pdf){.paper-link} [Presentation ↗](https://github.com/Erdos-Projects/summer26-permian-flaring/blob/main/presentation/permian_project.pptx){.paper-link}
+:::
+
+### Building a matched dataset
+
+We combined VIIRS Nightfire satellite observations from the Earth Observation Group with Texas regulatory production and gas-disposition records. Preparing a common dataset required several steps:
+
+- Aggregate satellite radiant heat to monthly observations and normalize by the number of clear satellite observations, with a mask for the August 2022 satellite outage.
+- Join lease-level production records to well identifiers and geographic coordinates. Allocate each lease’s reported volumes uniformly across its wells, making the allocation assumption explicit.
+- Assign wells to the satellite flare-site footprints containing them, then assemble a panel of matched site and month observations.
+
+This matching step matters because satellite flare-site footprints cover only part of the basin’s production. It defines the sample on which the satellite and regulatory signals can be compared.
+
+### Estimating flared gas before the official release
+
+An **ARIMAX(1,1,1)** model combines the recent history of reported flaring with satellite radiant heat as an additional predictor. We evaluated both a current-month nowcast using that month’s satellite observations and a one-month-ahead forecast. In a **92-month walk-forward backtest**, each prediction used the preceding training window, followed by a monthly update of the model.
+
+::: {.project-finding}
+**56.5% → 68.5% directional accuracy**
+
+Adding the satellite signal improved the model’s ability to predict whether flaring would rise or fall by **12 percentage points**, compared with ARIMA without satellite data, over January 2018–August 2025. The evaluation used final revised regulatory volumes.
+:::
+
+![Figure 1. Reported vented and flared gas volumes (black) are compared with predictions from ARIMAX using satellite data (red), ARIMA without satellite data (blue), ordinary least squares regression (orange), and the previous month’s volume (grey). Shaded bands show the ARIMA and ARIMAX 95% intervals. Gas volume is measured in thousands of cubic feet (MCF). ([Project](https://github.com/Erdos-Projects/summer26-permian-flaring))](assets/projects/permian-flaring/flaring-walk-forward.png){fig-alt="Monthly reported gas volumes and walk-forward model predictions, showing how the satellite-assisted ARIMAX follows changes in flaring."}
+
+The comparison also shows why the temporal structure matters. Ordinary least squares captures much of the direction of change but has substantially larger absolute errors. Combining the satellite measurement with an autoregressive component helps anchor the predicted level to the system’s recent behavior. XGBoost provided another comparison, with weaker performance during the largest surges.
+
+### Why flaring does not provide a stable oil-production proxy
+
+The proposed path to oil production passed through several physical relationships: satellite heat measures flaring, flaring is a fraction of casinghead gas, and gas production is related to oil production. The latter relationships changed over the study period. As new pipelines became available around 2019–2020, the flared fraction fell to roughly 2%, while the gas-to-oil ratio more than doubled.
+
+![Figure 2. Monthly oil production (blue, left axis, in barrels) and satellite radiant heat (red, right axis) rise together before 2019, then follow different paths. The two vertical axes have different units. Their changing relationship explains why a model calibrated during the early growth period does not provide a stable oil-production estimate later. ([Project](https://github.com/Erdos-Projects/summer26-permian-flaring))](assets/projects/permian-flaring/oil-and-radiant-heat.png){fig-alt="Oil production and satellite radiant heat over time, with different trends after the 2019 peak in flaring."}
+
+Oil forecasts therefore showed little consistent improvement over models using oil’s own history. The useful satellite signal is an early estimate of **flaring itself**. That distinction helps identify where satellite monitoring can inform infrastructure planning and environmental monitoring without treating a changing flaring-to-production relationship as a fixed conversion.
+
+**Team:** Abhishek Koparde, Amey Joshi, Sabarenath Jayaprakash, and Vineeth Krishna Talasila.
+
+## Training & certificate
+
+::: {.certificate-block}
+[Certificate of completion]{.eyebrow}
+
+### Erdős Institute Data Science Boot Camp
+
+Summer 2026 · Issued 20 July 2026
+
+Completed the boot camp with the Permian flaring team project described above.
+
+[View my certificate ↗](https://www.erdosinstitute.org/certificates/summer-2026/data-science-boot-camp/vineeth-krishna-talasila/f3b7e378-e702-4455-9dc4-88e1db450e9f){.button-link}
+:::
+
+:::
+
+::: {.page-next}
+[Academic research →](research.qmd){.text-link} · [GitHub ↗](https://github.com/vineethktalasila){.text-link}
+:::

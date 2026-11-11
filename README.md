@@ -23,7 +23,7 @@ python3 scripts/check_site.py
 
 Python 3.9 or newer is needed only for the checker. `environment.yml` is an optional minimal Python environment. The build goes into `_site/`. The deployment workflow regenerates it from the source files; edit the `.qmd` files rather than the rendered HTML. Never publish the repository root as the built site: it contains source, documentation, and development files.
 
-The checker examines the fourteen rendered pages, internal links and anchors, metadata, image descriptions, required deployment files, and common accidental personal-contact patterns. It is a useful check, not a substitute for reviewing new content before publishing.
+The checker examines the fifteen rendered pages, internal links and anchors, metadata, image descriptions, required deployment files, and common accidental personal-contact patterns. It is a useful check, not a substitute for reviewing new content before publishing.
 
 ## Editing guide
 
@@ -34,15 +34,18 @@ The checker examines the fourteen rendered pages, internal links and anchors, me
 | `publications.qmd` | Paper records, extended-summary links, journal/arXiv links, and talks |
 | `papers/*.qmd` | Nine extended paper summaries with source equations and figures |
 | `assets/papers/` | Original paper figures and their provenance manifest |
-| `cv.qmd` | Public academic CV; browser print / Save as PDF button |
+| `cv.qmd` | Public academic CV and PDF download |
+| `assets/vineeth-krishna-talasila-cv.pdf` | Supplied CV with phone removed and website email substituted |
+| `data-science.qmd` | Permian flaring project, results, resources, and Erdős certificate |
+| `assets/projects/permian-flaring/` | Original project plots and source manifest |
 | `styles.css` | Colors, typography, responsive layout, and print layout |
 | `assets/profile.jpeg` | Resized, re-encoded public portrait |
-| `assets/site.js` | Progressive enhancement: publication search and CV printing |
+| `assets/site.js` | Progressive enhancement: publication search |
 | `_quarto.yml` | Navigation, metadata, domain, and build resources |
 | `.github/workflows/publish.yml` | Build checks on pull requests; deploy on pushes to `main` |
 | `scripts/check_site.py` | Checks the actual `_site` output |
 
-The publication count is calculated automatically from the paper entries. Update the home page's recent papers separately when appropriate. All papers and contact links work without JavaScript; search and the print button appear when JavaScript is available. Browser printing is also available from the browser menu.
+The publication count is calculated automatically from the paper entries. Update the home page's recent papers separately when appropriate. All papers and contact links work without JavaScript; search appears when JavaScript is available. The CV download is a regular link and works without JavaScript. Browser printing is also available from the browser menu.
 
 To change the domain later, update `_quarto.yml`, `CNAME`, and `robots.txt`, then change the GitHub Pages custom-domain setting and DNS. GitHub Actions deployments use the domain in **repository Settings → Pages**; GitHub ignores `CNAME` files for this publishing method. The included `CNAME` documents the intended domain and supports a future branch-based setup. [GitHub's explanation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/troubleshooting-custom-domains-and-github-pages).
 
@@ -119,7 +122,7 @@ Confirm these behaviors in a browser:
 - `https://vineethkrishnat.com` opens the home page.
 - `https://www.vineethkrishnat.com` redirects to the bare domain.
 - The old `github.io` address redirects to the custom domain.
-- Navigation, portrait, publication links, publication search, and the CV print action work.
+- Navigation, portrait, publication links, publication search, and the CV download work.
 - An unknown URL shows the custom 404 page.
 
 With both DNS names configured, GitHub handles the `www` redirect. [Supported domain behavior](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages).
@@ -128,7 +131,7 @@ If the domain fails, check that all website records are DNS only, the GitHub Pag
 
 ## Content and privacy notes
 
-This revision removes the home address, phone numbers, personal email addresses, grades, fellowship monetary amounts, and machine-specific environment paths from current public source. The public contact address is `contact@vineethkrishnat.com`, with a separate university profile link. This address is explicitly allowed by the public-content checker; other email addresses remain flagged. The website provides a mail link; mailbox or forwarding configuration is managed separately by the domain owner. The portrait was resized and re-encoded, with EXIF and embedded metadata checked separately. No analytics, contact-form service, or cookie-based tracking were added by this project. Mathematical typesetting loads MathJax and its mathematical fonts from jsDelivr; the site’s general text uses system fonts.
+The web pages omit home addresses, phone numbers, personal email addresses, grades, fellowship monetary amounts, and machine-specific environment paths. The downloadable CV follows the separately confirmed setting: remove only the phone number and replace the U-M email with the website email; retain the rest of the supplied PDF. The public contact address is `contact@vineethkrishnat.com`, with a separate university profile link. This address is explicitly allowed by the public-content checker; other email addresses remain flagged. The website provides a mail link; mailbox or forwarding configuration is managed separately by the domain owner. The portrait was resized and re-encoded, with EXIF and embedded metadata checked separately. No analytics, contact-form service, or cookie-based tracking were added by this project. Mathematical typesetting loads MathJax and its mathematical fonts from jsDelivr; the site’s general text uses system fonts.
 
 **Existing Git history still contains the old versions.** These changes do not erase previous commits, GitHub caches, other clones, or information already published elsewhere. If the old contact details were pushed publicly, review the repository's history before sharing it widely. Removing historical copies is a separate, disruptive Git-history operation and was not performed here.
 
@@ -158,8 +161,14 @@ The research-interest heading shares the word “Quantum” across “Informatio
 
 Each of the nine publication titles opens a dedicated page in `papers/`, with three explanatory sections, LaTeX equations, and two figures from that paper. The Research page gives a two-column introduction and reuses four of those original figures. On small screens the columns stack. Figures can be opened for closer inspection. Math is rendered by Quarto with MathJax.
 
-`assets/papers/sources.json` records the arXiv version URL, original figure identifier, original caption, and local filename for every illustration. The images were downloaded from the papers' arXiv HTML representations; no scientific figure was generated or redrawn. Equation references and original figure numbers appear on each page. The summaries distinguish conjectures and numerical evidence from established results and state the assumptions relevant to the interpretation. These are explanatory summaries, not new results.
+`assets/papers/sources.json` records the arXiv version URL, original figure identifier, original caption, and local filename for every illustration. The images were downloaded from the papers' arXiv HTML representations; no scientific figure was generated or redrawn. Equations are presented directly in the summaries. Captions are numbered in reading order on each page and link to the source paper; the manifest retains the original paper figure numbers. The summaries distinguish conjectures and numerical evidence from established results and state the assumptions relevant to the interpretation. These are explanatory summaries, not new results.
 
 Paper pages use a readable single column online. Their three main sections begin on separate pages when printed, with compact figure sizing for a roughly three-page reading format. Exact pagination depends on the browser, paper size, and print settings. Use the browser's Print / Save as PDF command if needed.
 
 When adding a paper, create its summary in `papers/`, add the entry and summary link in `publications.qmd`, place source figures under `assets/papers/<arXiv-ID>/`, and extend the provenance manifest. `_quarto.yml` renders all `papers/*.qmd` files, and the checker includes them automatically. Review formulas against the cited version before publishing changes.
+
+## CV download and applied data science
+
+The CV button downloads `assets/vineeth-krishna-talasila-cv.pdf`, prepared from the supplied November 2026 CV. Only the phone contact was removed and the email was changed to `contact@vineethkrishnat.com`, following the requested public-download settings; other PDF content was retained. The on-page CV incorporates its 2025 PhD completion year, research interests, technical skills, and outreach activities. New talks and posters appear on the Publications page. When replacing the PDF later, keep this filename so existing download links continue to work.
+
+The Applied Data Science page describes the Permian flaring team project from the Erdős Institute Summer 2026 Data Science Boot Camp. It links to the public repository, executive summary, presentation, and official certificate. The certificate belongs on this page, not in the academic CV. Result figures are copied from the project repository, with paths recorded in `assets/projects/permian-flaring/sources.json`. The reported directional-accuracy change is 56.5% to 68.5%, a 12 percentage point increase over the satellite-free ARIMA baseline. Project content follows the executive summary, presentation, certificate, and linked repository.

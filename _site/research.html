@@ -128,6 +128,10 @@ window.Quarto = {
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./data-science.html"> 
+<span class="menu-text">Data Science</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
@@ -183,7 +187,7 @@ window.Quarto = {
 
 <p><span class="eyebrow">Information, geometry &amp; gravity</span></p>
 <div class="page-intro">
-<p>My research explores how quantum information is reflected in spacetime geometry and how holography describes the quantum states of black holes. The two directions below connect the organization of quantum correlations with the gravitational structures that encode them. The equations and illustrations are reproduced from the linked papers; the individual paper pages explain the constructions and their limits in more detail.</p>
+<p>I study multipartite entanglement in holography, developing measures of quantum correlations shared among several subsystems and understanding their geometric descriptions. In a separate direction, I construct new black hole solutions in AdS/CFT and study their thermodynamics and phase transitions, including configurations with charge or angular momentum outside the horizon.</p>
 </div>
 <div class="research-topics">
 <section id="quantum-information" class="level2 research-topic">
@@ -191,30 +195,30 @@ window.Quarto = {
 <section id="entanglement" class="level3">
 <h3 data-anchor-id="entanglement">From two subsystems to many</h3>
 <p>Entanglement entropy measures quantum correlations across a division into two parts. In a pure state with three or more subsystems, there are additional ways for correlations to be shared. Grouping parties together can hide this structure: the entropies of individual subsystems need not capture every invariant of the full state. My work develops measures that treat the multiple parties together and asks how their algebraic structure appears in gravity.</p>
-<p>The starting point is the replica method. For a bipartite system, copies of a reduced density matrix are joined cyclically, and the resulting contraction gives a Rényi entropy. The multi-entropy construction instead uses a lattice of replicas, with a separate cyclic permutation associated with each party. Its Rényi version is defined in <a href="./papers/2206.09723.html">equation (14) of the original paper</a>:</p>
+<p>The starting point is the replica method. For a bipartite system, copies of a reduced density matrix are joined cyclically, and the resulting contraction gives a Rényi entropy. The multi-entropy construction instead uses a lattice of replicas, with a separate cyclic permutation associated with each party. The resulting <a href="./papers/2206.09723.html">Rényi multi-entropy</a> is</p>
 <p><span class="math display">\[
 S^{({\mathtt{q}})}_{n}\equiv\frac{1}{1-n}{\rm Log}\,({\mathcal{Z}}_{n}^{({\mathtt{q}})}/({\mathcal{Z}}_{1}^{({\mathtt{q}})})^{n^{{\mathtt{q}}-1}}).
 \]</span></p>
 <p>Here <span class="math inline">\(\mathtt{q}\)</span> counts the parties, <span class="math inline">\(n\)</span> is the replica parameter, and <span class="math inline">\(\mathcal{Z}^{(\mathtt{q})}_n\)</span> is the specified contraction of copies of the state and its conjugate. The normalization removes dependence on the norm of the state. The construction reduces to the familiar Rényi entropy for two parties, while retaining information about more general multipartite correlations.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/papers/2206.09723/rho3.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Original Figure 2 from arXiv:2206.09723: graphical notation for the three-party density matrix and the contraction defining \mathcal{Z}^{(3)}_4."><img src="assets/papers/2206.09723/rho3.svg" class="img-fluid figure-img" alt="The three-party density matrix and the replica contraction used to define multi-entropy."></a></p>
-<figcaption>Original Figure 2 from <a href="https://arxiv.org/abs/2206.09723">arXiv:2206.09723</a>: graphical notation for the three-party density matrix and the contraction defining <span class="math inline">\(\mathcal{Z}^{(3)}_4\)</span>.</figcaption>
+<p><a href="assets/papers/2206.09723/rho3.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure 1. A three-party state can be represented by a density matrix (left). Joining copies of this matrix in a periodic lattice (right) gives the contraction \mathcal{Z}^{(3)}_4 used to define multi-entropy. The lattice labels replicas of the state. (arXiv:2206.09723)"><img src="assets/papers/2206.09723/rho3.svg" class="img-fluid figure-img" alt="The three-party density matrix and the replica contraction used to define multi-entropy."></a></p>
+<figcaption>Figure 1. A three-party state can be represented by a density matrix (left). Joining copies of this matrix in a periodic lattice (right) gives the contraction <span class="math inline">\(\mathcal{Z}^{(3)}_4\)</span> used to define multi-entropy. The lattice labels replicas of the state. (<a href="https://arxiv.org/abs/2206.09723">arXiv:2206.09723</a>)</figcaption>
 </figure>
 </div>
-<p>The continuation toward one replica defines multi-entropy itself, as in equation (17) of the same paper:</p>
+<p>Continuing the replica parameter toward one defines multi-entropy itself:</p>
 <p><span class="math display">\[
 S^{({\mathtt{q}})}={\rm lim}_{n\to{1}}\,S^{({\mathtt{q}})}_{n}.
 \]</span></p>
-<p>Analytic continuation is a substantive part of the prescription. One cannot infer its existence or uniqueness just from the integer-replica definition. A related question is whether these quantities decrease when two parties are merged. Work on the <a href="./papers/2308.16247.html">monotonicity conjecture</a> proves particular cases and develops evidence for others, while leaving the general statement conjectural.</p>
+<p>This continuation relates the integer-replica contractions to a continuous entropy-like quantity. A related question is how these quantities change when two parties are merged. Work on the <a href="./papers/2308.16247.html">monotonicity conjecture</a> proves particular cases and develops evidence for others, while leaving the general statement conjectural.</p>
 </section>
 <section id="holography" class="level3">
 <h3 data-anchor-id="holography">Replica symmetry and bulk geometry</h3>
 <p>In holography, a quantum field theory admits a gravitational description in one higher dimension. Ordinary entanglement entropy is encoded by an extremal area. The multipartite problem suggests a richer structure: networks of surfaces that partition the bulk into chambers, with junctions where surfaces meet. The replica construction determines the gluing of boundary regions; a compatible bulk saddle must implement that gluing geometrically.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/papers/2304.06082/setup.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Original Figure 12 from arXiv:2304.06082: boundary regions \mathcal{R}_{\mathtt a}, bulk chambers \mathcal{C}_{\mathtt a}, and the walls separating them."><img src="assets/papers/2304.06082/setup.svg" class="img-fluid figure-img" alt="Boundary regions and bulk chambers separated by a network of walls."></a></p>
-<figcaption>Original Figure 12 from <a href="https://arxiv.org/abs/2304.06082">arXiv:2304.06082</a>: boundary regions <span class="math inline">\(\mathcal{R}_{\mathtt a}\)</span>, bulk chambers <span class="math inline">\(\mathcal{C}_{\mathtt a}\)</span>, and the walls separating them.</figcaption>
+<p><a href="assets/papers/2304.06082/setup.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure 2. Boundary regions \mathcal{R}_{\mathtt a} are associated with bulk chambers \mathcal{C}_{\mathtt a}. The walls separating neighboring chambers form a network of surfaces, with labels fixed by the replica permutations of the adjacent regions. (arXiv:2304.06082)"><img src="assets/papers/2304.06082/setup.svg" class="img-fluid figure-img" alt="Boundary regions and bulk chambers separated by a network of walls."></a></p>
+<figcaption>Figure 2. Boundary regions <span class="math inline">\(\mathcal{R}_{\mathtt a}\)</span> are associated with bulk chambers <span class="math inline">\(\mathcal{C}_{\mathtt a}\)</span>. The walls separating neighboring chambers form a network of surfaces, with labels fixed by the replica permutations of the adjacent regions. (<a href="https://arxiv.org/abs/2304.06082">arXiv:2304.06082</a>)</figcaption>
 </figure>
 </div>
 <p>The <a href="./papers/2304.06082.html">classification program</a> studies more general permutation contractions and the finite groups organizing their replica symmetries. The subsequent <a href="./papers/2411.00935.html">bulk replica symmetry analysis</a> asks when those symmetries can extend to a smooth covering geometry. This constrains which proposed networks admit a symmetric gravitational realization. The goal is to identify the quantum observables and the geometric assumptions required for each correspondence, including the possibility that a dominant saddle breaks replica symmetry.</p>
@@ -231,41 +235,33 @@ S^{({\mathtt{q}})}={\rm lim}_{n\to{1}}\,S^{({\mathtt{q}})}_{n}.
 </section>
 <section id="black-holes" class="level2 research-topic">
 <h2 data-anchor-id="black-holes">Black Holes and Holography</h2>
-<section id="which-states-dominate" class="level3">
-<h3 data-anchor-id="which-states-dominate">Which states dominate?</h3>
-<p>A black hole with specified charges is one possible way to organize the states of a gravitational system. It need not be the configuration with the greatest entropy. In anti-de Sitter space, additional charge or angular momentum can reside outside a central black hole, producing phases that combine a black-hole core with a surrounding gas or condensate. My work investigates when these configurations dominate and how their transitions appear in the dual quantum theory.</p>
-<p>Supersymmetry makes this problem more tractable by imposing an energy bound. In the two-charge <span class="math inline">\(AdS_4\)</span> setting, <a href="./papers/2510.16274.html">equation (1) of the ground-state phases paper</a> reads:</p>
+<section id="black-holes-with-charge-outside-the-horizon" class="level3">
+<h3 data-anchor-id="black-holes-with-charge-outside-the-horizon">Black holes with charge outside the horizon</h3>
+<p>In anti-de Sitter space, a black hole can share its conserved charges with matter outside its horizon. I study such configurations in AdS/CFT and determine which phase has the largest entropy at fixed energy, charge, and angular momentum. The resulting phase diagrams describe new equilibrium states of the dual quantum field theory.</p>
+<p>A central example is a <strong>dual dressed black hole</strong>: a black-hole core surrounded by a small number of large dual giant gravitons. These expanded branes carry electric charge, while the core supplies the leading entropy. The <a href="./papers/2409.18178.html">charged-superradiance study</a> constructs these configurations in <span class="math inline">\(AdS_5\times S^5\)</span> and analyzes how they arise when a charged black hole becomes unstable. Entropy maximization determines how the total charge is divided between the core and its dressing.</p>
+<p><strong>Grey galaxies</strong> provide a rotational counterpart, with angular momentum carried by a distant gas. Together, charged and rotational dressing extend the supersymmetric ground-state phases beyond the family of isolated black holes. In the <a href="./papers/2510.16274.html">two-charge <span class="math inline">\(AdS_4\)</span> analysis</a>, supersymmetric states saturate the energy bound</p>
 <p><span class="math display">\[
 E\ell\geq J+2(Q_{1}\ell+Q_{2}\ell)~.
 \]</span></p>
-<p>Here <span class="math inline">\(\ell\)</span> is the AdS radius, <span class="math inline">\(E\)</span> is energy, <span class="math inline">\(J\)</span> is angular momentum, and <span class="math inline">\(Q_1,Q_2\)</span> are electric charges. States saturating this bound are BPS. Regular single-center supersymmetric black holes obey a further nonlinear relation between their charges, so they occupy a restricted surface in charge space. A core-plus-gas configuration can extend the family of candidate ground states beyond that surface.</p>
+<p>Here <span class="math inline">\(\ell\)</span> is the AdS radius, <span class="math inline">\(E\)</span> is energy, <span class="math inline">\(J\)</span> is angular momentum, and <span class="math inline">\(Q_1,Q_2\)</span> are electric charges. Regular single-center supersymmetric black holes satisfy a further nonlinear charge relation, forming a surface in charge space. Combining a core with an additional gas produces distinct phases on either side of that surface.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/papers/2510.16274/bhsheet.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Original Figure 1 from arXiv:2510.16274: the black-hole sheet, including its folded region. The translucent foreground reveals the second branch."><img src="assets/papers/2510.16274/bhsheet.png" class="img-fluid figure-img" alt="The supersymmetric black-hole sheet in the charge and angular-momentum space of the AdS4 analysis."></a></p>
-<figcaption>Original Figure 1 from <a href="https://arxiv.org/abs/2510.16274">arXiv:2510.16274</a>: the black-hole sheet, including its folded region. The translucent foreground reveals the second branch.</figcaption>
+<p><a href="assets/papers/2510.16274/bhsheet.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure 3. Supersymmetric single-center black holes lie on a curved sheet in the space of electric-charge densities and angular momentum. The translucent foreground shows where the sheet folds over into a second branch. Configurations containing a core and a gas extend the phase diagram beyond this sheet. (arXiv:2510.16274)"><img src="assets/papers/2510.16274/bhsheet.png" class="img-fluid figure-img" alt="The supersymmetric black-hole sheet, with its folded branch visible through the translucent foreground."></a></p>
+<figcaption>Figure 3. Supersymmetric single-center black holes lie on a curved sheet in the space of electric-charge densities and angular momentum. The translucent foreground shows where the sheet folds over into a second branch. Configurations containing a core and a gas extend the phase diagram beyond this sheet. (<a href="https://arxiv.org/abs/2510.16274">arXiv:2510.16274</a>)</figcaption>
 </figure>
 </div>
-<p>The <a href="./papers/2409.18178.html">charged-superradiance study</a> develops dual dressed black holes as candidate endpoints of an instability in <span class="math inline">\(AdS_5\)</span>. The <a href="./papers/2501.17217.html">grey-galaxy and index study</a> connects several dressed phases to the superconformal index. This index is a protected, signed count of states: cancellations mean that its entropy need not simply equal the total number of supersymmetric states. Keeping these two counting problems distinct is essential to understanding the proposed phase diagrams.</p>
 </section>
-<section id="which-geometries-belong-in-the-sum" class="level3">
-<h3 data-anchor-id="which-geometries-belong-in-the-sum">Which geometries belong in the sum?</h3>
-<p>The same question has a Euclidean formulation. A path-integral computation sums over geometries and matter fields. <a href="./papers/2602.05979.html">Equation (1) of the complex-black-hole paper</a> expresses the starting point as</p>
-<p><span class="math display">\[
-\mathcal{Z}=\int\mathcal{D}g_{\mu\nu}\mathcal{D}\Psi\,e^{-I_{E}[g_{\mu\nu},\Psi]}~,
-\]</span></p>
-<p>where <span class="math inline">\(I_E\)</span> is the Euclidean action. The supersymmetric black-hole saddles relevant to the index have complex metrics. Solving the equations of motion therefore leaves an additional question: which complex geometries are admissible in the integral?</p>
-<p>The Kontsevich–Segal–Witten criterion tests convergence of auxiliary matter kinetic terms on a complex geometry. In a suitable diagonal basis, its condition is <a href="./papers/2602.05979.html">equation (20) of the same paper</a>:</p>
-<p><span class="math display">\[
-\sum_i|\arg\lambda_i|&lt;\pi~.
-\]</span></p>
-<p>The <span class="math inline">\(\lambda_i\)</span> are the diagonal metric entries in that basis. The test must hold throughout spacetime. For the studied <span class="math inline">\(AdS_5\)</span> family, analytic asymptotic calculations and numerical bulk checks find agreement between admissibility and the convergence region of the boundary index.</p>
+<section id="phase-transitions-and-the-superconformal-index" class="level3">
+<h3 data-anchor-id="phase-transitions-and-the-superconformal-index">Phase transitions and the superconformal index</h3>
+<p>The superconformal index is a protected, signed count of quantum states. Its charge combinations group states along lines in charge space. A new dressed configuration can dominate the leading entropy on such a line, changing the phase predicted for the index. In the <a href="./papers/2501.17217.html">grey-galaxy and index study</a>, an entropy-maximization prescription, together with the unobstructed saddle conjecture, predicts nine index phases. The numerical index provides an independent test of those predictions.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="assets/papers/2602.05979/KSWinf.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Original Figure 1 from arXiv:2602.05979: imposing the test at every polar angle selects the region bounded by the red curves, matching index convergence."><img src="assets/papers/2602.05979/KSWinf.png" class="img-fluid figure-img" alt="Three slices of the region allowed by the asymptotic one-form test, with the boundaries of index convergence marked in red."></a></p>
-<figcaption>Original Figure 1 from <a href="https://arxiv.org/abs/2602.05979">arXiv:2602.05979</a>: imposing the test at every polar angle selects the region bounded by the red curves, matching index convergence.</figcaption>
+<p><a href="assets/papers/2501.17217/N10GG.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure 4. Numerical index entropy at N=10 (red points) is compared with the single-black-hole prediction (blue) and the grey-galaxy prediction (orange), as the angular-momentum imbalance j_R varies at fixed index-charge combination. The combined solid curve follows the black-hole branch before changing to the grey-galaxy branch, matching the trend in the numerical data. (arXiv:2501.17217)"><img src="assets/papers/2501.17217/N10GG.svg" class="img-fluid figure-img" alt="Red numerical index data compared with blue single-black-hole and orange grey-galaxy entropy predictions."></a></p>
+<figcaption>Figure 4. Numerical index entropy at <span class="math inline">\(N=10\)</span> (red points) is compared with the single-black-hole prediction (blue) and the grey-galaxy prediction (orange), as the angular-momentum imbalance <span class="math inline">\(j_R\)</span> varies at fixed index-charge combination. The combined solid curve follows the black-hole branch before changing to the grey-galaxy branch, matching the trend in the numerical data. (<a href="https://arxiv.org/abs/2501.17217">arXiv:2501.17217</a>)</figcaption>
 </figure>
 </div>
-<p>Failure near the asymptotic boundary is consistent with the appearance of a distant angular-momentum-carrying gas. This provides a diagnostic for a change of phase, without constructing the complete replacement saddle. The criterion also has limits: in the related two-charge <span class="math inline">\(AdS_4\)</span> setting it misses an instability. Comparing these examples helps distinguish a successful test within one family from a universal rule for gravitational path integrals.</p>
+<p>The change from the blue branch to the orange branch is a direct signature of the proposed phase transition. The finite-<span class="math inline">\(N\)</span> data follow the trend expected from the leading large-<span class="math inline">\(N\)</span> calculation, showing how configurations with matter outside the horizon change the microscopic count. The distinction between entropy at fixed charges and the signed index is central to this comparison.</p>
+<p>I also study the Euclidean gravitational description of these transitions. Supersymmetric black holes contribute complex saddles to the path integral. The <a href="./papers/2602.05979.html">complex-black-hole analysis</a> applies the Kontsevich–Segal–Witten criterion to this family and finds that geometric admissibility tracks the convergence region of the boundary index. This supplies a gravitational diagnostic for the onset of grey-galaxy physics.</p>
 </section>
 <section id="explore-the-papers-1" class="level3">
 <h3 data-anchor-id="explore-the-papers-1">Explore the papers</h3>

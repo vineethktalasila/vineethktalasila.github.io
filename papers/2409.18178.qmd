@@ -16,11 +16,11 @@ toc: false
 
 A black hole in anti-de Sitter space can lose stability when it becomes favorable to transfer charge from its horizon to material outside it. The reflecting asymptotic geometry allows emitted excitations to remain in the system. The question is then thermodynamic as well as dynamical: at fixed total energy and charges, what configuration replaces the unstable black hole? This paper investigates that question in type IIB string theory on $AdS_5\times S^5$, the gravitational dual of strongly coupled $\mathcal{N}=4$ Yang–Mills theory.
 
-Earlier descriptions emphasized charged scalar condensates and hairy black holes in a five-dimensional gauged-supergravity truncation. A consistent truncation permits solutions within its retained fields, but does not guarantee stability against all fields of the full theory. The ten-dimensional theory contains an infinite tower of charged excitations. The paper shows that large dual giant gravitons provide an instability channel that is absent from the restricted description. In particular, previously proposed hairy endpoints can themselves discharge into these objects.
+Earlier descriptions emphasized charged scalar condensates and hairy black holes in a five-dimensional gauged-supergravity truncation. The ten-dimensional theory extends this description with an infinite tower of charged excitations, supplying additional channels through which the black hole can redistribute charge. The paper shows that large dual giant gravitons provide an instability channel that is absent from the restricted description. In particular, previously proposed hairy endpoints can themselves discharge into these objects.
 
 A dual giant is a D3-brane expanded into the anti-de Sitter directions while carrying angular momentum on the internal sphere. The proposed endpoint contains a central black hole and one, two, or three very large dual giants. Each giant carries charge of order $N^2$ and lies at a radial position of order $\sqrt{N}$ in AdS units. Their large separation makes a weakly interacting composite possible even though the total energy outside the horizon is macroscopic.
 
-The charge and energy bookkeeping is written in **equation (43)**:
+The charges, energy, and effective flux of the core are
 
 $$
 \begin{split}
@@ -33,20 +33,20 @@ $$
 
 Here $m$ is the number of dual giants, $Q_i^D$ their charges, and $N_{\rm eff}$ the five-form flux seen by the central black hole. The small flux reduction is important for selecting how many giants occur, even though it is subleading in the leading large-$N$ thermodynamics.
 
-![Original Figure 1 from the [paper](https://arxiv.org/abs/2409.18178): fixed-charge paths through the zero-angular-momentum phase diagram. All original panels are retained. The number of intermediate dressing phases depends on charge degeneracies.](../assets/papers/2409.18178/RNphase.svg){fig-alt="Original three-panel phase schematic showing how decreasing energy at fixed charges produces one or more dual dressed black-hole phases before the BPS limit."}
+![Figure 1. Fixed-charge paths through the zero-angular-momentum phase diagram of $\mathcal{N}=4$ Yang–Mills theory. Decreasing energy gives three dressing phases for unequal charges, two when two charges coincide, and one when all three coincide. ([arXiv:2409.18178](https://arxiv.org/abs/2409.18178))](../assets/papers/2409.18178/RNphase.svg){fig-alt="three-panel phase schematic showing how decreasing energy at fixed charges produces one or more dual dressed black-hole phases before the BPS limit."}
 
 :::
 
 ::: {.summary-section}
 ## Construction and main results
 
-The dominant entropy comes from the core horizon. Its dependence on the remaining energy, charges, angular momenta, and effective flux is summarized in **equation (44)**:
+The dominant entropy comes from the core horizon. Its dependence on the remaining energy, charges, angular momenta, and effective flux takes the form
 
 $$
 S_{BH}=N_{\rm eff}^{2}\,s_{BH}\left(\frac{E^{BH}}{N_{\rm eff}^{2}},\frac{Q_i^{BH}}{N_{\rm eff}^{2}},\frac{J_j^{BH}}{N_{\rm eff}^{2}}\right).
 $$
 
-At fixed total charges, the preferred division between core and dressing maximizes this entropy. The leading derivative, **equation (48)**, takes a particularly transparent form:
+At fixed total charges, the preferred division between core and dressing maximizes this entropy. The leading derivative takes a particularly transparent form:
 
 $$
 \frac{\partial S_{BH}}{\partial Q_i^D}=\beta(\mu_i-1),\qquad Q^{BH}<Q^{\rm tot}.
@@ -54,9 +54,9 @@ $$
 
 The inverse temperature is $\beta$, and $\mu_i$ is the core chemical potential. If a potential exceeds unity, moving the corresponding charge into a dual giant increases entropy. An interior equilibrium therefore pins that potential to unity. Channels in which no giant is present instead satisfy the appropriate endpoint condition with potential below unity. Depending on how many channels are occupied, the resulting dual dressed black holes have rank two, four, or six.
 
-The leading entropy does not determine the number of giants by itself. At the next order, the loss of effective flux reduces the central entropy. Within the proposed family, this favors the smallest number of giants needed to carry the dressing: one, two, or three in the respective phases. The paper analyzes both unequal-charge nonrotating configurations and equal-charge rotating configurations, displaying phase boundaries and competition with rotationally dressed grey galaxies.
+The next order in the entropy expansion selects the number of giants through the reduction in effective flux seen by the core. Within the proposed family, this favors the smallest number of giants needed to carry the dressing: one, two, or three in the respective phases. The paper analyzes both unequal-charge nonrotating configurations and equal-charge rotating configurations, displaying phase boundaries and competition with rotationally dressed grey galaxies.
 
-The canonical description reaches the same threshold from another direction. A dual giant becomes macroscopically occupied when a chemical potential approaches unity closely enough. **Equation (56)** gives the relevant large-$N$ scaling:
+The canonical description reaches the same threshold from another direction. A dual giant becomes macroscopically occupied when a chemical potential approaches unity closely enough. The relevant large-$N$ scaling is
 
 $$
 \mu_i=1-\frac{\chi_i}{N^2}.
@@ -65,22 +65,19 @@ $$
 The paper also studies the quantum mechanics of a giant near the black hole, including potential tunneling into the horizon. The threshold picked by that analysis agrees with the thermodynamic equilibrium condition. Approximate ten-dimensional solutions incorporate the gravitational backreaction of the large giants: their contribution to the asymptotic charges is significant, while the metric perturbation can still be handled linearly in the appropriate large-$N$ regime.
 
 
-![Original Figure 5 from the [paper](https://arxiv.org/abs/2409.18178): an equal-charge slice with $J_1=J_2=2$. The colored threshold curves distinguish charged and rotational dressing and show how a dressed state's entropy is assigned from its core.](../assets/papers/2409.18178/EQ_final_phase.svg){fig-alt="Original equal-charge, fixed-angular-momentum phase diagram showing vacuum black holes, dual dressed black holes, grey galaxies, and the BPS boundary."}
+![Figure 2. Equal-charge phase diagram at $J_1=J_2=2$. The red $\mu=1$ and black $\Omega=1$ curves separate the vacuum black-hole region from dual dressed black holes and grey galaxies; the blue line is the BPS bound. The arrow assigns the entropy of a dressed state to its core. ([arXiv:2409.18178](https://arxiv.org/abs/2409.18178))](../assets/papers/2409.18178/EQ_final_phase.svg){fig-alt="equal-charge, fixed-angular-momentum phase diagram showing vacuum black holes, dual dressed black holes, grey galaxies, and the BPS boundary."}
 :::
 
 ::: {.summary-section}
-## Interpretation and limits
+## Dressed phases and the gravitational description
 
-The main physical lesson is that a black hole need not store all of a state's conserved charges behind its horizon. A relatively simple core can coexist with distant objects carrying a substantial share of the charge. Holographically, this enlarges the candidate equilibrium phases of a familiar gauge theory. It also shows why a solution stable inside a consistent truncation may fail to describe equilibrium in the full string-theory spectrum.
+A dual dressed black hole divides the conserved charges between a central horizon and distant D3-branes. The core supplies the leading entropy, while the surrounding giants carry a macroscopic amount of charge at a small entropy cost. At fixed total charges, the equilibrium condition therefore selects a core at the chemical-potential threshold. This provides a direct geometric interpretation of the phase diagram: different regions correspond to different numbers of charge directions in which the core has reached this threshold.
 
-The proposed phase dominance is a **conjecture supported by the construction and thermodynamic analysis**, rather than a proof excluding every possible state. The approximation uses large $N$, strong coupling, a small number of widely separated dual giants, and controlled inverse-$N$ corrections. The paper explicitly leaves open the possibility of other nonlinear solutions with greater entropy. Stability against the analyzed tunneling channel does not by itself establish stability against all conceivable perturbations.
+The proposed dominance of these phases is a conjecture based on large-$N$ thermodynamics and the approximate gravitational construction at strong coupling. The displayed slices describe the regime in which the five-dimensional cores are stable against localization on the internal sphere. In the nonrotating slice, successive transitions can occur as energy decreases at fixed unequal charges. Equalities among the charges combine these transitions, producing the patterns shown in the first figure. In the rotating slice, charged dressing competes with the angular-momentum dressing of grey galaxies.
 
-The displayed phase diagrams also omit Gregory–Laflamme instabilities and the associated black holes localized in ten dimensions. Their proposed interpretation is therefore restricted to regimes where the participating five-dimensional cores are stable against that effect. Completing the full charge-and-angular-momentum phase diagram, understanding the corresponding microscopic states, and constructing more general nonlinear dressed solutions remain further tasks. These qualifications preserve the distinction between the explicit approximate solutions and the broader equilibrium picture they motivate.
+The large radius of a giant explains how this composite remains tractable. Locally, its gravitational field is weak at large $N$. At distances where its full energy and charge contribute to the asymptotic fields, the normalizable perturbation has already decayed strongly. Linearized backreaction can consequently capture a substantial change in the boundary charges. Combining this perturbation with the central black-hole geometry yields the approximate ten-dimensional dressed solutions, with corrections controlled by inverse powers of $N$.
+
+The quantum probe calculation complements this spacetime picture by examining the exchange of a giant with the horizon. Its stability threshold matches the condition obtained by entropy maximization, connecting microscopic brane dynamics to macroscopic equilibrium. Near supersymmetry, a core with nonzero horizon entropy can coexist with supersymmetric dressing. The resulting configurations motivate a microscopic account of how black-hole states and brane degrees of freedom contribute together to the spectrum of the dual gauge theory.
+
 :::
-:::
-
-::: {.paper-references}
-Source: [arXiv:2409.18178](https://arxiv.org/abs/2409.18178), especially sections 1, 3, 5–7; equations (43), (44), (48), and (56); original Figures 1 and 5.
-
-Related work: [Supersymmetric grey galaxies and dual dressed black holes](2501.17217.qmd) · [Supersymmetric ground states in AdS₄](2510.16274.qmd).
 :::

@@ -1,11 +1,12 @@
 ---
 title: "Publications"
-description: "Papers and selected presentations by theoretical physicist Vineeth Krishna Talasila, publishing as Vineeth Krishna."
+description: "Research publications, talks, and posters by Vineeth Krishna Talasila."
+body-classes: publications-page
 ---
 
 [Research papers & presentations]{.eyebrow}
 
-I publish as **Vineeth Krishna**. Papers are ordered by their **first arXiv submission date**, most recent first. Select a paper title to read an extended summary with equations and figures from the original work. Journal references and links are included where available. [View my INSPIRE profile ↗](https://inspirehep.net/authors/2170399?ui-citation-summary=true){.text-link}
+Papers are ordered by their **first arXiv submission date**, most recent first. Select a paper title to read an extended summary with equations and figures from the original work. Journal references and links are included where available. [View my INSPIRE profile ↗](https://inspirehep.net/authors/2170399?ui-citation-summary=true){.text-link}
 
 ## Papers
 
@@ -140,6 +141,38 @@ Pranshu Mandal, Devansh Agarwal, Pratik Kumar, Anjali Yelikar, Kanchan Soni, and
 ## Selected talks
 
 ::: {.talk-entry}
+[November 2026 · Physics department seminar]{.entry-meta}
+
+### Multi-component Black Holes: New Phases of Quantum Gravity
+
+University of Hyderabad, India.
+:::
+
+::: {.talk-entry}
+[October 2026 · Leinweber postdoc meeting]{.entry-meta}
+
+### Multi-component Black Holes: New Phases of Quantum Gravity
+
+MIT, USA.
+:::
+
+::: {.talk-entry}
+[November 2025 · Group seminar]{.entry-meta}
+
+### Multipartite Entanglement in Holography
+
+Virginia Tech, USA.
+:::
+
+::: {.talk-entry}
+[April 2025 · HET seminar]{.entry-meta}
+
+### New (Non-)Supersymmetric Phases of $\mathcal{N}=4$ SYM
+
+Kavli Institute for Theoretical Sciences, University of Chinese Academy of Sciences, China.
+:::
+
+::: {.talk-entry}
 [January 2024 · Department seminar]{.entry-meta}
 
 ### New measures of multi-partite entanglement and their holographic duals
@@ -161,6 +194,48 @@ IIT Bombay, India.
 ### Supersymmetric Grey Galaxies and Revolving Black Holes
 
 SISSA, Trieste; University of Milano-Bicocca; and the ICTP Workshop on String Theory, Holography and Black Holes (Gong Show), Trieste, Italy.
+:::
+
+::: {.talk-entry}
+[August 2022 · STMP Journal Club]{.entry-meta}
+
+### New multipartite entanglement measure and its holographic dual
+
+Tata Institute of Fundamental Research, Mumbai, India.
+:::
+
+::: {.talk-entry}
+[June 2022 · STMP Journal Club]{.entry-meta}
+
+### Multiboundary wormholes and holographic entanglement
+
+Tata Institute of Fundamental Research, Mumbai, India.
+:::
+
+## Posters
+
+::: {.talk-entry}
+[September 2023 · In person]{.entry-meta}
+
+### Supersymmetric Grey Galaxies and Revolving Black Holes
+
+Quantum Information, Quantum Matter and Quantum Gravity, Yukawa Institute for Theoretical Physics, Kyoto, Japan.
+:::
+
+::: {.talk-entry}
+[August 2023 · Online]{.entry-meta}
+
+### Towards classification of holographic multi-partite entanglement measures
+
+It from Qubit, Perimeter Institute.
+:::
+
+::: {.talk-entry}
+[January 2023 · In person]{.entry-meta}
+
+### New multipartite entanglement measure and its holographic dual
+
+17th Kavli Asian Winter School on Strings, Particles and Cosmology, Institute for Basic Science, Daejeon, Korea.
 :::
 
 ::: {.page-next}

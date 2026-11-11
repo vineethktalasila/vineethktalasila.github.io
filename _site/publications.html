@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Papers and selected presentations by theoretical physicist Vineeth Krishna Talasila, publishing as Vineeth Krishna.">
+<meta name="description" content="Research publications, talks, and posters by Vineeth Krishna Talasila.">
 
 <title>Publications – Vineeth Krishna Talasila</title>
 <style>
@@ -59,19 +59,48 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Publications – Vineeth Krishna Talasila">
-<meta property="og:description" content="Papers and selected presentations by theoretical physicist Vineeth Krishna Talasila, publishing as Vineeth Krishna.">
+<meta property="og:description" content="Research publications, talks, and posters by Vineeth Krishna Talasila.">
 <meta property="og:image" content="https://vineethkrishnat.com/assets/profile.jpeg">
 <meta property="og:site_name" content="Vineeth Krishna Talasila">
 <meta name="twitter:title" content="Publications – Vineeth Krishna Talasila">
-<meta name="twitter:description" content="Papers and selected presentations by theoretical physicist Vineeth Krishna Talasila, publishing as Vineeth Krishna.">
+<meta name="twitter:description" content="Research publications, talks, and posters by Vineeth Krishna Talasila.">
 <meta name="twitter:image" content="https://vineethkrishnat.com/assets/profile.jpeg">
 <meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed publications-page quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -94,6 +123,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="./research.html"> 
 <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data-science.html"> 
+<span class="menu-text">Data Science</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./publications.html" aria-current="page"> 
@@ -132,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Papers and selected presentations by theoretical physicist Vineeth Krishna Talasila, publishing as Vineeth Krishna.
+    Research publications, talks, and posters by Vineeth Krishna Talasila.
   </div>
 </div>
 
@@ -150,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><span class="eyebrow">Research papers &amp; presentations</span></p>
-<p>I publish as <strong>Vineeth Krishna</strong>. Papers are ordered by their <strong>first arXiv submission date</strong>, most recent first. Select a paper title to read an extended summary with equations and figures from the original work. Journal references and links are included where available. <a href="https://inspirehep.net/authors/2170399?ui-citation-summary=true" class="text-link">View my INSPIRE profile ↗</a></p>
+<p>Papers are ordered by their <strong>first arXiv submission date</strong>, most recent first. Select a paper title to read an extended summary with equations and figures from the original work. Journal references and links are included where available. <a href="https://inspirehep.net/authors/2170399?ui-citation-summary=true" class="text-link">View my INSPIRE profile ↗</a></p>
 <section id="papers" class="level2">
 <h2 data-anchor-id="papers">Papers</h2>
 <div class="publication-controls" data-publication-controls="" hidden="">
@@ -249,6 +282,34 @@ ul.task-list li input[type="checkbox"] {
 <section id="selected-talks" class="level2">
 <h2 data-anchor-id="selected-talks">Selected talks</h2>
 <div class="talk-entry">
+<p><span class="entry-meta">November 2026 · Physics department seminar</span></p>
+<section id="multi-component-black-holes-new-phases-of-quantum-gravity" class="level3">
+<h3 data-anchor-id="multi-component-black-holes-new-phases-of-quantum-gravity">Multi-component Black Holes: New Phases of Quantum Gravity</h3>
+<p>University of Hyderabad, India.</p>
+</section>
+</div>
+<div class="talk-entry">
+<p><span class="entry-meta">October 2026 · Leinweber postdoc meeting</span></p>
+<section id="multi-component-black-holes-new-phases-of-quantum-gravity-1" class="level3">
+<h3 data-anchor-id="multi-component-black-holes-new-phases-of-quantum-gravity-1">Multi-component Black Holes: New Phases of Quantum Gravity</h3>
+<p>MIT, USA.</p>
+</section>
+</div>
+<div class="talk-entry">
+<p><span class="entry-meta">November 2025 · Group seminar</span></p>
+<section id="multipartite-entanglement-in-holography" class="level3">
+<h3 data-anchor-id="multipartite-entanglement-in-holography">Multipartite Entanglement in Holography</h3>
+<p>Virginia Tech, USA.</p>
+</section>
+</div>
+<div class="talk-entry">
+<p><span class="entry-meta">April 2025 · HET seminar</span></p>
+<section id="new-non-supersymmetric-phases-of-mathcaln4-sym" class="level3">
+<h3 data-anchor-id="new-non-supersymmetric-phases-of-mathcaln4-sym">New (Non-)Supersymmetric Phases of <span class="math inline">\(\mathcal{N}=4\)</span> SYM</h3>
+<p>Kavli Institute for Theoretical Sciences, University of Chinese Academy of Sciences, China.</p>
+</section>
+</div>
+<div class="talk-entry">
 <p><span class="entry-meta">January 2024 · Department seminar</span></p>
 <section id="new-measures-of-multi-partite-entanglement-and-their-holographic-duals" class="level3">
 <h3 data-anchor-id="new-measures-of-multi-partite-entanglement-and-their-holographic-duals">New measures of multi-partite entanglement and their holographic duals</h3>
@@ -267,6 +328,44 @@ ul.task-list li input[type="checkbox"] {
 <section id="supersymmetric-grey-galaxies-and-revolving-black-holes" class="level3">
 <h3 data-anchor-id="supersymmetric-grey-galaxies-and-revolving-black-holes">Supersymmetric Grey Galaxies and Revolving Black Holes</h3>
 <p>SISSA, Trieste; University of Milano-Bicocca; and the ICTP Workshop on String Theory, Holography and Black Holes (Gong Show), Trieste, Italy.</p>
+</section>
+</div>
+<div class="talk-entry">
+<p><span class="entry-meta">August 2022 · STMP Journal Club</span></p>
+<section id="new-multipartite-entanglement-measure-and-its-holographic-dual-1" class="level3">
+<h3 data-anchor-id="new-multipartite-entanglement-measure-and-its-holographic-dual-1">New multipartite entanglement measure and its holographic dual</h3>
+<p>Tata Institute of Fundamental Research, Mumbai, India.</p>
+</section>
+</div>
+<div class="talk-entry">
+<p><span class="entry-meta">June 2022 · STMP Journal Club</span></p>
+<section id="multiboundary-wormholes-and-holographic-entanglement" class="level3">
+<h3 data-anchor-id="multiboundary-wormholes-and-holographic-entanglement">Multiboundary wormholes and holographic entanglement</h3>
+<p>Tata Institute of Fundamental Research, Mumbai, India.</p>
+</section>
+</div>
+</section>
+<section id="posters" class="level2">
+<h2 data-anchor-id="posters">Posters</h2>
+<div class="talk-entry">
+<p><span class="entry-meta">September 2023 · In person</span></p>
+<section id="supersymmetric-grey-galaxies-and-revolving-black-holes-1" class="level3">
+<h3 data-anchor-id="supersymmetric-grey-galaxies-and-revolving-black-holes-1">Supersymmetric Grey Galaxies and Revolving Black Holes</h3>
+<p>Quantum Information, Quantum Matter and Quantum Gravity, Yukawa Institute for Theoretical Physics, Kyoto, Japan.</p>
+</section>
+</div>
+<div class="talk-entry">
+<p><span class="entry-meta">August 2023 · Online</span></p>
+<section id="towards-classification-of-holographic-multi-partite-entanglement-measures-1" class="level3">
+<h3 data-anchor-id="towards-classification-of-holographic-multi-partite-entanglement-measures-1">Towards classification of holographic multi-partite entanglement measures</h3>
+<p>It from Qubit, Perimeter Institute.</p>
+</section>
+</div>
+<div class="talk-entry">
+<p><span class="entry-meta">January 2023 · In person</span></p>
+<section id="new-multipartite-entanglement-measure-and-its-holographic-dual-2" class="level3">
+<h3 data-anchor-id="new-multipartite-entanglement-measure-and-its-holographic-dual-2">New multipartite entanglement measure and its holographic dual</h3>
+<p>17th Kavli Asian Winter School on Strings, Particles and Cosmology, Institute for Basic Science, Daejeon, Korea.</p>
 </section>
 </div>
 <div class="page-next">

@@ -16,13 +16,13 @@ toc: false
 
 Supersymmetry places a lower bound on the energy of a state with specified charges. States that saturate it are BPS states, the supersymmetric ground states in their charge sector. Black holes account for enormous numbers of such states, yet familiar regular BPS black holes do not exist at every allowed charge. This work asks what fills the rest of the phase diagram, and how these additional states affect the protected count called the superconformal index.
 
-The setting is supergravity on $AdS_4\times S^7$, restricted to four electric charges equal in pairs. There are consequently two independent electric charges, $Q_1$ and $Q_2$, and one angular momentum, $J$. The BPS energy bound is equation (1):
+The setting is supergravity on $AdS_4\times S^7$, restricted to four electric charges equal in pairs. There are consequently two independent electric charges, $Q_1$ and $Q_2$, and one angular momentum, $J$. The BPS energy bound is
 
 $$
 E\ell\geq J+2(Q_{1}\ell+Q_{2}\ell)~.
 $$
 
-Here $\ell$ is the AdS radius. Saturating this linear inequality is necessary for supersymmetry, but a regular single black hole must also obey a nonlinear charge relation. After rescaling charges by the large-$N$ parameter $k=\ell^2/(2G)$, the paper uses densities $q_1,q_2,j$, their sum $q$, and difference $\tilde q$. The nonlinear relation becomes the “black hole sheet,” equation (44):
+Here $\ell$ is the AdS radius. Saturating this linear inequality is necessary for supersymmetry, but a regular single black hole must also obey a nonlinear charge relation. After rescaling charges by the large-$N$ parameter $k=\ell^2/(2G)$, the paper uses densities $q_1,q_2,j$, their sum $q$, and difference $\tilde q$. The nonlinear relation defines the “black hole sheet”:
 
 $$
 \displaystyle j=j_{c}(q,\tilde{q})=q\left(\sqrt{1+4\left(q^{2}-\tilde{q}^{2}\right)}-1\right)~.
@@ -30,15 +30,15 @@ $$
 
 This sheet is a surface in a three-dimensional charge space. It does not fill the physical region. Its geometry therefore exposes the central puzzle: generic supersymmetric charge sectors cannot be described by an isolated member of the known black-hole family. The paper proposes that they instead contain a black-hole core accompanied by another component carrying the remaining charge.
 
-![Original Figure 1: Regular single-component BPS black holes occupy the green sheet, rather than the full three-dimensional charge space. The foreground is translucent so that the folded branch remains visible. Reproduced from the [paper](https://arxiv.org/abs/2510.16274).](../assets/papers/2510.16274/bhsheet.png){fig-alt="The curved green black-hole sheet in the three-dimensional space of charge densities."}
+![Figure 1. The black hole sheet meets the $j=0$ plane at $q=|\tilde q|$ and shrinks inward as $j$ increases. Light green is the translucent foreground; dark green shows the second branch where the sheet folds behind it. ([arXiv:2510.16274](https://arxiv.org/abs/2510.16274))](../assets/papers/2510.16274/bhsheet.png){fig-alt="The curved green black-hole sheet in the three-dimensional space of charge densities."}
 :::
 
 ::: {.summary-section}
 ## Construction and results
 
-The construction assumes a two-component system whose energy and charges add at leading order. One component is a BPS black hole; the other is termed a gas. The gas carries macroscopic charge but negligible leading entropy, so the total entropy comes from the core. This is a thermodynamic prescription supported by related constructions, rather than an explicit construction of every proposed supersymmetric geometry.
+The construction assumes a two-component system whose energy and charges add at leading order. One component is a BPS black hole; the other is termed a gas. The gas carries macroscopic charge but negligible leading entropy, so the total entropy comes from the core. In the large-$N$ thermodynamic description, these assumptions reduce the phase problem to a competition among possible core black holes. Grey-galaxy and dual-giant constructions motivate the two ways the additional component can carry charge.
 
-Given total charges, the allowed cores lie on the black hole sheet and must leave nonnegative charges for the gas. The dominant candidate is found by maximizing the core entropy over that allowed set. On the sheet, the entropy density takes the simple form in equation (45):
+Given total charges, the allowed cores lie on the black hole sheet and must leave nonnegative charges for the gas. The dominant candidate is found by maximizing the core entropy over that allowed set. On the sheet, the entropy density takes the simple form
 
 $$
 s_{BH}(j,q)=\pi\frac{j}{q}~.
@@ -50,7 +50,7 @@ On the overcharged side, Region II, the optimum places all angular momentum in t
 
 The superconformal index introduces another optimization. Because its chemical potentials obey a supersymmetric constraint, it resolves combinations of charges rather than all three charges independently. In the paper's density variables, an index line has fixed $\zeta=q+j$ and $\tilde\zeta=\tilde q$. Each physical line intersects the black hole sheet once, but this intersection need not supply its largest entropy.
 
-Assuming that cancellations in the signed index do not remove the leading entropy maximum, the paper compares configurations along each line. For nonnegative $\tilde\zeta$, its result is equation (126):
+Assuming that cancellations in the signed index do not remove the leading entropy maximum, the paper compares configurations along each line. For nonnegative $\tilde\zeta$, the resulting prediction is
 
 $$
 s_{\mathcal{I}}(\zeta,\tilde{\zeta})=\begin{cases}s_{X}(\zeta,\tilde{\zeta})&,~~{\rm if~~}\tilde{\zeta}\leq\frac{1}{2}\\
@@ -61,20 +61,17 @@ The quantity $s_X$ is the entropy of the pure black hole at the intersection; $s
 :::
 
 ::: {.summary-section}
-## Interpretation and limits
+## Phase transitions in the index
 
-![Original Figure 15: In the physical wedge $|\tilde\zeta|\leq\zeta$, the predicted index is dominated by a pure black hole in grey and a two-component configuration in blue. The boundaries lie at $|\tilde\zeta|=1/2$. Reproduced from the [paper](https://arxiv.org/abs/2510.16274).](../assets/papers/2510.16274/indphasediag.svg){fig-alt="The index phase diagram with a central grey black-hole region and blue two-component regions."}
+![Figure 2. The microcanonical index phase diagram in the physical region $|\tilde\zeta|\leq\zeta$. Grey is the pure BPS black-hole phase and blue is the two-component phase, connected by second-order transitions at $|\tilde\zeta|=1/2$. ([arXiv:2510.16274](https://arxiv.org/abs/2510.16274))](../assets/papers/2510.16274/indphasediag.svg){fig-alt="The index phase diagram with a central grey black-hole region and blue two-component regions."}
 
-The distinction between two phase diagrams matters. The ground-state diagram fixes all conserved charges; the index diagram groups states along charge-space lines. A two-component configuration can dominate the latter even though a pure black hole exists elsewhere on the same line. Agreement between a black-hole entropy calculation and an index calculation therefore has a restricted domain, rather than establishing that all typical supersymmetric states are isolated black holes.
+The ground-state and index phase diagrams describe different ensembles. Fixing all conserved charges selects the best core compatible with one point in charge space. Fixing the index charges instead selects an entire line, along which angular momentum and the sum of electric charges vary together. The maximal entropy along this line determines the index prediction under the unobstructed saddle assumption. A two-component configuration can supply that maximum even though the line also contains a pure black hole.
 
-The paper also studies complex Euclidean BPS black holes and their chemical potentials. The loss of a convergent statistical interpretation tracks the predicted onset of the two-component index phase. However, the Kontsevich–Segal–Witten criterion for allowable complex metrics remains satisfied in the unstable region. In this example that geometric criterion is too weak to diagnose the relevant transition.
+When the electric charges are comparable, the entropy increases along the grey-galaxy segment toward the pure black hole and then decreases along the overcharged segment. The black-hole intersection is consequently the dominant point. For a sufficiently large charge difference, an additional maximum appears in the two-component part of the line. This maximum overtakes the pure black hole at $|\tilde\zeta|=1/2$, producing the second-order transition. At the positive boundary, the two entropy branches both equal $\pi(-1+\sqrt{2\zeta})$. Exchanging the two electric charges gives the corresponding negative boundary.
 
-The results retain two important qualifications. First, the detailed existence and supersymmetry of the proposed gas-plus-core configurations require further work, including their backreaction. Second, replacing a rapidly oscillating signed sum by its largest entropy contribution is an assumption, often called the unobstructed saddle conjecture. A direct calculation of the boundary three-dimensional index would test the predicted transition independently. Four unequal electric charges, finite-$N$ effects, and quantum corrections also lie beyond the analysis here.
+Complex Euclidean BPS black holes provide a complementary description through chemical potentials conjugate to the conserved charges. A convergent interpretation of the index requires the real parts of the relevant potentials to suppress towers of charged states. The onset of instability in this description coincides with the predicted transition to the two-component phase. The geometry and the statistical ensemble therefore identify the same threshold through different calculations.
+
+The Kontsevich–Segal–Witten condition tests positivity of auxiliary-field kinetic terms on the complex metric. In this $AdS_4$ charge sector it remains satisfied across the statistical instability, distinguishing geometric allowability from thermodynamic dominance. Together, these results give a coherent organization of the leading large-$N$ ground states: entropy is stored in a black-hole core, charge can also reside in an accompanying component, and the index selects among these configurations according to the charge combinations it resolves.
 :::
 
-::: {.paper-references}
-**Source:** [arXiv:2510.16274](https://arxiv.org/abs/2510.16274), especially §§2–5 and the conclusion. Equations above reproduce original equations (1), (44), (45), and (126); illustrations reproduce original Figures 1 and 15. The prose is an explanatory summary of the paper.
-
-**Related work:** [Supersymmetric Grey Galaxies and the Superconformal Index](2501.17217.qmd) · [Allowable Complex Black Holes](2602.05979.qmd).
-:::
 :::

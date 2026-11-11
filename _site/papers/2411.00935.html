@@ -128,6 +128,10 @@ window.Quarto = {
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../data-science.html"> 
+<span class="menu-text">Data Science</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../publications.html"> 
 <span class="menu-text">Publications</span></a>
   </li>  
@@ -185,59 +189,52 @@ window.Quarto = {
 <p><a href="https://arxiv.org/abs/2411.00935">arXiv:2411.00935</a> · <a href="https://doi.org/10.1007/JHEP06(2025)116">Published: JHEP 06 (2025) 116</a> · <a href="https://inspirehep.net/literature/2845255">INSPIRE</a> · <a href="../publications.html">All publications</a></p>
 </div>
 <div class="paper-summary">
-<section id="the-question-when-does-boundary-symmetry-survive-in-gravity" class="level2 summary-section">
-<h2 data-anchor-id="the-question-when-does-boundary-symmetry-survive-in-gravity">The question: when does boundary symmetry survive in gravity?</h2>
+<section id="multipartite-invariants-and-replica-symmetry" class="level2 summary-section">
+<h2 data-anchor-id="multipartite-invariants-and-replica-symmetry">Multipartite invariants and replica symmetry</h2>
 <p>Entanglement between several parts of a quantum system contains information that cannot be captured by examining just one division into two parts. A natural starting point is to construct quantities unchanged by independent changes of basis in each part. This paper calls these quantities <strong>multi-invariants</strong>. It studies polynomial invariants obtained by contracting copies of a wavefunction with copies of its complex conjugate, with a separate contraction pattern for each party. Permutations record those patterns, turning a potentially complicated tensor expression into a precise combinatorial object.</p>
 <p>The physical setting is the vacuum of a two-dimensional holographic conformal field theory: a theory with large central charge and a suitable gap that admits a semiclassical gravitational description. Dividing the spatial circle into party regions makes its vacuum a multipartite state. Each contraction becomes an instruction for gluing copies of the Euclidean path integral. The resulting replicated surface can have handles and branch points. Evaluating its partition function computes the invariant, with normalization removing the original state’s norm.</p>
-<p>The central question is whether this complicated replicated problem has a simpler description using a single copy of the boundary. The normalized invariant removes its overall replica multiplicity, as in original equation (7):</p>
+<p>The central question is whether this complicated replicated problem has a simpler description using a single copy of the boundary. The normalized invariant removes its overall replica multiplicity:</p>
 <p><span class="math display">\[
 \displaystyle\tilde{\mathcal{E}}\equiv{\mathcal{E}}^{1/{n_{r}}},
-\tag{7}
 \]</span></p>
-<p>Here the replica number counts copies of the wavefunction. When a replica symmetry acts freely and transitively on the copies, quotienting the replicated boundary returns the original sphere. To do the same in gravity, however, the dominant bulk filling must preserve that symmetry. Symmetry of the boundary data alone does not guarantee symmetry of the dominant gravitational saddle. Establishing when this additional step is justified is the purpose of the paper.</p>
+<p>Here the replica number counts copies of the wavefunction. When a replica symmetry acts freely and transitively on the copies, quotienting the replicated boundary returns the original sphere. If the dominant gravitational filling also preserves that symmetry, its quotient supplies a bulk geometry with this single-copy boundary. The problem therefore joins two questions: how the contraction patterns generate replica symmetries, and how those symmetries extend from a replicated surface into its gravitational filling.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../assets/papers/2411.00935/key-idea.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Original Figure 7, all panels. Different free normal subgroups give different intermediate handlebodies but the same final orbifold. Source figure."><img src="../assets/papers/2411.00935/key-idea.svg" class="img-fluid figure-img" alt="Commuting quotient diagram showing hyperbolic space, intermediate handlebodies, their replica symmetry quotients, and a common final orbifold."></a></p>
-<figcaption>Original Figure 7, all panels. Different free normal subgroups give different intermediate handlebodies but the same final orbifold. <a href="https://arxiv.org/html/2411.00935v2#S4.F7">Source figure</a>.</figcaption>
+<p><a href="../assets/papers/2411.00935/key-idea.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure 1. Quotienting hyperbolic space by different free normal subgroups gives intermediate handlebodies of different genera. Quotienting each handlebody by its replica symmetry gives the same final orbifold. (arXiv:2411.00935)"><img src="../assets/papers/2411.00935/key-idea.svg" class="img-fluid figure-img" alt="Commuting quotient diagram showing hyperbolic space, intermediate handlebodies, their replica symmetry quotients, and a common final orbifold."></a></p>
+<figcaption>Figure 1. Quotienting hyperbolic space by different free normal subgroups gives intermediate handlebodies of different genera. Quotienting each handlebody by its replica symmetry gives the same final orbifold. (<a href="https://arxiv.org/html/2411.00935v2#S4.F7">arXiv:2411.00935</a>)</figcaption>
 </figure>
 </div>
 </section>
 <section id="from-replicated-surfaces-to-hyperbolic-orbifolds" class="level2 summary-section">
 <h2 data-anchor-id="from-replicated-surfaces-to-hyperbolic-orbifolds">From replicated surfaces to hyperbolic orbifolds</h2>
-<p>With an unbroken bulk replica symmetry, the invariant is determined by the difference between the orbifold action and the unreplicated action. Original equation (22) is:</p>
+<p>With an unbroken bulk replica symmetry, the invariant is determined by the difference between the orbifold action and the unreplicated action:</p>
 <p><span class="math display">\[
 \displaystyle\tilde{\mathcal{E}}=e^{-S_{\rm grav}[\hat{\mathcal{B}}_{\mathcal{E}}]+S_{\rm grav}[{\mathcal{B}}]}.
-\tag{22}
 \]</span></p>
 <p>The quotient geometry generally contains conical singularities: lines around which a full circuit covers less angle than in smooth space. In three-dimensional Euclidean gravity these geometries can be described using discrete groups of hyperbolic isometries, called Kleinian groups. Their algebra records how the replicated boundary and its bulk filling fit together. Reflection symmetries extend the construction and connect it to Coxeter groups, which are generated by reflections satisfying pairwise relations.</p>
-<p>Figure 7 captures a striking consequence. One Kleinian group can contain different free normal subgroups. Quotienting by one such subgroup first gives a handlebody, and a further finite quotient produces the final orbifold. Different choices can change the genus and the replica presentation while leaving that orbifold unchanged. Consequently, infinitely large families of normalized invariants agree on the holographic vacuum at the semiclassical level. These are special equalities of holographic observables; they are not identities for every quantum state.</p>
-<p>The classification also has a local geometric face. Singular lines meet at junctions constrained by which finite groups can act around a point. The allowed three-line junctions are associated with the four families listed in original equation (29):</p>
+<p>Figure 1 captures a striking consequence. One Kleinian group can contain different free normal subgroups. Quotienting by one such subgroup first gives a handlebody, and a further finite quotient produces the final orbifold. Different choices can change the genus and the replica presentation while leaving that orbifold unchanged. Consequently, infinitely large families of normalized invariants agree on the holographic vacuum at the semiclassical level. The common orbifold action thus organizes observables with different replica numbers into equivalence families on this semiclassical holographic state.</p>
+<p>The classification also has a local geometric face. Singular lines meet at junctions constrained by which finite groups can act around a point. The allowed three-line junctions are associated with four families:</p>
 <p><span class="math display">\[
 \displaystyle(m_{12},m_{23},m_{31})=\quad(2,2,n),\quad(2,3,3),\quad(2,3,4),\quad(2,3,5).
-\tag{29}
 \]</span></p>
-<p>The integers determine cone angles, and therefore encode differing effective cosmic-brane tensions. The complete Figure 10 below displays the associated junctions. These are the paper’s original geometries rather than illustrative networks chosen independently for the website.</p>
+<p>The integers determine cone angles and therefore encode differing effective cosmic-brane tensions. Figure 2 displays the associated junctions. The possible local geometries are fixed by the spherical reflection groups, tying the branching pattern of a singular network to a finite set of algebraic data.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../assets/papers/2411.00935/cox-orb.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Original Figure 10, all four junctions. The labels specify conical angles and distinguish the allowed local group actions. Source figure."><img src="../assets/papers/2411.00935/cox-orb.svg" class="img-fluid figure-img" alt="Four allowed trivalent conical junctions with labels for their cone orders and corresponding finite replica symmetry groups."></a></p>
-<figcaption>Original Figure 10, all four junctions. The labels specify conical angles and distinguish the allowed local group actions. <a href="https://arxiv.org/html/2411.00935v2#S5.F10">Source figure</a>.</figcaption>
+<p><a href="../assets/papers/2411.00935/cox-orb.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure 2. Trivalent singular loci associated with the Coxeter groups (2,2,n), (2,3,3), (2,3,4), and (2,3,5). An edge label n specifies a cone angle 2\pi/n; the replica symmetry groups are shown beside the junctions. (arXiv:2411.00935)"><img src="../assets/papers/2411.00935/cox-orb.svg" class="img-fluid figure-img" alt="Four allowed trivalent conical junctions with labels for their cone orders and corresponding finite replica symmetry groups."></a></p>
+<figcaption>Figure 2. Trivalent singular loci associated with the Coxeter groups <span class="math inline">\((2,2,n)\)</span>, <span class="math inline">\((2,3,3)\)</span>, <span class="math inline">\((2,3,4)\)</span>, and <span class="math inline">\((2,3,5)\)</span>. An edge label <span class="math inline">\(n\)</span> specifies a cone angle <span class="math inline">\(2\pi/n\)</span>; the replica symmetry groups are shown beside the junctions. (<a href="https://arxiv.org/html/2411.00935v2#S5.F10">arXiv:2411.00935</a>)</figcaption>
 </figure>
 </div>
-<p>Combining groups along shared subgroups builds more extensive singular networks. This construction separates invariants that preserve bulk replica symmetry only in some configurations of boundary regions from those that do so for every configuration. Requiring preservation throughout the configuration space is highly restrictive: the resulting extended replica groups are finite Coxeter groups. Their defining presentation appears in original equation (10):</p>
+<p>Combining groups along shared subgroups builds more extensive singular networks. This construction separates invariants that preserve bulk replica symmetry only in some configurations of boundary regions from those that do so for every configuration. Requiring preservation throughout the configuration space is highly restrictive: the resulting extended replica groups are finite Coxeter groups. Their defining presentation is:</p>
 <p><span class="math display">\[
 \langle r_{1},\cdots r_{{\mathtt{q}}}|(r_{i}r_{j})^{m_{ij}}=e\rangle,\quad m_{ii}=1,\quad m_{ij}=m_{ji}\geq 2
-\tag{10}
 \]</span></p>
 </section>
-<section id="what-the-classification-establishesand-where-it-stops" class="level2 summary-section">
-<h2 data-anchor-id="what-the-classification-establishesand-where-it-stops">What the classification establishes—and where it stops</h2>
-<p>The result explains why a convenient geometric formula is available for some multipartite observables and fails for others. A contraction pattern specifies the boundary replica problem, while the group-theoretic classification decides which patterns admit the required symmetric gravitational filling as regions move. The same analysis supplies families of bulk geometries and relations among their regulated actions. Direct CFT calculations, using covering maps and their accompanying Liouville actions, check selected predictions independently of the bulk quotient construction.</p>
-<p>Replica symmetry breaking remains physically meaningful. A symmetric filling can exist without dominating the path integral, so existence alone cannot justify the simplified prescription. The paper discusses cases in which symmetric solutions are subleading and involve Euclidean wormholes with two boundary components. These examples make the distinction between a candidate saddle and the saddle that computes the observable essential.</p>
-<p>The scope is also specific: the detailed classification concerns vacuum states of two-dimensional holographic CFTs and their three-dimensional semiclassical bulk duals. Extending the conclusions to arbitrary states, higher dimensions, or finite-central-charge corrections requires further work. Local-unitary invariance likewise does not by itself establish the stronger operational properties of an entanglement monotone. The paper deliberately studies a geometric classification of invariants without claiming that every member satisfies all quantum-information requirements.</p>
+<section id="geometric-classification-and-cft-checks" class="level2 summary-section">
+<h2 data-anchor-id="geometric-classification-and-cft-checks">Geometric classification and CFT checks</h2>
+<p>The classification associates each admissible contraction pattern with a family of symmetric gravitational fillings. As boundary regions move, the corresponding singular networks evolve, and competing fillings can exchange dominance. The group-theoretic construction identifies the patterns for which a replica-symmetric description persists throughout configuration space. It also produces relations among regulated gravitational actions: different replicated manifolds can yield the same action per replica when their fillings share a common quotient.</p>
+<p>Direct CFT calculations test selected predictions independently of the bulk quotient construction. Twist operators impose the required permutation monodromies at the region endpoints. Covering maps lift these insertions to a smooth surface, and the accompanying Liouville action accounts for the change of metric. In the examples evaluated explicitly, this boundary calculation agrees with the gravitational orbifold result, connecting the same invariant to both a conformal mapping problem and a hyperbolic volume.</p>
+<p>The saddle structure also includes examples with broken replica symmetry. For certain invariants, replica-symmetric solutions appear as subleading Euclidean wormholes with two boundary components, while a different filling dominates. Comparing their actions reveals how symmetry and topology organize the gravitational path integral. Within the vacuum of a two-dimensional holographic CFT, this supplies a geometric account of both the equivalence families of multi-invariants and the transitions among their bulk descriptions. The semiclassical theory thereby turns a large collection of tensor contractions into a tractable problem of discrete groups and hyperbolic geometry.</p>
 </section>
-<div class="paper-references">
-<p>Equations reproduce original equations <a href="https://arxiv.org/html/2411.00935v2#S2.E7">(7)</a>, <a href="https://arxiv.org/html/2411.00935v2#S3.E22">(22)</a>, <a href="https://arxiv.org/html/2411.00935v2#S5.E29">(29)</a>, and <a href="https://arxiv.org/html/2411.00935v2#S2.E10">(10)</a>; figures reproduce original Figures 7 and 10 without redrawing. See <a href="https://arxiv.org/html/2411.00935v2">§§2–7 of the paper</a> for the definitions, classification, and checks. Related summaries: <a href="../papers/2304.06082.html">Classification of holographic multipartite measures</a> · <a href="../papers/2308.16247.html">Monotonicity conjecture</a>.</p>
-</div>
 </div>
 
 

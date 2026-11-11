@@ -8,7 +8,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1] / "_site"
 PUBLIC_EMAILS = {"contact@vineethkrishnat.com"}
-EXPECTED = {"index.html", "research.html", "publications.html", "cv.html", "404.html"}
+EXPECTED = {"index.html", "research.html", "data-science.html", "publications.html", "cv.html", "404.html"}
 EXPECTED |= {"papers/" + p.with_suffix(".html").name for p in (ROOT.parent / "papers").glob("*.qmd")}
 
 
@@ -22,6 +22,7 @@ class Page(HTMLParser):
         self.h1_count = 0
         self.figure_count = 0
         self.display_math_count = 0
+        self.downloads = []
         self.errors = []
         self.feed(source)
 
@@ -41,6 +42,8 @@ class Page(HTMLParser):
             self.has_title = True
         if tag == "meta" and attrs.get("name") == "description" and attrs.get("content"):
             self.has_description = True
+        if tag == "a" and "download" in attrs:
+            self.downloads.append(attrs.get("href", ""))
         if tag == "img" and not attrs.get("alt"):
             self.errors.append("image missing alternative text")
         for key in ("href", "src"):
@@ -70,6 +73,10 @@ def main():
         if name.startswith("papers/"):
             if page.figure_count != 2 or page.display_math_count != 4:
                 errors.append(f"{name}: expected two original figures and four source equations")
+            if re.search(r"Original Figure|paper-references|equations?\s*\(\d", source, re.I):
+                errors.append(f"{name}: outdated source-equation prose, figure labels, or footer")
+        if name == "cv.html" and page.downloads != ["assets/vineeth-krishna-talasila-cv.pdf"]:
+            errors.append("cv.html: missing CV download link")
         # Generic checks avoid storing any removed personal details in this checker.
         emails = {email.casefold() for email in re.findall(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}", source)}
         if emails - PUBLIC_EMAILS:
@@ -101,7 +108,7 @@ def main():
                 errors.append(f"{path.name}: broken local link {link}")
             elif url.fragment and target in pages and unquote(url.fragment) not in pages[target].ids:
                 errors.append(f"{path.name}: missing fragment {link}")
-    for required in ("CNAME", "robots.txt", "sitemap.xml", ".nojekyll", "assets/site.js", "assets/favicon.svg"):
+    for required in ("CNAME", "robots.txt", "sitemap.xml", ".nojekyll", "assets/site.js", "assets/favicon.svg", "assets/vineeth-krishna-talasila-cv.pdf"):
         if not (ROOT / required).is_file():
             errors.append(f"missing deployment resource: {required}")
     if (ROOT / "CNAME").is_file() and (ROOT / "CNAME").read_text().strip() != "vineethkrishnat.com":

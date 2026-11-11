@@ -10,21 +10,19 @@ toc: false
 [arXiv:1601.02982](https://arxiv.org/abs/1601.02982) · [Search INSPIRE](https://inspirehep.net/literature?q=arxiv%3A1601.02982) · [All publications](../publications.qmd)
 :::
 
-No journal publication or individual INSPIRE record has been confirmed for this paper. The original arXiv article is the primary source for this summary.
-
 ::: {.paper-summary}
 ::: {.summary-section}
 ## Motivation and setup
 
 Radio astronomy offers a way to study astronomical objects beyond visible light, but the equipment can appear inaccessible to an undergraduate laboratory or amateur group. This project develops an affordable experiment from commercially available satellite-television components. Its aim is educational as well as observational: to connect receiving electronics, digitization, calibration, statistical noise, and astronomical interpretation in a working instrument.
 
-The telescope operates near 11.2 GHz. A parabolic dish concentrates incoming radiation onto a low-noise block receiver, or LNB. A satellite finder acts as a square-law detector, producing a signal related to received intensity. An Arduino Uno digitizes the output with a ten-bit analog-to-digital converter at ten samples per second. A set-top box supplies power, and a Python pipeline records and displays the measurements. The instrument is an intensity-measuring system; the paper does not present it as an imaging array or a frequency-resolving radio spectrometer.
+The telescope operates near 11.2 GHz. A parabolic dish concentrates incoming radiation onto a low-noise block receiver, or LNB. A satellite finder acts as a square-law detector, producing a signal related to received intensity. An Arduino Uno digitizes the output with a ten-bit analog-to-digital converter at ten samples per second. A set-top box supplies power, and a Python pipeline records and displays the measurements. The instrument measures the total received intensity across its operating band, connecting changes in detector voltage to sources crossing the antenna beam.
 
-![Original Figure 1 from the [paper](https://arxiv.org/abs/1601.02982): the instrument's signal and acquisition chain.](../assets/papers/1601.02982/setup_circuit.png){fig-alt="Original block diagram of the radio-telescope setup, showing the antenna and receiver, satellite finder, power supply, digitization, and computer."}
+![Figure 1. Block diagram of the radio-telescope setup. ([arXiv:1601.02982](https://arxiv.org/abs/1601.02982))](../assets/papers/1601.02982/setup_circuit.png){fig-alt="block diagram of the radio-telescope setup, showing the antenna and receiver, satellite finder, power supply, digitization, and computer."}
 
-The Sun supplies a strong first target. Geostationary satellites provide reference signals for calibration, and sky observations away from a target supply the background. Pointing is manual, using predicted altitude and azimuth. For satellite calibration, rotating the LNB aligns its receiving element with the transmitted polarization and maximizes the detected signal. This makes the polarization response part of the experiment rather than an invisible correction.
+The Sun supplies a strong first target. Geostationary satellites provide reference signals for calibration, and sky observations away from a target supply the background. Pointing is manual, using predicted altitude and azimuth. For satellite calibration, rotating the LNB aligns its receiving element with the transmitted polarization and maximizes the detected signal. The resulting voltage change provides a direct demonstration of the receiver’s polarization response.
 
-The calibration begins with the Friis transmission relation, reproduced from **equation (2)**:
+The calibration begins with the Friis transmission relation:
 
 $$
 \frac{P_r}{P_t}=G_tG_r\left(\frac{\lambda}{4\pi R}\right)^2.
@@ -36,27 +34,27 @@ Here the received and transmitted powers are $P_r$ and $P_t$, the antenna gains 
 ::: {.summary-section}
 ## Construction and main results
 
-Converting a voltage change into an astronomical measurement requires both the detector calibration and an estimate of the effective collecting area. The receiving gain is related to dish diameter and aperture efficiency by **equation (4)**:
+Converting a voltage change into an astronomical measurement requires both the detector calibration and an estimate of the effective collecting area. The receiving gain is related to dish diameter and aperture efficiency by
 
 $$
 G_r=\eta_A\left(\frac{\pi d}{\lambda}\right)^2.
 $$
 
-The aperture efficiency $\eta_A$ accounts for the difference between geometric dish area and effective collecting area. The appendix uses this information to turn the measured satellite voltage above background into a power scale. The solar signal is then calibrated relative to the satellite observation, preferably taken close in time so that instrumental conditions are comparable.
+The aperture efficiency $\eta_A$ accounts for the difference between geometric dish area and effective collecting area. The calibration uses this information to turn the measured satellite voltage above background into a power scale. The solar signal is then calibrated relative to the satellite observation, preferably taken close in time so that instrumental conditions are comparable.
 
 A drift scan holds the antenna pointing fixed while the sky moves through its beam. Fitting the solar transit with a Gaussian provides a beam-width estimate as well as a recognizable source detection. The paper reports beam widths of approximately $3.4$–$3.5$ degrees, with the tabulated fits giving $3.357\pm0.021$ and $3.501\pm0.007$ degrees. These measurements agree with the approximate beam width expected for the instrument. The broad beam makes source acquisition forgiving, while also limiting angular resolution.
 
-![Original Figure 4 from the [paper](https://arxiv.org/abs/1601.02982): solar transit data and its Gaussian fit. The plotted measurements and fitted curve are reproduced directly from the article.](../assets/papers/1601.02982/pp.svg){fig-alt="Original solar drift-scan plot, with cyan measured points and a black Gaussian fit used to estimate the antenna beam width."}
+![Figure 2. Drift scan of the Sun. Cyan points show the data, and the black line is a Gaussian fit. ([arXiv:1601.02982](https://arxiv.org/abs/1601.02982))](../assets/papers/1601.02982/pp.svg){fig-alt="solar drift-scan plot, with cyan measured points and a black Gaussian fit used to estimate the antenna beam width."}
 
-The appendix next converts received power to flux density, including the single-polarization response and the difference between the satellite's transmitted bandwidth and the receiver's solar-observation bandwidth. Dividing the flux by the solar solid angle gives intensity. Assuming thermal radiation in the Rayleigh–Jeans regime, the final temperature relation shown in **Appendix A, unnumbered**, is
+The received power is then converted to flux density, including the single-polarization response and the difference between the satellite's transmitted bandwidth and the receiver's solar-observation bandwidth. Dividing the flux by the solar solid angle gives intensity. Assuming thermal radiation in the Rayleigh–Jeans regime, the corresponding brightness temperature is
 
 $$
 T=\frac{I\lambda^2}{2K_B}=10078\,K.
 $$
 
-This is the paper's worked calibration example, with $I$ the inferred intensity and $K_B$ Boltzmann's constant. The two reported solar brightness temperatures are 10078 K and 10136 K, with quoted uncertainties of 295 K and 324 K. Brightness temperature describes the observed intensity at the operating frequency; it should not be confused with a direct measurement of the Sun's photospheric temperature.
+Here $I$ is the inferred intensity, $K_B$ is Boltzmann's constant, and the numerical value follows from the measured solar signal in the worked calibration. The two reported solar brightness temperatures are 10078 K and 10136 K, with quoted uncertainties of 295 K and 324 K. Brightness temperature expresses the observed radio intensity as the temperature of a thermal emitter at the operating frequency, characterizing the Sun's microwave emission.
 
-Sensitivity can improve by averaging longer. The relevant relation is the radiometer equation, **equation (1)**:
+Sensitivity can improve by averaging longer. The radiometer equation gives the dependence on averaging time and bandwidth:
 
 $$
 \sigma_T\propto\frac{1}{\sqrt{\tau\Delta\nu_{RF}}}.
@@ -66,20 +64,17 @@ The output fluctuation $\sigma_T$ decreases as integration time $\tau$ or receiv
 :::
 
 ::: {.summary-section}
-## Interpretation and limits
+## Noise, calibration, and an undergraduate experiment
 
-This experiment brings several normally separate classroom topics into one measurement. The receiving chain illustrates amplification and detection; the digitizer turns a continuous voltage into a sampled series; calibration connects the output to physical units; and drift scans connect time-domain structure to the sky. A simple setup can therefore teach the reasoning behind a radio measurement without requiring a large professional observatory.
+The instrument connects several normally separate classroom topics in one measurement. The receiving chain illustrates amplification and detection; the digitizer turns a continuous voltage into a sampled series; calibration connects the output to physical units; and drift scans relate time-domain structure to the motion of the sky. Strong satellite signals make it practical to explore alignment, polarization, and gain before turning to astronomical targets. The Sun then supplies a bright extended source whose transit measures the antenna response.
 
-The paper also investigates noise rather than treating every fluctuation as astronomical. Comparing ordinary sky measurements with observations made while the LNB is shielded helps distinguish system-generated features. Fourier analysis shows instrumental structure in the time series, including a feature around half a hertz. Ambient temperature changes also track the detector voltage: the reported correlation coefficient is 0.98. Longer averaging alone cannot remove a drifting calibration or establish that every feature comes from a celestial source.
+Characterizing noise is part of this experimental chain. Comparing ordinary sky measurements with measurements taken while the LNB is shielded identifies features generated within the receiving system. Fourier analysis shows a feature around half a hertz that appears in both sets of measurements. This common structure helps connect the measured time series to the electronics and separates different contributions to the output fluctuations.
 
-The reported weaker-source detections should be read with those limitations in mind. Their interpretation relies on timing, pointing, background behavior, and modest signal-to-noise, rather than high-resolution imaging. The solar calibration assumes thermal emission, an aperture efficiency, published satellite powers, and a linear extrapolation between the satellite and solar bandwidths. Those assumptions explain what the quoted temperature estimates mean and where systematic uncertainty can enter.
+The surrounding temperature also tracks the detector voltage, with a reported correlation coefficient of 0.98. Measuring that dependence provides a practical introduction to instrumental drift and explains the value of satellite calibration close in time to a solar scan. The temperature conversion combines an assumed aperture efficiency, satellite reference powers, the measured voltage above background, and a bandwidth correction appropriate to broadband solar emission. Each step gives a physical meaning to a quantity that begins as a detector reading.
 
-There is also a dimensional inconsistency within the original article: the setup description gives a 68 cm dish, whereas the appendix's numerical gain substitution uses 0.71 m. This summary preserves the source equations and reported measurements without silently harmonizing those inputs. The original paper remains the reference for reproducing the experiment and evaluating its calibration in detail.
+For weaker sources, the broad receiver bandwidth and longer integration supply the sensitivity gain described by the radiometer relation. The reported Saturn signal, with a signal-to-noise ratio of three, and the Galactic-arm crossing are identified by comparing the measured transit times with the predicted field of view. This ties the observing geometry to the statistical interpretation of the data and makes background measurements central to source identification.
+
+The resulting experiment offers a compact route from commercially available receiving hardware to a calibrated view of the radio sky. It supports exercises in beam-width measurement, flux calibration, thermal-radiation analysis, time-series statistics, and observational planning. Changes in integration time and pointing let students test how the instrument responds, while the acquisition and visualization pipeline makes the connection between hardware settings and measured signals immediately accessible.
+
 :::
-:::
-
-::: {.paper-references}
-Source: [arXiv:1601.02982](https://arxiv.org/abs/1601.02982), sections II–V and Appendix A; equations (1), (2), and (4), the unnumbered temperature relation, and original Figures 1 and 4. The first arXiv submission is from 2016; the automatically generated date in the HTML rendering is not used as the publication year.
-
-Related: [Research overview](../research.qmd) · [All publications and talks](../publications.qmd).
 :::

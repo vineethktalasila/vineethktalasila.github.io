@@ -4,11 +4,6 @@ if (skipLink) document.body.prepend(skipLink);
 const mainContent = document.querySelector('main.content');
 if (mainContent) mainContent.setAttribute('tabindex', '-1');
 
-document.querySelectorAll('[data-print]').forEach((button) => {
-  button.hidden = false;
-  button.addEventListener('click', () => window.print());
-});
-
 const publicationSearch = document.querySelector('[data-publication-search]');
 if (publicationSearch) {
   const controls = document.querySelector('[data-publication-controls]');

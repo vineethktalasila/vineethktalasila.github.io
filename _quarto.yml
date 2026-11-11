@@ -4,6 +4,7 @@ project:
   render:
     - index.qmd
     - research.qmd
+    - data-science.qmd
     - publications.qmd
     - cv.qmd
     - 404.qmd
@@ -35,6 +36,8 @@ website:
         text: About
       - href: research.qmd
         text: Research
+      - href: data-science.qmd
+        text: Data Science
       - href: publications.qmd
         text: Publications
       - href: cv.qmd

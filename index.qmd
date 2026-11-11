@@ -48,6 +48,11 @@ title-block-banner: false
 
   </section>
 
+  <section class="home-section applied-teaser" aria-labelledby="applied-title">
+    <div><p class="eyebrow">Applied data science</p><h2 id="applied-title">Satellite observations<br>of Permian gas flaring.</h2></div>
+    <div><p>As part of the Erdős Institute’s Summer 2026 Data Science Boot Camp, I worked with a team to combine satellite observations and regulatory records, estimating gas flaring ahead of official reports.</p><a class="text-link" href="data-science.html">Explore the project &amp; certificate <span aria-hidden="true">→</span></a></div>
+  </section>
+
   <section class="background-section" aria-labelledby="background-title">
     <div><p class="eyebrow">Background</p><h2 id="background-title">From quantum systems<br>to spacetime.</h2></div>
     <div><p>I completed my PhD in theoretical physics at the Tata Institute of Fundamental Research, Mumbai, advised by Abhijit Gadde. My thesis focused on multipartite entanglement in holography. Before TIFR, I obtained my Masters in physics and mathematics at IISER Thiruvananthapuram.</p><a class="text-link" href="cv.html">Read my CV <span aria-hidden="true">→</span></a></div>

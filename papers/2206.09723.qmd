@@ -20,7 +20,7 @@ The starting point is a pure state in a tensor product of $\mathtt{q}$ Hilbert s
 
 The paper selects a family with a regular replica structure. After eliminating redundant relabelings, there are $n^{\mathtt{q}-1}$ copies arranged on a $(\mathtt{q}-1)$-dimensional periodic lattice. Each party has its own prescribed cyclic contraction. Although this representation chooses one party to trace out first, the resulting invariant is symmetric under exchange of the original parties. The normalization is included explicitly, so the definition does not depend on an arbitrary norm of the state.
 
-The resulting Rényi multi-entropy is defined in **equation (14)**:
+The resulting Rényi multi-entropy is
 
 $$
 S^{(\mathtt{q})}_{n}\equiv\frac{1}{1-n}{\rm Log}\,\left(\mathcal{Z}_{n}^{(\mathtt{q})}/\left(\mathcal{Z}_{1}^{(\mathtt{q})}\right)^{n^{\mathtt{q}-1}}\right).
@@ -28,13 +28,13 @@ $$
 
 Here $\mathcal{Z}_{n}^{(\mathtt{q})}$ denotes the prescribed replica contraction. Taking the continuation to $n=1$ defines multi-entropy. With two parties this recovers the ordinary von Neumann entropy; with more parties it probes a different contraction pattern.
 
-![Original Figure 2 from the [paper](https://arxiv.org/abs/2206.09723): the three-party contraction producing $\mathcal{Z}_{4}^{(3)}$. The periodic lattice is a replica-index diagram, not a spatial lattice in the underlying theory.](../assets/papers/2206.09723/rho3.svg){fig-alt="Original density-matrix contraction diagram: a three-party reduced density matrix and its periodic two-dimensional replica lattice."}
+![Figure 1. Graphical notation for the density matrix for $\mathtt{q}=3$ and the index contraction giving $\mathcal{Z}_4^{(3)}$. ([arXiv:2206.09723](https://arxiv.org/abs/2206.09723))](../assets/papers/2206.09723/rho3.svg){fig-alt="density-matrix contraction diagram: a three-party reduced density matrix and its periodic two-dimensional replica lattice."}
 :::
 
 ::: {.summary-section}
 ## Construction and main results
 
-A useful check comes from generalized GHZ states, whose basis labels are shared among all parties. The replica contraction can then be evaluated explicitly because a common index runs through the whole network. The resulting multi-entropy, **equation (22)**, is
+A useful check comes from generalized GHZ states, whose basis labels are shared among all parties. The replica contraction can then be evaluated explicitly because a common index runs through the whole network. The resulting multi-entropy is
 
 $$
 S^{(\mathtt{q})}=(1-\mathtt{q})\sum_i |\lambda_i|^2\,{\rm log}|\lambda_i|^2.
@@ -46,36 +46,33 @@ For holographic states, the same replica construction becomes a boundary conditi
 
 The gravitational action near these defects determines the leading answer. The paper checks possible extra contributions at junctions by excising small tubular neighborhoods and examining the corner terms. In Einstein gravity, those junction contributions vanish as the neighborhood shrinks. Near $n=1$, the brane tension vanishes, and the web can therefore be found as an area-minimizing probe configuration in the original geometry.
 
-This gives the central classical prescription, **equation (30)**:
+This gives the classical soap-film prescription:
 
 $$
 S^{(\mathtt{q})}=\frac{A(\mathcal{W})}{4G_N}.
 $$
 
-The web $\mathcal{W}$ must end on the boundaries of the specified regions and contain subwebs homologous to each region. These conditions matter: a small area alone is insufficient if the web does not implement the required partition. The resulting geometry resembles a soap film attached to a wire frame, which motivates the name “soap-film prescription.”
+The web $\mathcal{W}$ must end on the boundaries of the specified regions and contain subwebs homologous to each region. Together, these anchoring and homology conditions associate the bulk chambers with the specified boundary parties. The resulting geometry resembles a soap film attached to a wire frame, which motivates the name “soap-film prescription.”
 
-![Original Figure 3 from the [paper](https://arxiv.org/abs/2206.09723): the local junction used to analyze gravitational corner terms. This diagram supports the junction calculation; it is not a newly drawn example of a complete bulk solution.](../assets/papers/2206.09723/junction.svg){fig-alt="Original diagram showing the tubular neighborhoods of three bulk defect sheets meeting at a junction, including their corner seams."}
+![Figure 2. Top view of the junction of tubular neighborhoods of three $\widetilde{\mathcal{L}}$ sheets. ([arXiv:2206.09723](https://arxiv.org/abs/2206.09723))](../assets/papers/2206.09723/junction.svg){fig-alt="diagram showing the tubular neighborhoods of three bulk defect sheets meeting at a junction, including their corner seams."}
 :::
 
 ::: {.summary-section}
-## Interpretation and limits
+## Quantum geometry and the replica construction
 
-The result extends the geometric dictionary of holography from one bipartition to a symmetric many-party observable. A network with junctions can encode how several regions share a state, whereas a single minimal surface describes one division. The construction also makes contact with ordinary soap-film junction rules in a spatial slice, supplying a geometric way to think about the new boundary quantity.
+The soap-film prescription extends the geometric dictionary of holography from a bipartition to a symmetric many-party observable. Its junctions describe a single bulk partition associated with all the boundary regions. In a three-dimensional spatial slice, minimizing the area gives the familiar local geometry of soap films: three sheets meet along a line at equal angles, and the junction lines can themselves meet at isolated points. The minimization determines both the shape of the sheets and their meeting conditions.
 
-Several qualifications are essential. The classical argument uses Einstein gravity and assumes an appropriate replica-symmetric bulk saddle. The analytic continuation away from integer replica number is another substantive issue. The paper does not establish its existence and uniqueness for arbitrary finite-dimensional states; it restricts its definition to cases with a manifest continuation, including the holographic construction under consideration. Higher-derivative gravity can introduce additional junction contributions and needs a separate treatment.
+The replica construction supplies the link between this geometric problem and the boundary invariant. A replica-symmetric bulk saddle in Einstein gravity produces the classical area formula. The continuous brane tension then provides a manifest continuation of that saddle toward $n=1$, where the branes become probes. This is the setting in which the multi-entropy is defined through analytic continuation; generalized GHZ states provide another explicitly computable family. The continuation connects integer-copy contractions to an entropy-like quantity that can be compared with a bulk area.
 
-The quantum extension is explicitly a **conjecture**. The proposed quantum extremal soap film extremizes the combination in **equation (32)**:
+At the quantum level, fields in the chambers also share multipartite entanglement. The proposed quantum extremal soap-film prescription incorporates this contribution by extremizing
 
 $$
 \frac{A(\mathcal{W})}{4G_N}+S_{\rm bulk}^{(\mathtt{q})}(\mathcal{W}).
 $$
 
-The second term is the bulk multi-entropy of the regions separated by the web. Its inclusion parallels quantum corrections to ordinary holographic entropy, but the paper does not promote that analogy into an unconditional proof. A covariant extension using extremal webs is also proposed. These questions provide the motivation for studying more general invariant constructions and their replica symmetries in subsequent work.
-:::
-:::
+The second term is the bulk multi-entropy for the chamber decomposition defined by the web. This conjectural extension gives quantum correlations a role in determining the location of the surface itself, in parallel with quantum extremal surfaces for ordinary entropy. The associated entropy includes the expectation value of the area operator and the renormalized bulk contribution.
 
-::: {.paper-references}
-Source: [arXiv:2206.09723](https://arxiv.org/abs/2206.09723), sections II–IV, equations (14), (22), (30), and (32), and original Figures 2–3. This page explains the paper; the linked article contains its full argument and bibliography.
+A proposed covariant version replaces minimal webs on a fixed spatial slice with extremal webs, using a maximin construction to choose the appropriate configuration. The static, covariant, and quantum proposals organize multipartite entanglement around the same geometric ingredients: boundary regions, bulk chambers, and the surfaces joining them. Their shared structure motivates a broader study of replica invariants as probes of the way quantum states encode spacetime.
 
-Related work: [Classification of multipartite measures](2304.06082.qmd) · [Monotonicity conjecture](2308.16247.qmd) · [Multi-invariants and bulk replica symmetry](2411.00935.qmd).
+:::
 :::
