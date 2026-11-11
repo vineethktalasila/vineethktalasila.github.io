@@ -1,6 +1,6 @@
 ---
 title: "Publications"
-description: "Research publications, talks, and posters by Vineeth Krishna Talasila."
+description-meta: "Research publications, talks, and posters by Vineeth Krishna Talasila."
 body-classes: publications-page
 ---
 
